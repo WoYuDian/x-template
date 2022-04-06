@@ -1,6 +1,8 @@
 import {cacheGet, cacheSet , cacheUpdate, CustomTableType} from '../cache'
 import * as heroConf from './configuration/hero.json'
 import {playerHeroSelection} from '../event_handlers/custom_events'
+import * as relicConf from './configuration/relic.json'
+import { teleportPlayerToHome } from './game_operation'
 
 const configuration = {
     hero_selection_duration: 5,
@@ -13,6 +15,7 @@ const configuration = {
     rank_round_num_before_cycle: 1,
     cycle_prepare_duration: 5,
     cycle_duration: 5,
+    relic_selection_size: 3
 }
 
 const cycleRoundNum = 2 * (configuration.practice_round_num_before_rank * configuration.rank_round_num_before_cycle + configuration.rank_round_num_before_cycle + 1);
@@ -46,14 +49,15 @@ export function checkGameTime() {
         stateInfo.state = 'hero_selection'
         tickGameTime(stateInfo, heroSelectionIniter, heroSelectionSettler, configuration.hero_selection_duration, gameTime)
     } else {
-        print(stateInfo.round_count,'+++++++++++++')
         const cycleNum = parseInt((stateInfo.round_count / cycleRoundNum).toString());
         const roundNumInCycle = stateInfo.round_count % cycleRoundNum;        
         const rankNumInCycle = parseInt((roundNumInCycle / rankRoundNum).toString());
         const roundInRank = roundNumInCycle % rankRoundNum;
         const practiceNumInRank = parseInt((roundInRank / 2).toString());
-        const isPrepare = (stateInfo.round_count % 2) == 1;        
+        const isPrepare = (stateInfo.round_count % 2) == 1
+        stateInfo.is_prepare = isPrepare?1: 0        
         if(((roundNumInCycle == 0) || (roundNumInCycle > (rankRoundNum * configuration.rank_round_num_before_cycle)))) {
+            
             if(isPrepare) {
                 stateInfo.state = 'cycle_prepare'
                 tickGameTime(stateInfo, null, null, configuration.cycle_prepare_duration, gameTime)
@@ -72,7 +76,7 @@ export function checkGameTime() {
         } else {
             if(isPrepare) {
                 stateInfo.state = 'practice_prepare'
-                tickGameTime(stateInfo, null, null, configuration.practice_prepare_duration, gameTime)
+                tickGameTime(stateInfo, practicePrepareIniter, practicePrepareSettler, configuration.practice_prepare_duration, gameTime)
             } else {
                 stateInfo.state = 'practice_in_progress'
                 tickGameTime(stateInfo, null, null, configuration.practice_duration, gameTime)
@@ -104,6 +108,45 @@ function tickGameTime(stateInfo: stateInfo, roundIniter: Function, roundSettler:
         stateInfo.round_count += 1;
     }
 }
+
+function practicePrepareIniter(stateInfo: stateInfo) {    
+    const playerMap = CustomNetTables.GetTableValue('player_info', 'player_map')
+
+    for(const playerId in playerMap) {
+        teleportPlayerToHome(parseInt(playerId) as PlayerID);
+
+        const relicIndex = []
+        while(relicIndex.length < configuration.relic_selection_size) {
+            const randomIndex = RandomInt(1, relicConf.available_relics.length);
+
+            if(relicIndex.indexOf(randomIndex) < 0) {
+                relicIndex.push(randomIndex)
+            }
+        }
+
+        const relicPool = {}
+        for (const index of relicIndex) {
+            relicPool[index] = relicConf.available_relics[index]
+        }        
+
+        stateInfo.player_relic_selections[playerId].relic_selections = relicPool
+    }
+}
+
+function practicePrepareSettler(stateInfo:  stateInfo) {
+    const playerMap = CustomNetTables.GetTableValue('player_info', 'player_map')
+
+    for(const playerId in playerMap) {
+        if(!stateInfo.plan_selection_info[playerId]) {
+            stateInfo.plan_selection_info[playerId] = {plan_name: 'practice'}
+        } else if((stateInfo.plan_selection_info[playerId].plan_name == 'adventure') && !stateInfo.relic_selection_info[playerId]) {
+            const randomIndex = RandomInt(1, configuration.relic_selection_size);
+            const relic = stateInfo.player_relic_selections[playerId].relic_selections[randomIndex]
+            stateInfo.relic_selection_info[playerId] = {relic_name: relic.relic_name}
+        }
+    }
+}
+
 
 function heroSelectionIniter(stateInfo: stateInfo) {
     const playerMap = CustomNetTables.GetTableValue('player_info', 'player_map')

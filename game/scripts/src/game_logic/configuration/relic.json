@@ -1,0 +1,9 @@
+{
+    "available_relics": [
+        {"relic_name": "test1", "texture_src": "chen_penitence"},
+        {"relic_name": "test2", "texture_src": "clinkz_searing_arrows"},
+        {"relic_name": "test3", "texture_src": "crystal_maiden_crystal_nova"},
+        {"relic_name": "test4", "texture_src": "dark_seer_surge"},
+        {"relic_name": "test5", "texture_src": "dazzle_poison_touch"}        
+    ]
+}

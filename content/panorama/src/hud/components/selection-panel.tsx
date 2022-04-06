@@ -32,11 +32,10 @@ export class SelectionPanel extends React.Component<any, props> {
             selectionContent = heroCards;
 
         } else {
-            const roundType = this.props.stateInfo?.round_type;
-            const isPrepare = this.props.stateInfo?.is_prepare;
+            const gameState = this.props.stateInfo?.state;
 
             let selections = []
-            if(isPrepare && (roundType == 'practice')) {
+            if(gameState == 'practice_prepare') {
                 const planSelectionInfo = this.props.stateInfo?.plan_selection_info;
                 const relicSelectionInfo = this.props.stateInfo?.relic_selection_info;
                 if(!planSelectionInfo || !planSelectionInfo[this.props.playerId]) {
