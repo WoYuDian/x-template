@@ -12,7 +12,7 @@ declare interface CustomNetTableDeclarations {
         state_info: {
             last_round_time: number,
             time_from_last_round: number, 
-            state: string, 
+            state: 'practice_in_progress' | 'practice_prepare' | 'rank_in_progress' | 'rank_prepare' | 'cycle_in_progress' | 'cycle_prepare' | 'hero_selection', 
             round_count_down: number, 
             round_count: number, 
             round_inited: 0 | 1, 

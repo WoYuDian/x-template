@@ -11,7 +11,7 @@ export function playerHeroSelection(event) {
 
             
     if(!playerSelection || !playerSelection.hero_selection_info || !playerSelection.hero_selection_info[event.playerId.toString()]) {
-        playerSelection[event.playerId] = {hero_name: event.heroName}
+        playerSelection[event.playerId.toString()] = {hero_name: event.heroName}
         
         stateInfo.hero_selection_info = playerSelection;
         print('Set the player hero selection result: ', cacheUpdate('gameStateInfo'))

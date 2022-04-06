@@ -13,7 +13,8 @@
         "experimentalDecorators": true,
         "strictNullChecks": false,
         "strictPropertyInitialization": false,
-        "strict": false
+        "strict": false,
+        "resolveJsonModule": true,
     },
     "include": ["src", "../../shared"],
     "tstl": {

@@ -1,4 +1,5 @@
 import { Timers } from "../lib/timers";
+import { checkGameTime } from "../game_logic/state_manager";
 
 export function playerFullConnect(e: PlayerConnectFullEvent) {
     const playerMap = CustomNetTables.GetTableValue('player_info', 'player_map') || {};
@@ -12,7 +13,7 @@ export function gameStateChange(e: DotaGameStateChangeEvent) {
 
     if(e.new_state == 4) {
         Timers.CreateTimer(function() {
-            print('herer+++')
+            checkGameTime()
             return 1
         })
     }

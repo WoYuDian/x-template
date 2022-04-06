@@ -17,5 +17,5 @@
 "cycle_in_progress" "渡劫回合"
 "rank_prepare" "排名准备"
 "rank_in_progress" "排名回合"
-"daily_prepare" "修炼准备"
-"daily_in_progress" "修炼回合"
+"practice_prepare" "修炼准备"
+"practice_in_progress" "修炼回合"
