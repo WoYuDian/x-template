@@ -1,3 +1,9 @@
 <root>
+    <scripts>
+        <include src="./script.tsx" />
+    </scripts>
+    <styles>
+        <include src="./custom_loading_screen.scss" />
+    </styles>
     <Panel />
 </root>

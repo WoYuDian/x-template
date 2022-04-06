@@ -1,20 +1,28 @@
 declare interface CustomNetTableDeclarations {
-    game_timer: {
-        game_timer: {
-            current_time: number;
-            current_state: 1 | 2 | 3 | 4 | 5;
-            current_round: number;
-        };
+    hero_pool: {
+        pool: string[];
     };
-    hero_list: {
-        hero_list: Record<string, string> | string[];
+    player_info: {
+        player_map: {},
     };
-    custom_net_table_1: {
-        key_1: number;
-        key_2: string;
-    };
-    custom_net_table_3: {
-        key_1: number;
-        key_2: string;
-    };
+    player_configuration: {
+        player_location: {[player_id: string]: {center: {x: number, y: number, z: number}}}
+    }
+    game_state_info: {
+        state_info: {
+            last_round_time: number,
+            time_from_last_round: number, 
+            state: string, 
+            round_count_down: number, 
+            round_count: number, 
+            round_inited: 0 | 1, 
+            round_type: 'cycle' | 'rank' | 'practice' | 'hero_selection',
+            is_prepare: 0 | 1,
+            player_relic_selections: {[playerId: string]: {relic_selections: {[key: string]: {texture_src: string, relic_name: string}}}}    
+            player_hero_pool: {[key: string]: {[key: string]: string}}        
+            hero_selection_info: {[player_id: string]: {hero_name: string}}
+            relic_selection_info: {[player_id: string]: {relic_name: string}},
+            plan_selection_info: {[player_id: string]: {plan_name: 'practice' | 'adventure'}},
+        },
+    }
 }

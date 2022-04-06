@@ -1,1 +1,21 @@
-"test"  "test%%<font color='#232323'></font>1"
+//------------------Game info
+"addon_game_name" "飞升"
+"addonname" "飞升"
+//------------------Team name
+"DOTA_Custom1" "玩家1"
+"DOTA_Custom2" "玩家2"
+"DOTA_Custom3" "玩家3"
+"DOTA_Custom4" "玩家4"
+"DOTA_Custom5" "玩家5"
+"DOTA_Custom6" "玩家6"
+"DOTA_Custom7" "玩家7"
+"DOTA_Custom8" "玩家8"
+
+//-----------------State info
+"hero_selection" "英雄选择"
+"cycle_prepare" "渡劫准备"
+"cycle_in_progress" "渡劫回合"
+"rank_prepare" "排名准备"
+"rank_in_progress" "排名回合"
+"daily_prepare" "修炼准备"
+"daily_in_progress" "修炼回合"

@@ -1,4 +1,7 @@
-// import React from 'react';
-// import { render } from '@demon673/react-panorama';
+import React from 'react';
+import { render } from '@demon673/react-panorama';
+import {UIBody} from './ui'
 
-// render(<ReactPanoramaPanel />, $.GetContextPanel()); // an example of how to render a panel
+GameUI.SetDefaultUIEnabled(DotaDefaultUIElement_t.DOTA_DEFAULT_UI_TOP_BAR, false)
+
+render(<UIBody/>, $.GetContextPanel());

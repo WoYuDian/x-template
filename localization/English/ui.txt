@@ -1,1 +1,21 @@
-"test"  "test%%<font color='#232323'></font>1"
+//------------------Game info
+"addon_game_name" "ascension"
+"addonname" "ascension"
+//------------------Team name
+"DOTA_Custom1" "Player 1"
+"DOTA_Custom2" "Player 2"
+"DOTA_Custom3" "Player 3"
+"DOTA_Custom4" "Player 4"
+"DOTA_Custom5" "Player 5"
+"DOTA_Custom6" "Player 6"
+"DOTA_Custom7" "Player 7"
+"DOTA_Custom8" "Player 8"
+
+//-----------------State info
+"hero_selection" "Hero Selection"
+"cycle_prepare" "Cycle Prepare"
+"cycle_in_progress" "Cycle Round"
+"rank_prepare" "Rand Prepare"
+"rank_in_progress" "Rank Round"
+"daily_prepare" "Practice prepare"
+"daily_in_progress" "Practice Round"

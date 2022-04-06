@@ -2,7 +2,10 @@
 {
     custom_net_tables = 
     [
-        "hero_list",
-        "game_timer"
+        "hero_pool",
+        "player_info",
+        "player_configuration",
+        "game_state_info"
     ]
 }
+
