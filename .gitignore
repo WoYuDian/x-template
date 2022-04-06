@@ -21,7 +21,7 @@ game/resource/word_filter_cache_1.dat
 *.vmesh_c
 *.vsndevts_c
 *.vsnd_c
-
+*.history
 
 !scripts/**/*.*
 game/scripts/vscripts
