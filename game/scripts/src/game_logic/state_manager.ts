@@ -9,7 +9,7 @@ const configuration = {
     hero_selection_pool_size: 3,
     practice_prepare_duration: 5,
     practice_duration: 5,
-    practice_round_num_before_rank: 1,
+    practice_round_num_before_rank: 3,
     rank_prepare_duration: 5,
     rank_duration: 5,
     rank_round_num_before_cycle: 1,
@@ -110,6 +110,9 @@ function tickGameTime(stateInfo: stateInfo, roundIniter: Function, roundSettler:
 }
 
 function practicePrepareIniter(stateInfo: stateInfo) {    
+    stateInfo.relic_selection_info = {};
+    stateInfo.plan_selection_info = {};
+    
     const playerMap = CustomNetTables.GetTableValue('player_info', 'player_map')
 
     for(const playerId in playerMap) {
@@ -129,7 +132,7 @@ function practicePrepareIniter(stateInfo: stateInfo) {
             relicPool[index] = relicConf.available_relics[index]
         }        
 
-        stateInfo.player_relic_selections[playerId].relic_selections = relicPool
+        stateInfo.player_relic_selections[playerId] = {relic_selections: relicPool}
     }
 }
 

@@ -21,7 +21,7 @@ export function playerHeroSelection(event) {
             const playerLocation = CustomNetTables.GetTableValue('player_configuration', 'player_location')[event.playerId.toString()].center
             const hero = CreateHeroForPlayer(event.heroName, player)
             hero.SetControllableByPlayer(event.playerId, true);
-            hero.SetRespawnPosition(Vector(playerLocation.x, playerLocation.y, playerLocation.z))
+            hero.SetRespawnPosition(Vector(playerLocation.x - 1024, playerLocation.y + 1024, playerLocation.z))
             hero.RespawnHero(false, true)
             hero.AddAbility('abaddon_death_coil')
             hero.AddAbility('abaddon_death_coil')

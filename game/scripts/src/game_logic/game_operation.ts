@@ -6,6 +6,7 @@ export function teleportPlayerToHome(playerId: PlayerID) {
 
         if(hero) {
             hero.RespawnHero(false, false)
+            CenterCameraOnUnit(playerId, hero)
         }
     }
     

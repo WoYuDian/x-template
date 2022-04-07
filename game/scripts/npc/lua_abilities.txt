@@ -1,6 +1,6 @@
 // generate with Xavier's kv generator https://github.com/XavierCHN/x-template
 "XLSXContent" {
-	"item_kv_generator_test" {
+	"item_kv_generator_test1" {
 		"BaseClass" "ability_lua"
 		"AbilityValues" {
 			"damage" "0.1 0.2 0.3 0.4"
