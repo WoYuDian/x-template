@@ -23,21 +23,15 @@ export function playerHeroSelection(event) {
             hero.SetControllableByPlayer(event.playerId, true);
             hero.SetRespawnPosition(Vector(playerLocation.x - 1024, playerLocation.y + 1024, playerLocation.z))
             hero.RespawnHero(false, true)
-            hero.AddAbility('abaddon_death_coil')
-            hero.AddAbility('abaddon_death_coil')
-            hero.AddAbility('abaddon_death_coil')
-            hero.AddAbility('abaddon_death_coil')
-            hero.AddAbility('abaddon_death_coil')
-            hero.AddAbility('abaddon_death_coil')
-            hero.AddAbility('abaddon_death_coil')
-            hero.AddAbility('abaddon_death_coil')
-            hero.AddAbility('abaddon_death_coil')
-            hero.AddAbility('abaddon_death_coil')
-            hero.AddAbility('abaddon_death_coil')
-            hero.AddAbility('abaddon_death_coil')
-            hero.AddAbility('abaddon_death_coil')
-            hero.AddAbility('abaddon_death_coil')
-            hero.RemoveAbility('abaddon_death_coil')
+            const ability =  hero.AddAbility('antimage_mana_break')
+            // for(let i = 0; i < 25; i++) {
+            //     hero.AddAbility('test_ability')
+            // }
+            // hero.UpgradeAbility(ability)
+            // hero.UpgradeAbility(ability)
+
+            hero.SetAbilityByIndex(ability, 0)
+            hero.CastAbilityImmediately(ability, player.GetEntityIndex())
             CenterCameraOnUnit(event.playerId, hero)
             player.SetAssignedHeroEntity(hero)                  
         }

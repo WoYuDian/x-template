@@ -13,7 +13,7 @@
 	[
 		{
 			Key = "SPACE"
-			Command = "KeySpace"
+			Command = "+KeySpace"
 		},
 	]
 	DisableIK = false

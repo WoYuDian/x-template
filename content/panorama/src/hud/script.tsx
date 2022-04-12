@@ -34,3 +34,11 @@ GameUI.SetDefaultUIEnabled(DotaDefaultUIElement_t.DOTA_DEFAULT_UI_CUSTOMUI_BEHIN
 GameUI.SetDefaultUIEnabled(DotaDefaultUIElement_t.DOTA_DEFAULT_UI_AGHANIMS_STATUS, false)
 GameUI.SetDefaultUIEnabled(DotaDefaultUIElement_t.DOTA_DEFAULT_UI_ELEMENT_COUNT, false)
 render(<UIBody/>, $.GetContextPanel());
+
+// Game.AddCommand( "+KeySpace", OnExecuteAbility1ButtonPressed, "", 0 );
+// function OnExecuteAbility1ButtonPressed()
+// {
+//     var queryUnit = Players.GetLocalPlayerPortraitUnit();
+//     var ability = Entities.GetAbility( queryUnit, 0 );
+//     Abilities.ExecuteAbility(ability, queryUnit, false)
+// }

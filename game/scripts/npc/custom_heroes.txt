@@ -1,0 +1,22 @@
+// generate with Xavier's kv generator https://github.com/XavierCHN/x-template
+"XLSXContent" {
+	"test" {
+		"override_hero" "npc_dota_hero_antimage"
+		"Creature" {
+			"AttachWearables" {
+
+			}
+
+		}
+		"Ability1" ""
+		"Ability2" ""
+		"Ability3" ""
+		"Ability4" ""
+		"Ability5" ""
+		"Ability6" ""
+		"ArmorPhysical" "1"
+		"StatusHealth" "200"
+
+	}
+
+}

@@ -1,0 +1,21 @@
+{
+    "book_name": "fire_magic",
+    "texture_src": "jakiro_dual_breath",
+    "abilities": {
+        "jakiro_liquid_fire": {
+            "parent_ability": "arc_warden_tempest_double"
+        },
+        "juggernaut_omni_slash": {
+            "parent_ability": "jakiro_liquid_fire"
+        },
+        "keeper_of_the_light_illuminate": {
+            "parent_ability": "juggernaut_omni_slash"
+        },
+        "keeper_of_the_light_chakra_magic": {
+            "parent_ability": "juggernaut_omni_slash"
+        },
+        "keeper_of_the_light_recall": {
+            "parent_ability": "juggernaut_omni_slash"
+        }
+    }
+}

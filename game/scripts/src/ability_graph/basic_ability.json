@@ -1,0 +1,21 @@
+{
+    "book_name": "basic_ability",
+    "texture_src": "antimage_blink",
+    "abilities": {
+        "antimage_mana_break": {
+            "parent_ability": null
+        },
+        "arc_warden_magnetic_field": {
+            "parent_ability": null
+        },
+        "arc_warden_tempest_double": {
+            "parent_ability": null
+        },
+        "axe_culling_blade": {
+            "parent_ability": null
+        },
+        "bane_nightmare": {
+            "parent_ability": null
+        }
+    }
+}

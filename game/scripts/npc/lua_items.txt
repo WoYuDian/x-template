@@ -11,6 +11,7 @@
 		"MaxLevel" "2"
 		"AbilityCooldown" "1 2 3 4 "
 		"AbilityManaCost" "1 1 1 1"
+		"AbilityTextureName" ""
 
 	}
 

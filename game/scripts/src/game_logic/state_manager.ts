@@ -128,8 +128,8 @@ function practicePrepareIniter(stateInfo: stateInfo) {
         }
 
         const relicPool = {}
-        for (const index of relicIndex) {
-            relicPool[index] = relicConf.available_relics[index]
+        for (let i = 0; i < relicIndex.length; i++) {
+            relicPool[i] = relicConf.available_relics[relicIndex[i]]
         }        
 
         stateInfo.player_relic_selections[playerId] = {relic_selections: relicPool}
@@ -143,8 +143,9 @@ function practicePrepareSettler(stateInfo:  stateInfo) {
         if(!stateInfo.plan_selection_info[playerId]) {
             stateInfo.plan_selection_info[playerId] = {plan_name: 'practice'}
         } else if((stateInfo.plan_selection_info[playerId].plan_name == 'adventure') && !stateInfo.relic_selection_info[playerId]) {
-            const randomIndex = RandomInt(1, configuration.relic_selection_size);
+            const randomIndex = RandomInt(0, configuration.relic_selection_size - 1);
             const relic = stateInfo.player_relic_selections[playerId].relic_selections[randomIndex]
+            
             stateInfo.relic_selection_info[playerId] = {relic_name: relic.relic_name}
         }
     }
@@ -160,14 +161,15 @@ function heroSelectionIniter(stateInfo: stateInfo) {
         const heroPool = []
         const heroPoolMap = {}
         while(heroPool.length < configuration.hero_selection_pool_size) {
-            const randomIndex = RandomInt(1, heroConf.available_heros.length);
+            const randomIndex = RandomInt(0, heroConf.available_heros.length - 1);
 
             if(heroPool.indexOf(heroConf.available_heros[randomIndex]) < 0) {
                 heroPool.push(heroConf.available_heros[randomIndex])
                 heroPoolMap[heroPool.length.toString()] = heroConf.available_heros[randomIndex]
             }
+            
         }
-
+        
         stateInfo.player_hero_pool[playerId] = heroPoolMap
     }
 

@@ -1,0 +1,21 @@
+{
+    "book_name": "ice_magic",
+    "texture_src": "batrider_sticky_napalm",
+    "abilities": {
+        "beastmaster_inner_beast": {
+            "parent_ability": "arc_warden_magnetic_field"
+        },
+        "bloodseeker_bloodrage": {
+            "parent_ability": "beastmaster_inner_beast"
+        },
+        "bloodseeker_thirst": {
+            "parent_ability": "beastmaster_inner_beast"
+        },
+        "bounty_hunter_shuriken_toss": {
+            "parent_ability": "bloodseeker_thirst"
+        },
+        "brewmaster_thunder_clap": {
+            "parent_ability": "bounty_hunter_shuriken_toss"
+        }
+    }
+}

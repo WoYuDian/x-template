@@ -1,0 +1,5 @@
+#base "override_abilities.txt"
+
+"DOTAAbilities"
+{
+}

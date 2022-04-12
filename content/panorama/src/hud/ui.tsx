@@ -1,6 +1,11 @@
 import React from 'react';
 import {SelectionPanel} from './components/selection-panel'
 import {GameStateBar} from './components/game-state-bar'
+import { AbilityPanel } from './components/ability-panel';
+
+import {loadAbilityGraph, getBookRoot} from '../../../../game/scripts/src/ability_graph/graph_loader'
+
+loadAbilityGraph()
 
 interface UIProps {
 
@@ -20,17 +25,19 @@ export class UIBody extends React.Component<any, UIState> {
     playerInfoListenerId: NetTableListenerID
     playerHeroSelectionId: NetTableListenerID
     gameStateInfoId: NetTableListenerID
+    bookRoot: any
     constructor(props: any) {
         super(props);
         this.playerId = Game.GetLocalPlayerID().toString()
         this.state = {
-            // heroPool: {'1': 'npc_dota_hero_elder_titan'},
             stateInfo: null
         }
+        this.bookRoot = getBookRoot()
     }
 
     render() {
         return (<Panel style={{width: '100%', height: '100%'}}>
+            <AbilityPanel bookRoot={this.bookRoot}></AbilityPanel>
             <GameStateBar gameTime={this.state.stateInfo?.round_count_down || 0} gameState={this.state.stateInfo?.state || ''}></GameStateBar>
             <SelectionPanel playerId={this.playerId} stateInfo={this.state.stateInfo}></SelectionPanel>
         </Panel>)
@@ -38,20 +45,6 @@ export class UIBody extends React.Component<any, UIState> {
 
     componentDidMount() {
         const _this = this;
-        // this.playerInfoListenerId = CustomNetTables.SubscribeNetTableListener('player_info', function(e) {
-        //     const data = CustomNetTables.GetTableValue('player_info', 'player_hero_pool')
-        //     if(data && data[_this.playerId]) {
-        //         const heroPool = data[_this.playerId]
-        //         _this.setState({heroPool: heroPool})
-        //     }
-        // })
-
-        // this.playerHeroSelectionId = CustomNetTables.SubscribeNetTableListener('hero_selection', function(e) {
-        //     const data = CustomNetTables.GetTableValue('hero_selection', 'hero_selection_info')
-        //     if(data && data[_this.playerId].hero_name) {
-        //         _this.setState({selectedHero: data[_this.playerId].hero_name})
-        //     }
-        // })
 
         this.gameStateInfoId = CustomNetTables.SubscribeNetTableListener('game_state_info', function(e) {
             const stateInfo = CustomNetTables.GetTableValue('game_state_info', 'state_info')

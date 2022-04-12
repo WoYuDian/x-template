@@ -1,6 +1,8 @@
 import { reloadable } from "./lib/tstl-utils";
 import * as systemEventHandlers from './event_handlers/system_events'
 import * as customEventHandlers from './event_handlers/custom_events'
+import {loadAbilityGraph, getBookRoot} from './ability_graph/graph_loader'
+import {printObject} from './util'
 
 declare global {
     interface CDOTAGamerules {
@@ -48,7 +50,6 @@ export class GameMode {
         gamemode.SetFogOfWarDisabled(true)
         gamemode.SetCameraDistanceOverride(1234)
 
-        const _this = this;
         ListenToGameEvent('player_connect_full', systemEventHandlers.playerFullConnect, this)
 
         ListenToGameEvent('dota_game_state_change', systemEventHandlers.gameStateChange, this)
@@ -56,6 +57,31 @@ export class GameMode {
         CustomGameEventManager.RegisterListener('player_hero_selection', customEventHandlers.playerHeroSelection.bind(this))
         CustomGameEventManager.RegisterListener('player_plan_selection', customEventHandlers.playerPlanSelection.bind(this))
         CustomGameEventManager.RegisterListener('player_relic_selection', customEventHandlers.playerRelicSelection.bind(this))
+
+        // function traverseBookGraph(book) {
+        //     book.ability_root = book.ability_root || {}
+        //     for(const key in book.ability_root) {
+        //         traverseBookAbility(book.ability_root[key])
+        //     }
+        //     if(Object.keys(book.children).length > 0) {
+        //         for(const key in book.children) {
+        //             traverseBookGraph(book.children[key])
+        //         }
+        //     }
+        // }
+
+        // function traverseBookAbility(ability) {
+        //     if(Object.keys(ability.children).length > 0) {
+        //         for(const key in ability.children) {
+        //             traverseBookAbility(ability.children[key])
+        //         }
+        //     }
+        // }
+
+        // loadAbilityGraph();
+        // let bookRoot = getBookRoot();
+        // printObject(bookRoot, 0, ['parents'])
+        // traverseBookGraph(bookRoot)        
     }
 
     
