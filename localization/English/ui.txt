@@ -19,3 +19,7 @@
 "rank_in_progress" "Rank Round"
 "practice_prepare" "Practice prepare"
 "practice_in_progress" "Practice Round"
+
+//-----------------Ability panel
+"ability_panel" "Ability Panel"
+"close_ability_panel" "Close"

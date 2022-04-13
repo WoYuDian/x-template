@@ -19,3 +19,7 @@
 "rank_in_progress" "排名回合"
 "practice_prepare" "修炼准备"
 "practice_in_progress" "修炼回合"
+
+//-----------------Ability panel
+"ability_panel" "技能面板"
+"close_ability_panel" "关闭"

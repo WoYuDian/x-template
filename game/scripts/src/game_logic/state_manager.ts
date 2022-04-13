@@ -7,7 +7,7 @@ import { teleportPlayerToHome } from './game_operation'
 const configuration = {
     hero_selection_duration: 5,
     hero_selection_pool_size: 3,
-    practice_prepare_duration: 5,
+    practice_prepare_duration: 11111115,
     practice_duration: 5,
     practice_round_num_before_rank: 3,
     rank_prepare_duration: 5,

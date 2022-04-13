@@ -33,6 +33,12 @@ GameUI.SetDefaultUIEnabled(DotaDefaultUIElement_t.DOTA_DEFAULT_UI_TOP_BAR, false
 GameUI.SetDefaultUIEnabled(DotaDefaultUIElement_t.DOTA_DEFAULT_UI_CUSTOMUI_BEHIND_HUD_ELEMENTS, false)
 GameUI.SetDefaultUIEnabled(DotaDefaultUIElement_t.DOTA_DEFAULT_UI_AGHANIMS_STATUS, false)
 GameUI.SetDefaultUIEnabled(DotaDefaultUIElement_t.DOTA_DEFAULT_UI_ELEMENT_COUNT, false)
+const rootPanel = $.GetContextPanel().GetParent()?.GetParent();
+
+if(rootPanel) {
+    rootPanel.style.zIndex = 0;
+}
+
 render(<UIBody/>, $.GetContextPanel());
 
 // Game.AddCommand( "+KeySpace", OnExecuteAbility1ButtonPressed, "", 0 );

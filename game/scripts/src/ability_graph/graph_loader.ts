@@ -45,6 +45,10 @@ export function loadAbilityGraph() {
     }
 }
 
+export function getBookMap() {
+    return abilityBooks;
+}
+
 export function getBookRoot() {
     let curBook;
     for(const bookName in abilityBooks) {
