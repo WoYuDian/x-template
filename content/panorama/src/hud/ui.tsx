@@ -3,7 +3,7 @@ import {SelectionPanel} from './components/selection-panel'
 import {GameStateBar} from './components/game-state-bar'
 import { AbilityPanel } from './components/ability-panel';
 
-import {loadAbilityGraph, getBookRoot, getBookMap} from '../../../../game/scripts/src/ability_graph/graph_loader'
+import {loadAbilityGraph, getBookRoot, getBookMap, getAbilityMap} from '../../../../game/scripts/src/ability_graph/graph_loader'
 
 loadAbilityGraph()
 
@@ -18,7 +18,10 @@ type stateInfo<
 
 interface UIState {
     stateInfo: stateInfo<'game_state_info', 'state_info'> | null,
-    showAbilityPanel: boolean
+    showAbilityPanel: boolean,
+    bookRoot: any,
+    bookMap: any
+    abilityMap: any
 }
 
 export class UIBody extends React.Component<any, UIState> {
@@ -26,24 +29,24 @@ export class UIBody extends React.Component<any, UIState> {
     playerInfoListenerId: NetTableListenerID
     playerHeroSelectionId: NetTableListenerID
     gameStateInfoId: NetTableListenerID
-    bookRoot: any
-    bookMap: any
+
     constructor(props: any) {
         super(props);
         this.playerId = Game.GetLocalPlayerID().toString()
         this.state = {
             stateInfo: null,
-            showAbilityPanel: false
+            showAbilityPanel: false,
+            bookRoot: getBookRoot(),
+            bookMap: getBookMap(),
+            abilityMap: getAbilityMap()
         }
-        this.bookRoot = getBookRoot()
-        this.bookMap = getBookMap()
         this.setAbilityPanelVisible = this.setAbilityPanelVisible.bind(this)
         this.clickBackground = this.clickBackground.bind(this)
     }
 
     render() {
         return (<Panel style={{width: '100%', height: '100%'}}>
-            <AbilityPanel setAbilityPanelVisible={this.setAbilityPanelVisible} showAbilityPanel={this.state.showAbilityPanel} bookRoot={this.bookRoot} bookMap={this.bookMap}></AbilityPanel>
+            <AbilityPanel setAbilityPanelVisible={this.setAbilityPanelVisible} showAbilityPanel={this.state.showAbilityPanel} abilityMap={this.state.abilityMap} bookRoot={this.state.bookRoot} bookMap={this.state.bookMap}></AbilityPanel>
             <GameStateBar gameTime={this.state.stateInfo?.round_count_down || 0} gameState={this.state.stateInfo?.state || ''}></GameStateBar>
             <SelectionPanel playerId={this.playerId} stateInfo={this.state.stateInfo}></SelectionPanel>
         </Panel>)

@@ -4,6 +4,8 @@ import * as basic_abilities from  './basic_ability.json'
 abilityBooks[basic_abilities.book_name] = basic_abilities;
 import * as ice_magic from  './ice_magic.json'
 abilityBooks[ice_magic.book_name] = ice_magic;
+import * as fire_magic from  './fire_magic.json'
+abilityBooks[fire_magic.book_name] = fire_magic;
 
 for(const bookName in abilityBooks) {
     abilityBooks[bookName].children = {}
@@ -22,7 +24,6 @@ export function loadAbilityGraph() {
             ability.ability_name = abilityKey;
             ability.book_name = book.book_name;
             ability.children = {}
-            // {ability_name: abilityKey, book_name: book.book_name , ...book.abilities[abilityKey], children: {}}
             abilityTable[abilityKey] = ability;
         }
     }
@@ -43,6 +44,10 @@ export function loadAbilityGraph() {
             abilityBooks[ability.book_name].ability_root[abilityKey] = ability;
         }
     }
+}
+
+export function getAbilityMap() {
+    return abilityTable;
 }
 
 export function getBookMap() {

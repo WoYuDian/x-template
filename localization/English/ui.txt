@@ -23,3 +23,5 @@
 //-----------------Ability panel
 "ability_panel" "Ability Panel"
 "close_ability_panel" "Close"
+"book_graph" "Book Graph"
+"ability_graph" "Ability Graph"

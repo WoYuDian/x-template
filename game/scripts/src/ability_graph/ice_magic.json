@@ -16,6 +16,15 @@
         },
         "brewmaster_thunder_clap": {
             "parent_ability": "bounty_hunter_shuriken_toss"
+        },
+        "legion_commander_overwhelming_odds": {
+            "parent_ability": "brewmaster_thunder_clap"
+        },
+        "lich_frost_nova": {
+            "parent_ability": "legion_commander_overwhelming_odds"
+        },
+        "life_stealer_rage": {
+            "parent_ability": "lich_frost_nova"
         }
     }
 }
