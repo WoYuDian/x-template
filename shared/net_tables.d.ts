@@ -23,5 +23,12 @@ declare interface CustomNetTableDeclarations {
             relic_selection_info: {[player_id: string]: {relic_name: string,}},
             plan_selection_info: {[player_id: string]: {plan_name: 'practice' | 'adventure'}},
         },
+    },
+    player_ability_info: {
+        ability_info: {
+            book_map: {[player_id: string]: {[book_name: string]: number}}
+            ability_points: {[player_id: string]: number},
+            ability_level_map: {[player_id: string]: {[ability_name: string]: number}}
+        }
     }
 }

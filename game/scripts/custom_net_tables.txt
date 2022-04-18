@@ -5,7 +5,8 @@
         "hero_pool",
         "player_info",
         "player_configuration",
-        "game_state_info"
+        "game_state_info",
+        "player_ability_info"
     ]
 }
 

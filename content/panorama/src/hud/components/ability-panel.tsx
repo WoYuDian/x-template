@@ -2,13 +2,16 @@ import React, { Children, EventHandler } from 'react';
 import {AbilityGraphItem} from './ability-graph-item'
 import {BookGraphItem} from './book-graph-item'
 import {Line} from './line'
+import { CustomTableType } from '../common_type'
 
 interface props {
     bookRoot: any,
     bookMap: any,
     abilityMap: any,
     showAbilityPanel: boolean,
-    setAbilityPanelVisible: Function
+    setAbilityPanelVisible: Function,
+    playerId: PlayerID,
+    playerAbilityInfo: CustomTableType<'player_ability_info', 'ability_info'> | null
 }
 
 interface state {
@@ -19,6 +22,7 @@ export class AbilityPanel extends React.Component<props, state> {
     bookLevelIndexTable: {[key: number]: number}
     uiStyleConfiguration: any
     bookLinks: any[]
+    availableAbilityPoints: number
     constructor(props: props) {
         super(props)
         this.togglePanel = this.togglePanel.bind(this)
@@ -32,8 +36,8 @@ export class AbilityPanel extends React.Component<props, state> {
             selectedBook: null
         }
         this.processBookGraph();
-        this.selectBook = this.selectBook.bind(this)
-    }
+        this.selectBook = this.selectBook.bind(this)    
+    }    
 
     render() {
         const bookItems = []
@@ -86,6 +90,10 @@ export class AbilityPanel extends React.Component<props, state> {
 
                     </Panel>
                     <Panel style={{position: '30% 0 0', width: '70%', height: '100%'}}>
+                        <Panel style={{position: '20px 95% 0', flowChildren: 'right'}}>
+                            <Label style={{fontSize: '20px', color: '#ffffff'}} localizedText='#ability_points'></Label>
+                            <Label style={{fontSize: '20px', color: '#ffffff'}} text={this.props.playerAbilityInfo?.ability_points[this.props.playerId.toString()] || 0}></Label>
+                        </Panel>                        
                         <Panel style={{margin: '100px 20px 50px 20px', width: '100%', height: '100%'}}>
                             <Label style={{width: '100%', height: '50px', lineHeight: '40px', fontSize: '30px', color: '#ffffff', textAlign: 'center'}} localizedText='#ability_graph'></Label>
                             <Panel style={{padding: '0 0 20px 0', position: '0 6% 0', width: '100%', height: '92%', //@ts-ignore

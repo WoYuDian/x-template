@@ -1,12 +1,9 @@
 import React, { EventHandler } from 'react';
+import { CustomTableType } from '../common_type'
 
-type stateInfo<
-    TName extends keyof CustomNetTableDeclarations,
-    T extends keyof CustomNetTableDeclarations[TName]
-    > = CustomNetTableDeclarations[TName][T]
 
 interface props {
-    stateInfo: stateInfo<'game_state_info', 'state_info'>,
+    stateInfo: CustomTableType<'game_state_info', 'state_info'>,
     playerId: string
 }
 

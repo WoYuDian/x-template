@@ -25,3 +25,4 @@
 "close_ability_panel" "关闭"
 "book_graph" "功法图鉴"
 "ability_graph" "功法技能"
+"ability_points" "技能点："

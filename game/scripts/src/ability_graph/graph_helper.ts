@@ -67,3 +67,16 @@ export function getBookRoot() {
 
     return curBook;
 }
+
+export function isAbilityLearnable(playerAbilityMap, playerBookMap, abilityName) {    
+    const ability = abilityTable[abilityName];
+
+    const parentAbility = ability.parent_ability? abilityTable[ability.parent_ability] : null;
+
+    let parentLearned = true;
+    if(parentAbility) {
+        parentLearned = ((playerAbilityMap[parentAbility.ability_name] || 0) > 0) && ((playerBookMap[parentAbility.book_name] || 0) > 0);
+    }
+
+    return parentLearned && ((playerAbilityMap[ability.ability_name] || 0) > 0) && ((playerBookMap[ability.book_name] || 0) > 0);
+}
