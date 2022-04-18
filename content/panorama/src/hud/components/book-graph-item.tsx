@@ -4,7 +4,8 @@ interface props {
     book: any
     styleConf: any
     selectBook: Function
-    id: string
+    id: string,
+    selected: boolean
 }
 
 export class BookGraphItem extends React.Component<props, any> {
@@ -15,7 +16,11 @@ export class BookGraphItem extends React.Component<props, any> {
     }
 
     render() {
-        return <DOTAAbilityImage id={this.props.id} onactivate={this.selectBook} style={{borderRadius: '10px', height: `width-percentage(${this.props.styleConf.height}%)`, width: `${this.props.styleConf.width}%`, position: `${this.props.book.position.x}% ${this.props.book.position.y}px 0`}} abilityname={this.props.book.texture_src}></DOTAAbilityImage>
+        const border = this.props.selected? '3px solid #e0c060': null
+        return <Panel id={this.props.id} onactivate={this.selectBook} style={{border: border ,borderRadius: '10px', height: `width-percentage(${this.props.styleConf.height}%)`, width: `${this.props.styleConf.width}%`, position: `${this.props.book.position.x}% ${this.props.book.position.y}px 0`}}>
+            <DOTAAbilityImage   style={{padding: '5%', height: `90%`, width: `90%`}} abilityname={this.props.book.texture_src}></DOTAAbilityImage>
+        </Panel>
+        
     }
 
     selectBook(e: any) {

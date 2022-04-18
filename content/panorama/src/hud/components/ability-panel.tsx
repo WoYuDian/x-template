@@ -25,7 +25,7 @@ export class AbilityPanel extends React.Component<props, state> {
         this.bookLevelIndexTable = {};
         this.bookLinks = [];
         this.uiStyleConfiguration = {
-            book: {width: 10, height: 100, levelGapHeight: 50},
+            book: {width: 12, height: 100, levelGapHeight: 50},
             ability: {width: 5, height: 100, levelGapHeight: 50}
         }
         this.state = {
@@ -40,7 +40,7 @@ export class AbilityPanel extends React.Component<props, state> {
         const bookLines = []
         for(const bookName in this.props.bookMap) {
             this.calcBookPosition(this.props.bookMap[bookName], this.bookLevelIndexTable[this.props.bookMap[bookName].level])
-            bookItems.push(<BookGraphItem selectBook={this.selectBook} id={bookName} key={bookName} styleConf={this.uiStyleConfiguration.book} book={this.props.bookMap[bookName]}></BookGraphItem>)
+            bookItems.push(<BookGraphItem selected={this.state.selectedBook == bookName} selectBook={this.selectBook} id={bookName} key={bookName} styleConf={this.uiStyleConfiguration.book} book={this.props.bookMap[bookName]}></BookGraphItem>)
         }
 
         for(const link of this.bookLinks) {
@@ -105,11 +105,10 @@ export class AbilityPanel extends React.Component<props, state> {
     calcLinePosition(link: any) {
         const from = $(`#${link.from}`);
         const to = $(`#${link.to}`);
-
         if(from && to) {
             return {
-                from: {x: from.actualxoffset + (from.actuallayoutwidth / 2), y: from.actualyoffset + from.actuallayoutheight},
-                to: {x: to.actualxoffset + (to.actuallayoutwidth / 2), y: from.actualyoffset}
+                from: {x: (from.actualxoffset + from.contentwidth / 2) * 1.2, y: (from.actualyoffset + from.contentheight) * 1.2 + 8},
+                to: {x: (to.actualxoffset + to.contentwidth / 2) * 1.2, y: (to.actualyoffset) * 1.2 - 8},
             }
         } else {
             return null
