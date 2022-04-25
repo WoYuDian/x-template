@@ -3,6 +3,7 @@ import {AbilityGraphItem} from './ability-graph-item'
 import {BookGraphItem} from './book-graph-item'
 import {Line} from './line'
 import { CustomTableType } from '../common_type'
+import {getPlayerAbilityState, getPlayerBookState} from '../../../../../game/scripts/src/ability_graph/graph_helper'
 
 interface props {
     bookRoot: any,
@@ -30,7 +31,7 @@ export class AbilityPanel extends React.Component<props, state> {
         this.bookLinks = [];
         this.uiStyleConfiguration = {
             book: {width: 12, height: 100, levelGapHeight: 50},
-            ability: {width: 5, height: 100, levelGapHeight: 50}
+            ability: {width: 5, height: 140, levelGapHeight: 50}
         }
         this.state = {
             selectedBook: null
@@ -39,19 +40,23 @@ export class AbilityPanel extends React.Component<props, state> {
         this.selectBook = this.selectBook.bind(this)    
     }    
 
-    render() {
+    render() {        
         const bookItems = []
         const bookLines = []
+        const playerBookMap = this.props.playerAbilityInfo?.book_map[this.props.playerId.toString()]
+        const playerAbilityMap = this.props.playerAbilityInfo?.ability_level_map[this.props.playerId.toString()]
+        const playerAbilityPoints = this.props.playerAbilityInfo?.ability_points[this.props.playerId.toString()]
+
         for(const bookName in this.props.bookMap) {
             this.calcBookPosition(this.props.bookMap[bookName], this.bookLevelIndexTable[this.props.bookMap[bookName].level])
-            bookItems.push(<BookGraphItem selected={this.state.selectedBook == bookName} selectBook={this.selectBook} id={bookName} key={bookName} styleConf={this.uiStyleConfiguration.book} book={this.props.bookMap[bookName]}></BookGraphItem>)
+            bookItems.push(<BookGraphItem state={getPlayerBookState(playerBookMap, bookName)} selected={this.state.selectedBook == bookName} selectBook={this.selectBook} id={bookName} key={bookName} styleConf={this.uiStyleConfiguration.book} book={this.props.bookMap[bookName]}></BookGraphItem>)
         }
 
         for(const link of this.bookLinks) {
             const line = this.calcLinePosition(link)
 
             if(line) {
-                bookLines.push(<Line key={`${link.from}-${link.to}`} line={line}></Line>)
+                bookLines.push(<Line id={`${link.from}-${link.to}`} key={`${link.from}-${link.to}`} line={line}></Line>)
             }
         }
 
@@ -61,14 +66,14 @@ export class AbilityPanel extends React.Component<props, state> {
             const book = this.props.bookMap[this.state.selectedBook];
             for(const abilityName of book.abilityKeys) {
                 this.calcAbilityPosition(this.props.abilityMap[abilityName], book.abilityLevelIndexTable[this.props.abilityMap[abilityName].level])
-                abilityItems.push(<AbilityGraphItem id={abilityName} key={abilityName} styleConf={this.uiStyleConfiguration.ability} ability={this.props.abilityMap[abilityName]}></AbilityGraphItem>)
+                abilityItems.push(<AbilityGraphItem state={getPlayerAbilityState(playerAbilityPoints ,playerAbilityMap, playerBookMap, abilityName)} id={abilityName} key={abilityName} styleConf={this.uiStyleConfiguration.ability} ability={this.props.abilityMap[abilityName]}></AbilityGraphItem>)
             }
             
             for(const link of book.abilityLinks) {
                 const line = this.calcLinePosition(link)
 
                 if(line) {
-                    abilityLines.push(<Line key={`${link.from}-${link.to}`} line={line}></Line>)
+                    abilityLines.push(<Line id={`${link.from}-${link.to}`} key={`${link.from}-${link.to}`} line={line}></Line>)
                 }
             }
         }
@@ -83,8 +88,10 @@ export class AbilityPanel extends React.Component<props, state> {
                             <Label style={{width: '100%', height: '50px', lineHeight: '40px', fontSize: '30px', color: '#ffffff', textAlign: 'center'}} localizedText='#book_graph'></Label>
                             <Panel style={{padding: '0 0 20px 0', position: '0 6% 0', width: '100%', height: '92%', //@ts-ignore
                                 overflow: 'squish scroll'}}>
-                                {bookItems}
-                                {bookLines}
+                                <Panel style={{width: '100%'}}>
+                                    {bookItems}
+                                    {bookLines}
+                                </Panel>  
                             </Panel>
                         </Panel>
 
@@ -98,8 +105,10 @@ export class AbilityPanel extends React.Component<props, state> {
                             <Label style={{width: '100%', height: '50px', lineHeight: '40px', fontSize: '30px', color: '#ffffff', textAlign: 'center'}} localizedText='#ability_graph'></Label>
                             <Panel style={{padding: '0 0 20px 0', position: '0 6% 0', width: '100%', height: '92%', //@ts-ignore
                                 overflow: 'squish scroll'}}>
-                                {abilityItems}
-                                {abilityLines}
+                                <Panel style={{width: '100%'}}>
+                                    {abilityItems}
+                                    {abilityLines}
+                                </Panel>    
                             </Panel>
                         </Panel>
                     </Panel>

@@ -23,16 +23,8 @@ export function playerHeroSelection(event) {
             hero.SetControllableByPlayer(event.playerId, true);
             hero.SetRespawnPosition(Vector(playerLocation.x - 1024, playerLocation.y + 1024, playerLocation.z))
             hero.RespawnHero(false, true)
-            // hero.SetAbilityPoints(100)
+            hero.SetAbilityPoints(-100)
             
-            hero.UpgradeAbility(hero.GetAbilityByIndex(1))
-            hero.UpgradeAbility(hero.GetAbilityByIndex(1))
-            // const ability =  hero.AddAbility('antimage_mana_break')
-            // for(let i = 0; i < 25; i++) {
-            //     hero.AddAbility('test_ability')
-            // }
-            // hero.UpgradeAbility(ability)
-            // hero.UpgradeAbility(ability)
             CenterCameraOnUnit(event.playerId, hero)
             player.SetAssignedHeroEntity(hero)                  
         }

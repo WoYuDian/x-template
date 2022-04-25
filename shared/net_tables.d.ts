@@ -3,7 +3,7 @@ declare interface CustomNetTableDeclarations {
         pool: string[];
     };
     player_info: {
-        player_map: {},
+        player_map: {[playerId: string]: {steamid: string, accountid: string, level: number | undefined}},
     };
     player_configuration: {
         player_location: {[player_id: string]: {center: {x: number, y: number, z: number}}}
@@ -22,6 +22,8 @@ declare interface CustomNetTableDeclarations {
             hero_selection_info: {[player_id: string]: {hero_name: string}}
             relic_selection_info: {[player_id: string]: {relic_name: string,}},
             plan_selection_info: {[player_id: string]: {plan_name: 'practice' | 'adventure'}},
+            challenge_selection_info: {[player_id: string]: string},
+            player_rank_info: {[key in '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8']: string}
         },
     },
     player_ability_info: {

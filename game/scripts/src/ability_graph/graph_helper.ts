@@ -68,15 +68,45 @@ export function getBookRoot() {
     return curBook;
 }
 
-export function isAbilityLearnable(playerAbilityMap, playerBookMap, abilityName) {    
+export function getPlayerAbilityState(playerAbilityPoints: number | undefined, playerAbilityMap: any, playerBookMap: any, abilityName: string) {
+    playerAbilityMap = playerAbilityMap || {};
+    playerBookMap = playerBookMap || {};
+    playerAbilityPoints = playerAbilityPoints || 0;
+
     const ability = abilityTable[abilityName];
 
     const parentAbility = ability.parent_ability? abilityTable[ability.parent_ability] : null;
 
     let parentLearned = true;
     if(parentAbility) {
-        parentLearned = ((playerAbilityMap[parentAbility.ability_name] || 0) > 0) && ((playerBookMap[parentAbility.book_name] || 0) > 0);
+        parentLearned = (parseInt(playerAbilityMap[parentAbility.ability_name] || 0) > 0) && (parseInt(playerBookMap[parentAbility.book_name] || 0) > 0);
     }
 
-    return parentLearned && ((playerAbilityMap[ability.ability_name] || 0) > 0) && ((playerBookMap[ability.book_name] || 0) > 0);
+    return {
+        learnable: parentLearned && (parseInt(playerBookMap[ability.book_name] || 0) > 0) && (playerAbilityPoints > 0),
+        level: parseInt(playerAbilityMap[abilityName] || 0)
+    };
+}
+
+export function getPlayerBookState(playerBookMap: any, bookName: string) {
+    playerBookMap = playerBookMap || {}
+
+    const book = abilityBooks[bookName];
+
+    const parentBooks = book.parents;
+
+    let parentLearned = true;
+    if(parentBooks) {
+        for(const key in parentBooks) {
+            if(!playerBookMap[key] || !(parseInt(playerBookMap[key] || 0) > 0)) {
+                parentLearned = false;
+                break;
+            }
+        }
+    }
+
+    return {
+        learnable: parentLearned,
+        learned: parseInt(playerBookMap[bookName] || 0) > 0
+    }
 }

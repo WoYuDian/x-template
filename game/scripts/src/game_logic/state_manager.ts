@@ -2,14 +2,14 @@ import {cacheGet, cacheSet , cacheUpdate, CustomTableType} from '../cache'
 import * as heroConf from './configuration/hero.json'
 import {playerHeroSelection} from '../event_handlers/custom_events'
 import * as relicConf from './configuration/relic.json'
-import { teleportPlayerToHome } from './game_operation'
+import { teleportPlayerToHome, teleportPlayerToJungle, teleportPlayerToArena, createUnitInJungle, killAllUnits } from './game_operation'
 
 const configuration = {
     hero_selection_duration: 5,
     hero_selection_pool_size: 3,
-    practice_prepare_duration: 11111115,
+    practice_prepare_duration: 5,
     practice_duration: 5,
-    practice_round_num_before_rank: 3,
+    practice_round_num_before_rank: 1,
     rank_prepare_duration: 5,
     rank_duration: 5,
     rank_round_num_before_cycle: 1,
@@ -39,7 +39,9 @@ export function checkGameTime() {
             player_hero_pool: {},
             hero_selection_info: {},
             relic_selection_info: {},
-            plan_selection_info: {}
+            plan_selection_info: {},
+            challenge_selection_info: {},
+            player_rank_info: {}
         })
     }
 
@@ -60,18 +62,18 @@ export function checkGameTime() {
             
             if(isPrepare) {
                 stateInfo.state = 'cycle_prepare'
-                tickGameTime(stateInfo, null, null, configuration.cycle_prepare_duration, gameTime)
+                tickGameTime(stateInfo, cyclePrepareIniter, cyclePrepareSettler, configuration.cycle_prepare_duration, gameTime)
             } else {
                 stateInfo.state = 'cycle_in_progress'
-                tickGameTime(stateInfo, null, null, configuration.cycle_duration, gameTime)
+                tickGameTime(stateInfo, cycleIniter, cycleSettler, configuration.cycle_duration, gameTime)
             }            
         } else if ((roundInRank == 0) || (roundInRank > (configuration.practice_round_num_before_rank * 2))) {
             if(isPrepare) {
                 stateInfo.state = 'rank_prepare'
-                tickGameTime(stateInfo, null, null, configuration.rank_prepare_duration, gameTime)
+                tickGameTime(stateInfo, rankPrepareIniter, rankPrepareSettler, configuration.rank_prepare_duration, gameTime)
             } else {
                 stateInfo.state = 'rank_in_progress'
-                tickGameTime(stateInfo, null, null, configuration.rank_duration, gameTime)
+                tickGameTime(stateInfo, rankIniter, rankSettler, configuration.rank_duration, gameTime)
             }
         } else {
             if(isPrepare) {
@@ -79,7 +81,7 @@ export function checkGameTime() {
                 tickGameTime(stateInfo, practicePrepareIniter, practicePrepareSettler, configuration.practice_prepare_duration, gameTime)
             } else {
                 stateInfo.state = 'practice_in_progress'
-                tickGameTime(stateInfo, null, null, configuration.practice_duration, gameTime)
+                tickGameTime(stateInfo, practiceIniter, practiceSettler, configuration.practice_duration, gameTime)
             }
         }
     }
@@ -136,7 +138,7 @@ function practicePrepareIniter(stateInfo: stateInfo) {
     }
 }
 
-function practicePrepareSettler(stateInfo:  stateInfo) {
+function practicePrepareSettler(stateInfo: stateInfo) {
     const playerMap = CustomNetTables.GetTableValue('player_info', 'player_map')
 
     for(const playerId in playerMap) {
@@ -151,6 +153,73 @@ function practicePrepareSettler(stateInfo:  stateInfo) {
     }
 }
 
+function practiceIniter(stateInfo: stateInfo) {    
+
+    const playerMap = CustomNetTables.GetTableValue('player_info', 'player_map')
+
+    for(const playerId in playerMap) {
+        teleportPlayerToJungle(parseInt(playerId) as PlayerID);
+        createUnitInJungle('npc_kv_generator_test', parseInt(playerId) as PlayerID)          
+    }
+}
+
+function practiceSettler(stateInfo: stateInfo) {
+    killAllUnits()
+}
+
+function rankPrepareIniter(stateInfo: stateInfo) {
+    stateInfo.challenge_selection_info = {};    
+    const playerMap = CustomNetTables.GetTableValue('player_info', 'player_map')
+
+    for(const playerId in playerMap) {
+        teleportPlayerToHome(parseInt(playerId) as PlayerID);
+    }
+}
+
+function rankPrepareSettler(stateInfo: stateInfo) {
+
+}
+
+function rankIniter(stateInfo: stateInfo) {
+    const playerMap = CustomNetTables.GetTableValue('player_info', 'player_map')
+
+    if(!stateInfo.player_rank_info['1']) {
+        
+    } else {
+
+    }
+    // for(const playerId in playerMap) {
+    //     teleportPlayerToArena(parseInt(playerId) as PlayerID, 'left');
+    // }
+}
+
+function rankSettler(stateInfo: stateInfo) {
+    
+}
+
+function cyclePrepareIniter(stateInfo: stateInfo) {
+    const playerMap = CustomNetTables.GetTableValue('player_info', 'player_map')
+
+    for(const playerId in playerMap) {
+        teleportPlayerToHome(parseInt(playerId) as PlayerID);    
+    }
+}
+
+function cyclePrepareSettler(stateInfo: stateInfo) {
+    
+}
+
+function cycleIniter(stateInfo: stateInfo) {
+    const playerMap = CustomNetTables.GetTableValue('player_info', 'player_map')
+
+    for(const playerId in playerMap) {
+        teleportPlayerToJungle(parseInt(playerId) as PlayerID);    
+    }
+}
+
+function cycleSettler(stateInfo: stateInfo) {
+    
+}
 
 function heroSelectionIniter(stateInfo: stateInfo) {
     const playerMap = CustomNetTables.GetTableValue('player_info', 'player_map')
@@ -192,6 +261,8 @@ function heroSelectionIniter(stateInfo: stateInfo) {
         }
         DOTA_SpawnMapAtPosition('basic_home', Vector(centerX, centerY, 128), false, null, null, null)
     }
+
+    DOTA_SpawnMapAtPosition('basic_arena', Vector(0, 0, 128), false, null, null, null)
 
     CustomNetTables.SetTableValue('player_configuration', 'player_location', playerLocation)
 }

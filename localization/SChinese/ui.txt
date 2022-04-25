@@ -26,3 +26,7 @@
 "book_graph" "功法图鉴"
 "ability_graph" "功法技能"
 "ability_points" "技能点："
+
+//-----------------Player info
+"player_level" "等级："
+"player_rank" "排名："

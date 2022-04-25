@@ -1,18 +1,28 @@
 import React, { EventHandler } from 'react';
-import { CustomTableType } from '../common_type'
+import { CustomTableType, RankNumber } from '../common_type'
+import { PlayerRankItem } from './player_rank_item'
 
 
 interface props {
-    stateInfo: CustomTableType<'game_state_info', 'state_info'>,
-    playerId: string
+    stateInfo: CustomTableType<'game_state_info', 'state_info'> | null,
+    playerId: string,
+    playerMap: CustomTableType<'player_info', 'player_map'> | null
 }
 
-export class SelectionPanel extends React.Component<any, props> {
+interface state {
+    curRank: number
+}
+
+export class SelectionPanel extends React.Component<props, state> {
     constructor(props: props) {
         super(props)
         this.selectHero = this.selectHero.bind(this)
         this.selectPlan = this.selectPlan.bind(this)
         this.selectRelic = this.selectRelic.bind(this)
+
+        this.state = {
+            curRank: 0            
+        }
     }
 
     render() {
@@ -46,11 +56,24 @@ export class SelectionPanel extends React.Component<any, props> {
                         selections.push(<DOTAAbilityImage onmouseactivate={e => {this.selectRelic(e, relicInfo.relic_name)}} key={relicInfo.relic_name} onmouseover={this.mouseOver} onmouseout={this.mouseOut} style={{height: 'width-percentage(100%)', width: '20%',margin: '10% 6.50%',transition: 'transform 0.2s ease-in-out 0.2s', perspectiveOrigin: '50% 50%'}} abilityname={relicInfo.texture_src}></DOTAAbilityImage>)
                     }                    
                 }
+            } else if (gameState == 'rank_prepare') {
+                const challengeSelectionInfo = this.props.stateInfo?.challenge_selection_info;
+                const playerRank = this.props.stateInfo?.player_rank_info;
+                const heroSelectionInfo = this.props.stateInfo?.hero_selection_info;
+   
+                if((!challengeSelectionInfo || !challengeSelectionInfo[this.props.playerId]) && (playerRank && playerRank['1']) && this.props.playerMap && heroSelectionInfo) {
+                    for(let i = 1; i <= 8; i++) {
+                        if(playerRank[i.toString() as RankNumber]) {
+                            selections.push(<PlayerRankItem key={i} rank={this.state.curRank} heroName={heroSelectionInfo[playerRank[i.toString() as RankNumber]].hero_name} playerInfo={this.props.playerMap[playerRank[i.toString() as RankNumber]]}></PlayerRankItem>)
+                        }
+                        
+                    }
+                }
             }
             selectionContent = selections
         }
 
-        return <Panel style={{flowChildren: 'right', width: '60%', height: '40%', margin: '30% 20%', textAlign: 'center', padding: '0 50px'}}>
+        return <Panel hittest={false} style={{flowChildren: 'right', width: '60%', height: '40%', margin: '30% 20%', textAlign: 'center', padding: '0 50px'}}>
             {selectionContent}
         </Panel>
         

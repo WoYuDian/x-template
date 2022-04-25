@@ -1,4 +1,4 @@
-type cacheKeys = 'gameStateInfo' | 'playerAbilityInfo' | 'test'
+type cacheKeys = 'gameStateInfo' | 'playerAbilityInfo' | 'battleInfo'
 
 
 const netTableMap = {

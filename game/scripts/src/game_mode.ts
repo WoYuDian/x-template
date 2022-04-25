@@ -1,8 +1,9 @@
 import { reloadable } from "./lib/tstl-utils";
 import * as systemEventHandlers from './event_handlers/system_events'
 import * as customEventHandlers from './event_handlers/custom_events'
-import {loadAbilityGraph, getBookRoot} from './ability_graph/graph_helper'
+import { loadAbilityGraph, getBookRoot } from './ability_graph/graph_helper'
 import {printObject} from './util'
+import * as abilityHandlers from './game_logic/ability_manager'
 
 declare global {
     interface CDOTAGamerules {
@@ -45,19 +46,34 @@ export class GameMode {
         GameRules.SetStartingGold(8000)
         GameRules.LockCustomGameSetupTeamAssignment(false)
 
+        //@ts-ignore
+        GameRules.DropTable = LoadKeyValues('scripts/kv/item_drops.kv')
 
         const gamemode = GameRules.GetGameModeEntity();
-        gamemode.SetFogOfWarDisabled(true)
+        // gamemode.SetFogOfWarDisabled(true)
+        // gamemode.SetUnseenFogOfWarEnabled(true)
         gamemode.SetCameraDistanceOverride(1234)
+        gamemode.SetUseCustomHeroLevels(true)
+        gamemode.SetCustomHeroMaxLevel(100)
+        let xpConf = []
+        for(let i = 0; i < 100; i++) {
+            xpConf.push(i * 10)
+        }
+        gamemode.SetCustomXPRequiredToReachNextLevel(xpConf)
 
         ListenToGameEvent('player_connect_full', systemEventHandlers.playerFullConnect, this)
 
         ListenToGameEvent('dota_game_state_change', systemEventHandlers.gameStateChange, this)
 
+        ListenToGameEvent('dota_player_gained_level', systemEventHandlers.playerLevelUp, this)
+        
+        ListenToGameEvent('entity_killed', systemEventHandlers.onEntityKilled, this)
+
         CustomGameEventManager.RegisterListener('player_hero_selection', customEventHandlers.playerHeroSelection.bind(this))
         CustomGameEventManager.RegisterListener('player_plan_selection', customEventHandlers.playerPlanSelection.bind(this))
         CustomGameEventManager.RegisterListener('player_relic_selection', customEventHandlers.playerRelicSelection.bind(this))
-
+        CustomGameEventManager.RegisterListener('player_upgrade_ability', abilityHandlers.playerUpgradeAbility.bind(this))
+        
         loadAbilityGraph()     
     }
 
