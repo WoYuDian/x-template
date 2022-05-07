@@ -9,7 +9,7 @@
 		"Creature" {
 			"AttachWearables" {
 				"1" {
-					"ItemDef" "9638"
+					"ItemDef" "9641"
 
 				}
 				"2" {
@@ -21,7 +21,7 @@
 
 				}
 				"4" {
-					"ItemDef" "9641"
+					"ItemDef" "9638"
 
 				}
 
@@ -42,6 +42,75 @@
 		"StatusHealth" "500"
 		"StatusHealthRegen" "0"
 		"StatusMana" "100"
+		"StatusManaRegen" "0"
+		"BountyGoldMin" "0"
+		"BountyGoldMax" "0"
+		"BountyXP" "10"
+		"AutoAttacksByDefault" "1"
+		"AttackDamageMin" "30"
+		"AttackDamageMax" "40"
+		"AttackRate" "1.5000"
+		"AttackAnimationPoint" "0.1000"
+		"AttackRange" "500"
+		"BoundsHullName" "DOTA_HULL_SIZE_HERO"
+		"RingRadius" "70"
+		"HasInventory" "1"
+
+	}
+	"npc_cycle_boss_zeus" {
+		"Searchable" "1"
+		"Cost" "1"
+		"BaseClass" "npc_dota_creature"
+		"Model" "models/heroes/zeus/zeus.vmdl"
+		"ModelScale" "1"
+		"Creature" {
+			"AttachWearables" {
+				"1" {
+					"ItemDef" "6914"
+
+				}
+				"2" {
+					"ItemDef" "8693"
+
+				}
+				"3" {
+					"ItemDef" "8692"
+
+				}
+				"4" {
+					"ItemDef" "16780"
+
+				}
+				"5" {
+					"ItemDef" "18563"
+
+				}
+				"6" {
+					"ItemDef" "12323"
+
+				}
+				"7" {
+					"ItemDef" "5412"
+
+				}
+
+			}
+
+		}
+		"Ability1" "global_light_bolt"
+		"Ability2" "zuus_thundergods_wrath"
+		"Ability3" ""
+		"Ability4" ""
+		"Ability5" ""
+		"Ability6" ""
+		"ConsideredHero" "1"
+		"MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND"
+		"AttackCapabilities" "DOTA_UNIT_CAP_RANGED_ATTACK"
+		"ArmorPhysical" "5"
+		"MagicalResistance" "0"
+		"StatusHealth" "500"
+		"StatusHealthRegen" "0"
+		"StatusMana" "2000"
 		"StatusManaRegen" "0"
 		"BountyGoldMin" "0"
 		"BountyGoldMax" "0"

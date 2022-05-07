@@ -30,3 +30,8 @@
 //-----------------Player info
 "player_level" "等级："
 "player_rank" "排名："
+
+//-----------------Rank player info
+"challenge" "挑战"
+"challengers" "挑战者"
+"challenge_list" "挑战顺序"

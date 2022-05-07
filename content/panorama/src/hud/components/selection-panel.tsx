@@ -1,12 +1,14 @@
 import React, { EventHandler } from 'react';
-import { CustomTableType, RankNumber } from '../common_type'
+import { CustomTableType, RankNumber, userNameMap } from '../common_type'
 import { PlayerRankItem } from './player_rank_item'
 
 
 interface props {
     stateInfo: CustomTableType<'game_state_info', 'state_info'> | null,
     playerId: string,
-    playerMap: CustomTableType<'player_info', 'player_map'> | null
+    playerMap: CustomTableType<'player_info', 'player_map'> | null,
+    curRank: number,
+    userNameMap: userNameMap | null
 }
 
 interface state {
@@ -19,10 +21,6 @@ export class SelectionPanel extends React.Component<props, state> {
         this.selectHero = this.selectHero.bind(this)
         this.selectPlan = this.selectPlan.bind(this)
         this.selectRelic = this.selectRelic.bind(this)
-
-        this.state = {
-            curRank: 0            
-        }
     }
 
     render() {
@@ -30,7 +28,7 @@ export class SelectionPanel extends React.Component<props, state> {
         const selectedHero = this.props.stateInfo?.hero_selection_info[this.props.playerId] || null;
         
         let selectionContent;
-        if(heroPool && !selectedHero) {            
+        if(heroPool && !selectedHero) {
             let heroCards = []
             for(const key in heroPool) {
                 heroCards.push(<DOTAHeroMovie onmouseactivate={this.selectHero} onmouseover={this.mouseOver} onmouseout={this.mouseOut} style={{height: 'width-percentage(150%)', width: '20%',margin: '10% 6.6%',transition: 'transform 0.2s ease-in-out 0.2s', perspectiveOrigin: '50% 50%'}} key={key} heroname={heroPool[key]}></DOTAHeroMovie>)
@@ -61,12 +59,19 @@ export class SelectionPanel extends React.Component<props, state> {
                 const playerRank = this.props.stateInfo?.player_rank_info;
                 const heroSelectionInfo = this.props.stateInfo?.hero_selection_info;
    
-                if((!challengeSelectionInfo || !challengeSelectionInfo[this.props.playerId]) && (playerRank && playerRank['1']) && this.props.playerMap && heroSelectionInfo) {
+                if((playerRank && playerRank['1']) && this.props.playerMap && heroSelectionInfo) {
                     for(let i = 1; i <= 8; i++) {
                         if(playerRank[i.toString() as RankNumber]) {
-                            selections.push(<PlayerRankItem key={i} rank={this.state.curRank} heroName={heroSelectionInfo[playerRank[i.toString() as RankNumber]].hero_name} playerInfo={this.props.playerMap[playerRank[i.toString() as RankNumber]]}></PlayerRankItem>)
-                        }
-                        
+                            const playerId = playerRank[i.toString() as RankNumber]
+                            let challengers = []
+                            for(const key in challengeSelectionInfo) {
+                                
+                                if(challengeSelectionInfo[key] == playerId) {                                    
+                                    challengers.push(this.props.userNameMap? this.props.userNameMap[key]: '')
+                                }
+                            }                            
+                            selections.push(<PlayerRankItem challengers={challengers} userName={this.props.userNameMap? this.props.userNameMap[playerId]: ''} key={playerId} playerId={playerId} playerRank={this.props.curRank} rank={i} heroName={heroSelectionInfo[playerId].hero_name} playerInfo={this.props.playerMap[playerId]}></PlayerRankItem>)
+                        }                        
                     }
                 }
             }

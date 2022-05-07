@@ -2,21 +2,10 @@ import {cacheGet, cacheSet , cacheUpdate, CustomTableType} from '../cache'
 import * as heroConf from './configuration/hero.json'
 import {playerHeroSelection} from '../event_handlers/custom_events'
 import * as relicConf from './configuration/relic.json'
-import { teleportPlayerToHome, teleportPlayerToJungle, teleportPlayerToArena, createUnitInJungle, killAllUnits } from './game_operation'
+import { teleportPlayerToHome, teleportPlayerToJungle, createUnitInArena, teleportPlayerToArena, createUnitInJungle, killAllUnits, createUnitCompositionInJungle, nextChallenge } from './game_operation'
+import { printObject } from '../util';
+import * as configuration from './configuration/game_state.json'
 
-const configuration = {
-    hero_selection_duration: 5,
-    hero_selection_pool_size: 3,
-    practice_prepare_duration: 5,
-    practice_duration: 5,
-    practice_round_num_before_rank: 1,
-    rank_prepare_duration: 5,
-    rank_duration: 5,
-    rank_round_num_before_cycle: 1,
-    cycle_prepare_duration: 5,
-    cycle_duration: 5,
-    relic_selection_size: 3
-}
 
 const cycleRoundNum = 2 * (configuration.practice_round_num_before_rank * configuration.rank_round_num_before_cycle + configuration.rank_round_num_before_cycle + 1);
 const rankRoundNum = 2 * (configuration.practice_round_num_before_rank + 1)
@@ -41,7 +30,9 @@ export function checkGameTime() {
             relic_selection_info: {},
             plan_selection_info: {},
             challenge_selection_info: {},
-            player_rank_info: {}
+            player_rank_info: {},
+            challenge_order: [],
+            challenge_index: -1,
         })
     }
 
@@ -101,13 +92,16 @@ function tickGameTime(stateInfo: stateInfo, roundIniter: Function, roundSettler:
     stateInfo.round_count_down = roundDuration - stateInfo.time_from_last_round;
 
     if(stateInfo.round_count_down < 1) {
+        let reCount = false;
         if(roundSettler) {
-            roundSettler(stateInfo)
+            reCount = roundSettler(stateInfo)
         }
 
-        stateInfo.last_round_time = gameTime;
-        stateInfo.round_inited = 0;
-        stateInfo.round_count += 1;
+        if(!reCount) {
+            stateInfo.last_round_time = gameTime;
+            stateInfo.round_inited = 0;
+            stateInfo.round_count += 1;
+        }        
     }
 }
 
@@ -168,7 +162,9 @@ function practiceSettler(stateInfo: stateInfo) {
 }
 
 function rankPrepareIniter(stateInfo: stateInfo) {
-    stateInfo.challenge_selection_info = {};    
+    stateInfo.challenge_selection_info = {};  
+    stateInfo.challenge_order = [];
+    stateInfo.challenge_index = -1;
     const playerMap = CustomNetTables.GetTableValue('player_info', 'player_map')
 
     for(const playerId in playerMap) {
@@ -177,24 +173,100 @@ function rankPrepareIniter(stateInfo: stateInfo) {
 }
 
 function rankPrepareSettler(stateInfo: stateInfo) {
+    if(stateInfo.player_rank_info['1']) {
+        const playerRankMap = {}
 
+        for(const key in stateInfo.player_rank_info) {
+            playerRankMap[stateInfo.player_rank_info[key]] = key;
+        }
+
+        for(const key in stateInfo.player_rank_info) {
+            if(parseInt(key) > 3) {
+                stateInfo.challenge_selection_info[stateInfo.player_rank_info[key]] = stateInfo.player_rank_info[tostring(parseInt(key) - RandomInt(1, 3))]
+            }
+        }
+
+        const challenges = []
+        for(const challenger in stateInfo.challenge_selection_info) {            
+            challenges.push({challenger: challenger, rank: playerRankMap[stateInfo.challenge_selection_info[challenger]], winner: null})
+        }
+
+        challenges.sort(function(a, b) {
+            if (parseInt(a.rank) != parseInt(b.rank)) {
+                return parseInt(a.rank) - parseInt(b.rank);
+            } else {
+                return parseInt(playerRankMap[b.challenger]) - parseInt(playerRankMap[a.challenger])
+            }
+        })
+
+        stateInfo.challenge_order = challenges;        
+    }
 }
 
 function rankIniter(stateInfo: stateInfo) {
     const playerMap = CustomNetTables.GetTableValue('player_info', 'player_map')
 
+    cacheSet('battleInfo', {})
     if(!stateInfo.player_rank_info['1']) {
+        for(const key in playerMap) {
+            createUnitCompositionInJungle('first_rank', parseInt(key) as PlayerID, function(playerId: PlayerID) {
+                for(let i = 1; i <= 8; i++) {
+                    if(!stateInfo.player_rank_info[i.toString()]) {
+                        stateInfo.player_rank_info[i.toString()] = playerId.toString()
+                        break;
+                    }
+                }
+            })
+            teleportPlayerToJungle(parseInt(key) as PlayerID)
+        }
         
+        cacheUpdate('battleInfo');
     } else {
-
+        nextChallenge()
     }
-    // for(const playerId in playerMap) {
-    //     teleportPlayerToArena(parseInt(playerId) as PlayerID, 'left');
-    // }
 }
 
 function rankSettler(stateInfo: stateInfo) {
+    if(stateInfo.round_count <= rankRoundNum) {
+        killAllUnits();
+        let rankFinished = true;
+        let unRankedIndex;
+        const playerRankMap = {}
+        for(let i = 1; i <= 8; i++) {
+            if(!stateInfo.player_rank_info[i.toString()]) {
+                rankFinished = false;
+                unRankedIndex = i;
+                break;
+            } else {
+                playerRankMap[stateInfo.player_rank_info[i.toString()]] = i;
+            }
+        }
     
+        if(!rankFinished) {
+            const unRankedPlayers = []
+            const playerMap = CustomNetTables.GetTableValue('player_info', 'player_map')
+            const battleInfo: CustomTableType<'player_battle_info', 'battle_info'> = cacheGet('battleInfo');
+            for(const key in playerMap) {
+                if(!playerRankMap[key]) {
+                    unRankedPlayers.push({playerId: key, score: battleInfo[key].score});
+                }
+            }
+    
+            unRankedPlayers.sort(function(a,b) {
+                return b.score - a.score
+            })
+    
+            for(let i = 0; i < unRankedPlayers.length; i++) {
+                stateInfo.player_rank_info[tostring(i + unRankedIndex)] = unRankedPlayers[i].playerId;
+            }
+        }
+    } else {
+        if(stateInfo.challenge_index < stateInfo.challenge_order.length) {
+            nextChallenge()
+            return true;
+        }
+    }
+
 }
 
 function cyclePrepareIniter(stateInfo: stateInfo) {
@@ -209,16 +281,19 @@ function cyclePrepareSettler(stateInfo: stateInfo) {
     
 }
 
+import { modifier_cycle_boss_zeus_ai } from '../modifiers/modifier_cycle_boss_zeus_ai'
 function cycleIniter(stateInfo: stateInfo) {
     const playerMap = CustomNetTables.GetTableValue('player_info', 'player_map')
 
     for(const playerId in playerMap) {
         teleportPlayerToJungle(parseInt(playerId) as PlayerID);    
     }
+    const cycleBoss = createUnitInArena("npc_cycle_boss_zeus")
+    cycleBoss.AddNewModifier(null, null, modifier_cycle_boss_zeus_ai.name, {})
 }
 
 function cycleSettler(stateInfo: stateInfo) {
-    
+    killAllUnits()
 }
 
 function heroSelectionIniter(stateInfo: stateInfo) {

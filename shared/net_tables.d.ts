@@ -23,7 +23,9 @@ declare interface CustomNetTableDeclarations {
             relic_selection_info: {[player_id: string]: {relic_name: string,}},
             plan_selection_info: {[player_id: string]: {plan_name: 'practice' | 'adventure'}},
             challenge_selection_info: {[player_id: string]: string},
-            player_rank_info: {[key in '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8']: string}
+            player_rank_info: {[key in '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8']: string},
+            challenge_order: {challenger: string, rank: string, winner: 'challenger' | 'target' | 'draw' | null}[],
+            challenge_index: number
         },
     },
     player_ability_info: {
@@ -31,6 +33,11 @@ declare interface CustomNetTableDeclarations {
             book_map: {[player_id: string]: {[book_name: string]: number}}
             ability_points: {[player_id: string]: number},
             ability_level_map: {[player_id: string]: {[ability_name: string]: number}}
+        }
+    },
+    player_battle_info: {
+        battle_info: {
+            [player_id: string]: {unit_stats: {[unit_name: string]: {num: number, killed: number}}, score: number}
         }
     }
 }

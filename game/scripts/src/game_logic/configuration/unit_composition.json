@@ -1,7 +1,14 @@
 {
     "first_rank": {
         "units": [
-            {"name": "npc_kv_generator_test", "offset": {"x": 0, "y": 0}}
+            {"name": "npc_kv_generator_test", "offset": {"x": 0, "y": 0}},
+            {"name": "npc_kv_generator_test", "offset": {"x": 0, "y": 10}},
+            {"name": "npc_kv_generator_test", "offset": {"x": 0, "y": -10}}
+        ]
+    },
+    "cycle_boss_zuus": {
+        "units": [
+            {"name": "npc_cycle_boss_zuus", "offset": {"x": 0, "y": 0}}
         ]
     }
 }

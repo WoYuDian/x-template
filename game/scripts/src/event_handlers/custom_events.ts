@@ -21,6 +21,7 @@ export function playerHeroSelection(event) {
             const playerLocation = CustomNetTables.GetTableValue('player_configuration', 'player_location')[event.playerId.toString()].center
             const hero = CreateHeroForPlayer(event.heroName, player)
             hero.SetControllableByPlayer(event.playerId, true);
+            hero.SetRespawnsDisabled(true)
             hero.SetRespawnPosition(Vector(playerLocation.x - 1024, playerLocation.y + 1024, playerLocation.z))
             hero.RespawnHero(false, true)
             hero.SetAbilityPoints(-100)
@@ -53,4 +54,10 @@ export function playerRelicSelection(event) {
     } else {
         print('Relic already selected.')
     }
+}
+
+export function playerChallengeSelection(event: {playerId: PlayerID, targetPlayerId: PlayerID}) {
+    const stateInfo: GameStateInfo = cacheGet('gameStateInfo')
+    stateInfo.challenge_selection_info[event.playerId.toString()] = event.targetPlayerId.toString();
+    print('Set the player challenge selection result: ', cacheUpdate('gameStateInfo'))
 }

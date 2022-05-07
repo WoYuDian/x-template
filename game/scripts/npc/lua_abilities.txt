@@ -1,16 +1,23 @@
 // generate with Xavier's kv generator https://github.com/XavierCHN/x-template
 "XLSXContent" {
-	"antimage_mana_break" {
+	"global_light_bolt" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/global_light_bolt"
 		"AbilityValues" {
-			"var_2" "0 0 0"
-			"var_3" "1000 2000 30000 40000"
 
 		}
-		"MaxLevel" "2"
-		"AbilityCooldown" "0 0"
-		"AbilityManaCost" "1 1"
-		"AbilityTextureName" "antimage_mana_break"
-		"AbilityBehavior" ""
+		"MaxLevel" "1"
+		"AbilityCooldown" "3"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "zuus_lightning_bolt"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_5"
+		"AbilityCastPoint" "0.4000"
+		"SpellImmunityType" "1"
+		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
 
 	}
 

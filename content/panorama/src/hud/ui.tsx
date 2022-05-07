@@ -3,8 +3,9 @@ import { SelectionPanel } from './components/selection-panel'
 import { GameStateBar} from './components/game-state-bar'
 import { AbilityPanel } from './components/ability-panel';
 import { loadAbilityGraph, getBookRoot, getBookMap, getAbilityMap } from '../../../../game/scripts/src/ability_graph/graph_helper'
-import { CustomTableType } from './common_type'
+import { CustomTableType, RankNumber, userNameMap } from './common_type'
 import { PlayerPanel } from './components/player-panel'
+import { ChallengeList } from './components/challenge-list'
 
 loadAbilityGraph()
 
@@ -19,7 +20,9 @@ interface UIState {
     showAbilityPanel: boolean,
     bookRoot: any,
     bookMap: any
-    abilityMap: any
+    abilityMap: any,
+    curRank: number,
+    userNameMap: userNameMap | null
 }
 
 export class UIBody extends React.Component<any, UIState> {
@@ -36,18 +39,22 @@ export class UIBody extends React.Component<any, UIState> {
             showAbilityPanel: false,
             bookRoot: getBookRoot(),
             bookMap: getBookMap(),
-            abilityMap: getAbilityMap()
+            abilityMap: getAbilityMap(),
+            curRank: 0,
+            userNameMap: null
         }
         this.setAbilityPanelVisible = this.setAbilityPanelVisible.bind(this)
         this.clickBackground = this.clickBackground.bind(this)
+        this.collectUserNames = this.collectUserNames.bind(this)
     }
 
     render() {
         return (<Panel hittest={false} style={{width: '100%', height: '100%'}}>
-            <PlayerPanel playerMap={this.state.playerMap} stateInfo={this.state.stateInfo}></PlayerPanel>
+            <ChallengeList userNameMap={this.state.userNameMap} stateInfo={this.state.stateInfo}></ChallengeList>
+            <PlayerPanel userNameMap={this.state.userNameMap} collectUserNames={this.collectUserNames} playerMap={this.state.playerMap} stateInfo={this.state.stateInfo}></PlayerPanel>
             <AbilityPanel playerAbilityInfo={this.state.playerAbilityInfo} playerId={Game.GetLocalPlayerID()} setAbilityPanelVisible={this.setAbilityPanelVisible} showAbilityPanel={this.state.showAbilityPanel} abilityMap={this.state.abilityMap} bookRoot={this.state.bookRoot} bookMap={this.state.bookMap}></AbilityPanel>
             <GameStateBar gameTime={this.state.stateInfo?.round_count_down || 0} gameState={this.state.stateInfo?.state || ''}></GameStateBar>
-            <SelectionPanel playerId={this.playerId} playerMap={this.state.playerMap} stateInfo={this.state.stateInfo}></SelectionPanel>
+            <SelectionPanel userNameMap={this.state.userNameMap} curRank={this.state.curRank} playerId={this.playerId} playerMap={this.state.playerMap} stateInfo={this.state.stateInfo}></SelectionPanel>
         </Panel>)
     }
 
@@ -62,10 +69,17 @@ export class UIBody extends React.Component<any, UIState> {
         })        
 
         this.gameStateInfoId = CustomNetTables.SubscribeNetTableListener('game_state_info', function(e) {
-            const stateInfo = CustomNetTables.GetTableValue('game_state_info', 'state_info')
+            const stateInfo = CustomNetTables.GetTableValue('game_state_info', 'state_info')  
+
             _this.setState({
                 stateInfo: stateInfo
             })
+
+            //@ts-ignore
+            setTimeout(() => {
+                _this.updateCurRank()
+            }, 500);
+            
         })            
         
         this.playerAbilityInfoId = CustomNetTables.SubscribeNetTableListener('player_ability_info', function(e) {
@@ -77,6 +91,29 @@ export class UIBody extends React.Component<any, UIState> {
             }, 500);
             
         })    
+    }
+
+    collectUserNames(userNameMap: any) {
+        this.setState({userNameMap: userNameMap})
+    }
+
+    updateCurRank() {
+        this.setState((state, props) => {
+            const playerRank = state.stateInfo?.player_rank_info;
+
+            if(playerRank) {
+                for(const key in playerRank) {
+                    if(playerRank[key as RankNumber] == this.playerId) {
+                        return {curRank: parseInt(key)}
+                    }
+                }
+
+                return {curRank: 0}
+            } else {
+                return {curRank: 0}
+            }
+
+        })
     }
 
     getplayerMap() {

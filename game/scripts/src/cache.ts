@@ -1,9 +1,10 @@
-type cacheKeys = 'gameStateInfo' | 'playerAbilityInfo' | 'battleInfo'
+type cacheKeys = 'gameStateInfo' | 'playerAbilityInfo' | 'battleInfo' | ''
 
 
 const netTableMap = {
     'gameStateInfo': ['game_state_info', 'state_info'],
     'playerAbilityInfo': ['player_ability_info', 'ability_info'],
+    'battleInfo': ['player_battle_info', 'battle_info']
 }
 export type CustomTableType<
     TName extends keyof CustomNetTableDeclarations,
@@ -12,8 +13,9 @@ export type CustomTableType<
 
 const gameStateInfo: CustomTableType<'game_state_info', 'state_info'> = null;
 const playerAbilityInfo: CustomTableType<'player_ability_info', 'ability_info'> = null;
+const playerBattleInfo: CustomTableType<'player_battle_info', 'battle_info'> = null;
 
-const Cache = {gameStateInfo, playerAbilityInfo}
+const Cache = {gameStateInfo, playerAbilityInfo, playerBattleInfo}
 export function cacheGet(key: cacheKeys) {
     return Cache[key];
 }

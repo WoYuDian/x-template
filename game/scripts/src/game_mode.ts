@@ -2,7 +2,7 @@ import { reloadable } from "./lib/tstl-utils";
 import * as systemEventHandlers from './event_handlers/system_events'
 import * as customEventHandlers from './event_handlers/custom_events'
 import { loadAbilityGraph, getBookRoot } from './ability_graph/graph_helper'
-import {printObject} from './util'
+import {printObject, MapWearables, GenerateDefaultBlock, GenerateBundleBlock} from './util'
 import * as abilityHandlers from './game_logic/ability_manager'
 
 declare global {
@@ -73,8 +73,18 @@ export class GameMode {
         CustomGameEventManager.RegisterListener('player_plan_selection', customEventHandlers.playerPlanSelection.bind(this))
         CustomGameEventManager.RegisterListener('player_relic_selection', customEventHandlers.playerRelicSelection.bind(this))
         CustomGameEventManager.RegisterListener('player_upgrade_ability', abilityHandlers.playerUpgradeAbility.bind(this))
-        
+        CustomGameEventManager.RegisterListener('player_challenge_selection', customEventHandlers.playerChallengeSelection.bind(this))
         loadAbilityGraph()     
+
+        // MapWearables()
+        // Convars.RegisterCommand('gwb',function(name, args) {
+        //     print(args,'========')
+        //     GenerateBundleBlock(args)
+        // }, 'Print bundle codes', ConVarFlags.DEMO)
+
+        // Convars.RegisterCommand('ghdb',function(name, args) {
+        //     GenerateDefaultBlock(args)
+        // }, 'Print hero defalt bundle codes', ConVarFlags.DEMO)
     }
 
     

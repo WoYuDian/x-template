@@ -1,7 +1,7 @@
 import { Timers } from "../lib/timers";
 import { checkGameTime } from "../game_logic/state_manager";
 import { initPlayerAbilityInfo, addPlayerAbilityPoints } from "../game_logic/ability_manager";
-import { rollDrops } from "../game_logic/game_operation";
+import { rollDrops, recordUnitKill, recordHeroKill } from "../game_logic/game_operation";
 
 export function playerFullConnect(e: PlayerConnectFullEvent) {
     const playerMap = CustomNetTables.GetTableValue('player_info', 'player_map') || {};
@@ -39,16 +39,13 @@ export function playerLevelUp(e: DotaPlayerGainedLevelEvent) {
 
 export function onEntityKilled(e: EntityKilledEvent) {
     const killedUnit = EntIndexToHScript(e.entindex_killed);
-    
-    const attachker = EntIndexToHScript(e.entindex_attacker)
-
-    print(killedUnit.GetOwnerEntity().GetTeam(), '+++++++++++++++++++++++')
-    // let inflictor
-    // if(e.entindex_inflictor) {
-    //     inflictor = EntIndexToHScript(e.entindex_inflictor)
-    // }    
+    const attachker = EntIndexToHScript(e.entindex_attacker);
     
     if(killedUnit.IsBaseNPC() && killedUnit.IsCreature() && (attachker.GetTeam() != DotaTeam.NEUTRALS)) {
+        
+        recordUnitKill(killedUnit, PlayerResource.GetNthPlayerIDOnTeam(attachker.GetTeam(), 1))
         rollDrops(killedUnit)
+    } else if (killedUnit.IsBaseNPC() && killedUnit.IsHero() && (killedUnit.GetTeam() != DotaTeam.NEUTRALS) && (attachker.GetTeam() != DotaTeam.NEUTRALS)) {
+        recordHeroKill(killedUnit, PlayerResource.GetNthPlayerIDOnTeam(attachker.GetTeam(), 1))
     }
 }

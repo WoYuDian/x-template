@@ -30,3 +30,8 @@
 //-----------------Player info
 "player_level" "Level: "
 "player_rank" "Rank: "
+
+//-----------------Rank player info
+"challenge" "Challenge"
+"challengers" "Challengers"
+"challenge_list" "Challenge List"

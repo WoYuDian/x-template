@@ -1,0 +1,13 @@
+{
+    "hero_selection_duration": 5,
+    "hero_selection_pool_size": 3,
+    "practice_prepare_duration": 5,
+    "practice_duration": 5,
+    "practice_round_num_before_rank": 0,
+    "rank_prepare_duration": 5,
+    "rank_duration": 5,
+    "rank_round_num_before_cycle": 0,
+    "cycle_prepare_duration": 5,
+    "cycle_duration": 25,
+    "relic_selection_size": 3
+}
