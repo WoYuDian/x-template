@@ -30,13 +30,13 @@ export class AbilityPanel extends React.Component<props, state> {
         this.bookLevelIndexTable = {};
         this.bookLinks = [];
         this.uiStyleConfiguration = {
-            book: {width: 12, height: 100, levelGapHeight: 50},
+            book: {width: 12, height: 100, levelGapHeight: 50, bookNumPerRow: 3},
             ability: {width: 5, height: 140, levelGapHeight: 50}
         }
         this.state = {
             selectedBook: null
         }
-        this.processBookGraph();
+        this.processBookList();
         this.selectBook = this.selectBook.bind(this)    
     }    
 
@@ -48,7 +48,7 @@ export class AbilityPanel extends React.Component<props, state> {
         const playerAbilityPoints = this.props.playerAbilityInfo?.ability_points[this.props.playerId.toString()]
 
         for(const bookName in this.props.bookMap) {
-            this.calcBookPosition(this.props.bookMap[bookName], this.bookLevelIndexTable[this.props.bookMap[bookName].level])
+            this.calcBookPosition(this.props.bookMap[bookName])
             bookItems.push(<BookGraphItem state={getPlayerBookState(playerBookMap, bookName)} selected={this.state.selectedBook == bookName} selectBook={this.selectBook} id={bookName} key={bookName} styleConf={this.uiStyleConfiguration.book} book={this.props.bookMap[bookName]}></BookGraphItem>)
         }
 
@@ -64,7 +64,7 @@ export class AbilityPanel extends React.Component<props, state> {
         const abilityLines = []
         if(this.state.selectedBook) {
             const book = this.props.bookMap[this.state.selectedBook];
-            for(const abilityName of book.abilityKeys) {
+            for(const abilityName of book.abilityKeys) {                
                 this.calcAbilityPosition(this.props.abilityMap[abilityName], book.abilityLevelIndexTable[this.props.abilityMap[abilityName].level])
                 abilityItems.push(<AbilityGraphItem state={getPlayerAbilityState(playerAbilityPoints ,playerAbilityMap, playerBookMap, abilityName)} id={abilityName} key={abilityName} styleConf={this.uiStyleConfiguration.ability} ability={this.props.abilityMap[abilityName]}></AbilityGraphItem>)
             }
@@ -80,9 +80,9 @@ export class AbilityPanel extends React.Component<props, state> {
         
         //@ts-ignore
         if(this.props.showAbilityPanel) {
-             return <Panel onactivate={this.togglePanel} style={{width: '100%', height: '100%'}}>
+             return <Panel onactivate={this.togglePanel} style={{width: '100%', height: '100%', zIndex: 2}}>
                 <Panel onactivate={e => {}} id='ability_panel' style={{width: '95%', height: '95%', position: '2.5% 2.5% 0', backgroundColor: '#333333', borderRadius: '20px'}}>
-                    <Label onactivate={this.togglePanel} style={{position: '93% 2% 0', textAlign: 'center', lineHeight: '30px', width: '100px', height: '40px', color: '#ffffff', border: '1px solid #ffffff', borderRadius: '5px', fontSize: '20px'}} localizedText='#close_ability_panel'></Label>
+                    <Label onactivate={this.togglePanel} style={{position: '93% 2% 0', textAlign: 'center', lineHeight: '30px', width: '100px', height: '40px', color: '#ffffff', border: '1px solid #ffffff', borderRadius: '5px', fontSize: '20px'}} localizedText='#close_ability_panel'></Label>                    
                     <Panel style={{position: '0 0 0', width: '30%', height: '100%'}}>
                         <Panel style={{margin: '100px 20px 50px 20px', width: '100%', height: '100%', borderRight: '1px solid #ffffff'}}>
                             <Label style={{width: '100%', height: '50px', lineHeight: '40px', fontSize: '30px', color: '#ffffff', textAlign: 'center'}} localizedText='#book_graph'></Label>
@@ -115,7 +115,7 @@ export class AbilityPanel extends React.Component<props, state> {
                 </Panel>
             </Panel>
         } else {
-            return <Label onactivate={this.togglePanel} style={{position: '318px 95% 0', textAlign: 'center', lineHeight: '30px', width: '100px', height: '40px', backgroundColor: '#333333', fontSize: '20px', color: '#ffffff', borderRadius: '5px'}} localizedText='#ability_panel'></Label>
+            return null
         }
     }
 
@@ -138,6 +138,21 @@ export class AbilityPanel extends React.Component<props, state> {
 
     selectBook(bookName: string) {
         this.setState({selectedBook: bookName})
+    }
+
+    processBookList() {
+        let index = 0
+        for(const key in this.props.bookMap) {
+            const book = this.props.bookMap[key];
+            book.abilityLevelIndexTable = {};
+            book.abilityKeys = [];
+            book.abilityLinks = [];
+            this.props.bookMap[key].index = index;
+            index++;
+            for(const ability in book.ability_root) {
+                this.processBookAbilityGraph(book.ability_root[ability], 0, book)                
+            }            
+        }
     }
 
     processBookGraph(book?: any, level: number = 0) {
@@ -195,15 +210,21 @@ export class AbilityPanel extends React.Component<props, state> {
 
     calcAbilityPosition(ability: any, levelNum: number) {
         ability.position = {
-            x: (100 / (levelNum + 1)) * (ability.index + 1) - this.uiStyleConfiguration.ability.width / 2,
+            x: (ability.position_x || ((100 / (levelNum + 1)) * (ability.index + 1))) - this.uiStyleConfiguration.ability.width / 2,
             y: ability.level * (this.uiStyleConfiguration.ability.height + this.uiStyleConfiguration.ability.levelGapHeight)
         }
     }
 
-    calcBookPosition(book: any, levelNum: number) {
+    calcBookPosition(book: any) {
+        //Graph version
+        // book.position = {
+        //     x: (book.position_x || ((100 / (levelNum + 1)) * (book.index + 1))) - this.uiStyleConfiguration.book.width / 2,
+        //     y: book.level * (this.uiStyleConfiguration.book.height + this.uiStyleConfiguration.book.levelGapHeight)
+        // }
+
         book.position = {
-            x: (100 / (levelNum + 1)) * (book.index + 1) - this.uiStyleConfiguration.book.width / 2,
-            y: book.level * (this.uiStyleConfiguration.book.height + this.uiStyleConfiguration.book.levelGapHeight)
+            x: ((book.index % 3) + 1) * (100 / (this.uiStyleConfiguration.book.bookNumPerRow + 1)) - this.uiStyleConfiguration.book.width / 2,
+            y: Math.floor(book.index / 3)  * (this.uiStyleConfiguration.book.height + this.uiStyleConfiguration.book.levelGapHeight)
         }
     }
 }

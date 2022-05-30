@@ -14,9 +14,9 @@ export class modifier_cycle_boss_zeus_ai extends BaseModifier {
 
     OnIntervalThink(): void {
         const unit = this.GetParent()
-        let globalLightBolt = unit.FindAbilityByName('zuus_thundergods_wrath');
+        let globalLightBolt = unit.FindAbilityByName('global_light_bolt');
         if(!globalLightBolt) {            
-            globalLightBolt = unit.AddAbility('zuus_thundergods_wrath');
+            globalLightBolt = unit.AddAbility('global_light_bolt');
             globalLightBolt.SetLevel(3)
         }
         globalLightBolt.EndCooldown()

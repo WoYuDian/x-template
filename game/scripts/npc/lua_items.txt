@@ -1,12 +1,9 @@
 // generate with Xavier's kv generator https://github.com/XavierCHN/x-template
 "XLSXContent" {
-	"item_book_ice_magic" {
+	"item_book_basic_fitness" {
 		"BaseClass" "item_lua"
-		"ScriptFile" "items/item_book_ice_magic"
+		"ScriptFile" "items/books/item_book_basic_fitness"
 		"AbilityValues" {
-			"damage" "0.1 0.2 0.3 0.4"
-			"var_2" "1 1 2 3 4"
-			"var_3" "1000 2000 30000 40000"
 
 		}
 		"ItemCost" "30"
@@ -21,6 +18,121 @@
 		"AbilityCooldown" ""
 		"AbilityManaCost" ""
 		"AbilityTextureName" "item_tome_of_knowledge"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_book_basic_magic" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/item_book_basic_magic"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "30"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "item_tome_of_knowledge"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_book_necromancer_collection" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/item_book_necromancer_collection"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "30"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "item_tome_of_knowledge"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_book_swordmanship" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/item_book_swordmanship"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "30"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "item_tome_of_knowledge"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_book_marksmanship" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/item_book_marksmanship"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "30"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "item_tome_of_knowledge"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_elixir_zhuji" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/elixir/item_elixir_zhuji"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "30"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "item_elixir_zhuji"
 		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"

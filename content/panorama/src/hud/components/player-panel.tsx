@@ -35,7 +35,7 @@ export class PlayerPanel extends React.Component<props, any> {
             this.collectUserNames()
         }
         
-        return <Panel id='player_info_panel' style={{width: '13%', position: '87% 20% 0', flowChildren: 'down'}}>
+        return <Panel id='player_info_panel' style={{height: '6%', width: '80%', position: '10% 0 0', flowChildren: 'right'}}>
             {playerItems}
         </Panel>
     }

@@ -21,7 +21,6 @@
 "practice_in_progress" "Practice Round"
 
 //-----------------Ability panel
-"ability_panel" "Ability Panel"
 "close_ability_panel" "Close"
 "book_graph" "Book Graph"
 "ability_graph" "Ability Graph"
@@ -35,3 +34,7 @@
 "challenge" "Challenge"
 "challengers" "Challengers"
 "challenge_list" "Challenge List"
+
+//-----------------Menu buttons
+"ability_panel" "技能面板"
+"break_realm" "突破境界"

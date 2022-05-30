@@ -1,5 +1,27 @@
 // generate with Xavier's kv generator https://github.com/XavierCHN/x-template
 "XLSXContent" {
+	"juggernaut_omni_slash" {
+		"AbilitySpecial"
+		{
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_damage"				"50"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"1"
+				"LinkedSpecialBonus"		"special_bonus_unique_juggernaut_2"
+			}
+		}
+		"MaxLevel" "1"
+		"AbilityCooldown" "1"
+		"AbilityManaCost" "0"
+		"AbilityCastPoint" "0"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
+	}
 
 }

@@ -1,0 +1,21 @@
+{
+    "book_name": "necromancer_collection",
+    "texture_src": "necrolyte_sadist",
+    "abilities": {
+        "summon_zombie": {
+            "parent_ability": null
+        },
+        "zombie_augmentation": {
+            "parent_ability": "summon_zombie"
+        },
+        "swallow_zombie": {
+            "parent_ability": "zombie_augmentation"
+        },
+        "zombie_blast": {
+            "parent_ability": "zombie_augmentation"
+        },
+        "resentment_stacking": {
+            "parent_ability": "zombie_augmentation"
+        }     
+    }
+}

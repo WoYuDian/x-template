@@ -1,0 +1,76 @@
+"dota_shops"
+{
+	"consumables"
+	{
+		"item" 		"item_book_basic_magic"
+		"item"		"item_book_basic_fitness"
+		"item"		"item_book_necromancer_collection"
+		"item"		"item_book_swordmanship"		
+		"item"		"item_book_marksmanship"	
+		"item"		"item_elixir_zhuji"
+	}
+ 
+	"attributes"
+	{
+ 
+	}
+ 
+	"weapons_armor"
+	{
+ 
+	}
+ 
+	"misc"
+	{
+ 
+	}	
+ 
+	// Level 1 - Green Recipes
+	"basics"
+	{
+ 
+	}
+ 
+	// Level 2 - Blue Recipes
+	"support"
+	{
+ 
+	}
+ 
+	"magics"
+	{
+ 
+	}
+ 
+	// Level 3 - Purple Recipes
+	"defense"
+	{
+ 
+	}
+ 
+	"weapons"
+	{
+ 
+	}
+ 
+	// Level 4 - Orange / Orb / Artifacts
+	"artifacts"
+	{
+ 
+	}
+ 
+	"sideshop1"
+	{
+ 
+	}
+ 
+	"sideshop2"
+	{
+ 
+	}
+ 
+	"secretshop"
+	{
+ 
+	}
+}

@@ -2,9 +2,8 @@ import { BaseAbility, registerAbility } from "../lib/dota_ts_adapter"
 @registerAbility()
 export class global_light_bolt extends BaseAbility
 {
-    
     OnSpellStart(): void {                
-        // if(IsServer()) {
+        if(IsServer()) {
             const playerMap = CustomNetTables.GetTableValue('player_info', 'player_map')
             ProjectileManager.CreateTrackingProjectile({
                 Target: this.GetCaster(),
@@ -34,7 +33,7 @@ export class global_light_bolt extends BaseAbility
                     })                                                  
                 }
             }
-        // }
+        }
     }
 
     OnProjectileHit(target: CDOTA_BaseNPC, location: Vector): boolean | void {
@@ -49,7 +48,7 @@ export class global_light_bolt extends BaseAbility
             })
 
             print(target.IsAlive())
-            EmitSoundOn('Hero_SkywrathMage.ArcaneBolt.Cast', target);
+            EmitSoundOn('Hero_Zuus.GodsWrath.Target', target)
         }
     }
 }

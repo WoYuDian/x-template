@@ -1,0 +1,15 @@
+{
+    "book_name": "marksmanship",
+    "texture_src": "drow_ranger_marksmanship",
+    "abilities": {
+        "dodge_move": {
+            "parent_ability": null
+        },
+        "leverage_back": {
+            "parent_ability": null
+        },
+        "shadow_arrow": {
+            "parent_ability": null
+        }
+    }
+}

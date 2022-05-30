@@ -1,0 +1,30 @@
+{
+    "book_name": "basic_magic",
+    "texture_src": "keeper_of_the_light_chakra_magic",
+    "abilities": {
+        "spell_base": {
+            "parent_ability": null
+        },
+        "magic_missile": {
+            "parent_ability": null
+        },
+        "spell_enhancement": {
+            "parent_ability": "spell_base"
+        },
+        "medusa_mana_shield": {
+            "parent_ability": "spell_base"
+        },
+        "spell_major": {
+            "parent_ability": "spell_enhancement"
+        },
+        "mana_recovery": {
+            "parent_ability": "spell_enhancement"
+        },
+        "spell_master": {
+            "parent_ability": "spell_major"
+        },
+        "spell_accelerate": {
+            "parent_ability": "spell_major"
+        }
+    }
+}

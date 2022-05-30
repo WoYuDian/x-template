@@ -1,0 +1,22 @@
+{
+    "book_name": "basic_artisan",
+    "texture_src": "artisan_base",
+    "abilities": {
+        "shredder_reactive_armor": {
+            "parent_ability": null
+        },
+        "tinker_rearm": {
+            "parent_ability": "shredder_reactive_armor",
+            "position_x": 20
+        },
+        "snapfire_scatterblast": {
+            "parent_ability": "artisan_base"
+        },
+        "shredder_whirling_death": {
+            "parent_ability": "artisan_base"
+        },
+        "techies_sticky_bomb": {
+            "parent_ability": "artisan_base"
+        }
+    }
+}

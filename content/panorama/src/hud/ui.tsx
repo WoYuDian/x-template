@@ -6,6 +6,7 @@ import { loadAbilityGraph, getBookRoot, getBookMap, getAbilityMap } from '../../
 import { CustomTableType, RankNumber, userNameMap } from './common_type'
 import { PlayerPanel } from './components/player-panel'
 import { ChallengeList } from './components/challenge-list'
+import { MenuPanel } from './components/menu-panel'
 
 loadAbilityGraph()
 
@@ -55,6 +56,7 @@ export class UIBody extends React.Component<any, UIState> {
             <AbilityPanel playerAbilityInfo={this.state.playerAbilityInfo} playerId={Game.GetLocalPlayerID()} setAbilityPanelVisible={this.setAbilityPanelVisible} showAbilityPanel={this.state.showAbilityPanel} abilityMap={this.state.abilityMap} bookRoot={this.state.bookRoot} bookMap={this.state.bookMap}></AbilityPanel>
             <GameStateBar gameTime={this.state.stateInfo?.round_count_down || 0} gameState={this.state.stateInfo?.state || ''}></GameStateBar>
             <SelectionPanel userNameMap={this.state.userNameMap} curRank={this.state.curRank} playerId={this.playerId} playerMap={this.state.playerMap} stateInfo={this.state.stateInfo}></SelectionPanel>
+            <MenuPanel setAbilityPanelVisible={this.setAbilityPanelVisible} playerInfo={this.state.playerMap? this.state.playerMap[this.playerId]: null}></MenuPanel>
         </Panel>)
     }
 

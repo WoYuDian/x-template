@@ -1,4 +1,6 @@
 import { cacheGet, cacheUpdate, CustomTableType } from "../cache";
+import { teleportPlayerToHome } from '../game_logic/game_operation'
+import { breakRealm } from '../game_logic/realm_manager'
 
 type GameStateInfo = CustomTableType<'game_state_info', 'state_info'>
 export function playerHeroSelection(event) {    
@@ -22,12 +24,11 @@ export function playerHeroSelection(event) {
             const hero = CreateHeroForPlayer(event.heroName, player)
             hero.SetControllableByPlayer(event.playerId, true);
             hero.SetRespawnsDisabled(true)
-            hero.SetRespawnPosition(Vector(playerLocation.x - 1024, playerLocation.y + 1024, playerLocation.z))
-            hero.RespawnHero(false, true)
             hero.SetAbilityPoints(-100)
             
             CenterCameraOnUnit(event.playerId, hero)
-            player.SetAssignedHeroEntity(hero)                  
+            player.SetAssignedHeroEntity(hero)
+            teleportPlayerToHome(event.playerId)            
         }
 
 
@@ -60,4 +61,9 @@ export function playerChallengeSelection(event: {playerId: PlayerID, targetPlaye
     const stateInfo: GameStateInfo = cacheGet('gameStateInfo')
     stateInfo.challenge_selection_info[event.playerId.toString()] = event.targetPlayerId.toString();
     print('Set the player challenge selection result: ', cacheUpdate('gameStateInfo'))
+}
+
+export function playerBreakRealm(event: {playerId: PlayerID}) {
+    breakRealm(event.playerId)
+    print('Player break realm: ', event.playerId)
 }

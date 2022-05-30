@@ -1,11 +1,22 @@
 const abilityBooks: any = {};
-
-import * as basic_abilities from  './basic_ability.json'
-abilityBooks[basic_abilities.book_name] = basic_abilities;
-import * as ice_magic from  './ice_magic.json'
-abilityBooks[ice_magic.book_name] = ice_magic;
-import * as fire_magic from  './fire_magic.json'
-abilityBooks[fire_magic.book_name] = fire_magic;
+// import * as basic_ability from  './basic_ability.json'
+// abilityBooks[basic_ability.book_name] = basic_ability;
+import * as basic_magic from  './basic_magic.json'
+abilityBooks[basic_magic.book_name] = basic_magic;
+import * as basic_fitness from  './basic_fitness.json'
+abilityBooks[basic_fitness.book_name] = basic_fitness;
+import * as necromancer_collection from  './necromancer_collection.json'
+abilityBooks[necromancer_collection.book_name] = necromancer_collection;
+import * as swordmanship from  './swordmanship.json'
+abilityBooks[swordmanship.book_name] = swordmanship;
+import * as marksmanship from  './marksmanship.json'
+abilityBooks[marksmanship.book_name] = marksmanship;
+// import * as basic_witchcraft from  './basic_witchcraft.json'
+// abilityBooks[basic_witchcraft.book_name] = basic_witchcraft;
+// import * as ice_magic from  './ice_magic.json'
+// abilityBooks[ice_magic.book_name] = ice_magic;
+// import * as fire_magic from  './fire_magic.json'
+// abilityBooks[fire_magic.book_name] = fire_magic;
 
 for(const bookName in abilityBooks) {
     abilityBooks[bookName].children = {}

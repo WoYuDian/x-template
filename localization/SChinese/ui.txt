@@ -21,7 +21,6 @@
 "practice_in_progress" "修炼回合"
 
 //-----------------Ability panel
-"ability_panel" "技能面板"
 "close_ability_panel" "关闭"
 "book_graph" "功法图鉴"
 "ability_graph" "功法技能"
@@ -35,3 +34,7 @@
 "challenge" "挑战"
 "challengers" "挑战者"
 "challenge_list" "挑战顺序"
+
+//-----------------Menu buttons
+"ability_panel" "技能面板"
+"break_realm" "突破境界"

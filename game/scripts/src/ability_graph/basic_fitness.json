@@ -1,0 +1,30 @@
+{
+    "book_name": "basic_fitness",
+    "texture_src": "dragon_knight_dragon_blood",
+    "abilities": {
+        "fitness_base": {
+            "parent_ability": null
+        },
+        "attack_echo": {
+            "parent_ability": null
+        },   
+        "fitness_enhancement": {
+            "parent_ability": "fitness_base"
+        },
+        "fitness_tenacity": {
+            "parent_ability": "fitness_base"
+        },
+        "fitness_major": {
+            "parent_ability": "fitness_enhancement"
+        },
+        "fitness_dodge": {
+            "parent_ability": "fitness_enhancement"
+        },
+        "fitness_master": {
+            "parent_ability": "fitness_major"
+        },
+        "fitness_regen": {
+            "parent_ability": "fitness_major"
+        }
+    }
+}

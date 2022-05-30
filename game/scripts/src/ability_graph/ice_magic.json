@@ -1,30 +1,10 @@
 {
     "book_name": "ice_magic",
-    "texture_src": "batrider_sticky_napalm",
+    "texture_src": "lich_chain_frost",
     "abilities": {
-        "beastmaster_inner_beast": {
-            "parent_ability": "arc_warden_magnetic_field"
-        },
-        "bloodseeker_bloodrage": {
-            "parent_ability": "beastmaster_inner_beast"
-        },
-        "bloodseeker_thirst": {
-            "parent_ability": "beastmaster_inner_beast"
-        },
-        "bounty_hunter_shuriken_toss": {
-            "parent_ability": "bloodseeker_thirst"
-        },
-        "brewmaster_thunder_clap": {
-            "parent_ability": "bounty_hunter_shuriken_toss"
-        },
-        "legion_commander_overwhelming_odds": {
-            "parent_ability": "brewmaster_thunder_clap"
-        },
-        "lich_frost_nova": {
-            "parent_ability": "legion_commander_overwhelming_odds"
-        },
-        "life_stealer_rage": {
-            "parent_ability": "lich_frost_nova"
+        "lich_frost_shield": {
+            "parent_ability": "crystal_maiden_crystal_nova"
         }
+
     }
 }

@@ -32,11 +32,12 @@ export function playerUpgradeAbility(event) {
     const abilityState = getPlayerAbilityState(abilityInfo.ability_points[playerIdStr], abilityInfo.ability_level_map[playerIdStr], abilityInfo.book_map[playerIdStr], event.abilityName);
 
     const hero = PlayerResource.GetSelectedHeroEntity(event.playerId);
+
+    let ability = hero.FindAbilityByName(event.abilityName);
     if(!hero.HasAbility(event.abilityName)) {
         hero.AddAbility(event.abilityName)        
+        ability = hero.FindAbilityByName(event.abilityName);
     }
-
-    const ability = hero.FindAbilityByName(event.abilityName);
 
     if(!ability) {
         print('Not found the ability')
@@ -44,7 +45,7 @@ export function playerUpgradeAbility(event) {
     }
 
     if(abilityState.level < ability.GetMaxLevel()) {
-        hero.UpgradeAbility(ability);
+        ability.SetLevel(abilityState.level + 1)
         abilityInfo.ability_points[playerIdStr] -= 1;
         if(!abilityInfo.ability_level_map[playerIdStr]) {
             abilityInfo.ability_level_map[playerIdStr] = {}

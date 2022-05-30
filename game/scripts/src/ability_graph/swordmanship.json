@@ -1,0 +1,21 @@
+{
+    "book_name": "swordmanship",
+    "texture_src": "juggernaut_omni_slash",
+    "abilities": {
+        "sword_mean_stacking": {
+            "parent_ability": null
+        },
+        "sword_mean_accelerate": {
+            "parent_ability": "sword_mean_stacking"
+        },
+        "sword_shot": {
+            "parent_ability": "sword_mean_accelerate"
+        },
+        "sword_sudden": {
+            "parent_ability": "sword_shot"
+        },
+        "sword_rain": {
+            "parent_ability": "sword_shot"
+        }
+    }
+}

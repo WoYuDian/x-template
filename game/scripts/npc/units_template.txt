@@ -57,6 +57,63 @@
 		"HasInventory" "1"
 
 	}
+	"npc_test_unit" {
+		"Searchable" "1"
+		"Cost" "1"
+		"BaseClass" "npc_dota_creature"
+		"Model" "models/heroes/dragon_knight/dragon_knight.vmdl"
+		"ModelScale" "1"
+		"Creature" {
+			"AttachWearables" {
+				"1" {
+					"ItemDef" "9641"
+
+				}
+				"2" {
+					"ItemDef" "9639"
+
+				}
+				"3" {
+					"ItemDef" "9640"
+
+				}
+				"4" {
+					"ItemDef" "9638"
+
+				}
+
+			}
+
+		}
+		"Ability1" ""
+		"Ability2" ""
+		"Ability3" ""
+		"Ability4" ""
+		"Ability5" ""
+		"Ability6" ""
+		"ConsideredHero" "1"
+		"MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND"
+		"AttackCapabilities" "DOTA_UNIT_CAP_RANGED_ATTACK"
+		"ArmorPhysical" "5"
+		"MagicalResistance" "0"
+		"StatusHealth" "10000"
+		"StatusHealthRegen" "2000"
+		"StatusMana" "2000"
+		"StatusManaRegen" "2000"
+		"BountyGoldMin" "0"
+		"BountyGoldMax" "0"
+		"BountyXP" "10"
+		"AutoAttacksByDefault" "1"
+		"AttackDamageMin" "1"
+		"AttackDamageMax" "100"
+		"AttackRate" "0.5000"
+		"AttackAnimationPoint" "0.1000"
+		"AttackRange" "100"
+		"BoundsHullName" "DOTA_HULL_SIZE_HERO"
+		"RingRadius" "70"
+		"HasInventory" "1"
+
+	}
 	"npc_cycle_boss_zeus" {
 		"Searchable" "1"
 		"Cost" "1"
@@ -123,7 +180,53 @@
 		"AttackRange" "500"
 		"BoundsHullName" "DOTA_HULL_SIZE_HERO"
 		"RingRadius" "70"
+		"GameSoundsFile" "soundevents/game_sounds_heroes/game_sounds_zuus.vsndevts"
+		"VoiceFile" "soundevents/voscripts/game_sounds_vo_zuus.vsndevts"
+		"SoundSet" "Hero_zuus"
 		"HasInventory" "1"
+
+	}
+	"npc_necromance_zombie" {
+		"Searchable" "1"
+		"Cost" "1"
+		"BaseClass" "npc_dota_creature"
+		"Model" "models/heroes/undying/undying_minion_torso.vmdl"
+		"ModelScale" "1"
+		"Creature" {
+			"AttachWearables" {
+
+			}
+
+		}
+		"Ability1" "undying_tombstone_zombie_deathstrike"
+		"Ability2" "neutral_spell_immunity"
+		"Ability3" ""
+		"Ability4" ""
+		"Ability5" ""
+		"Ability6" ""
+		"ConsideredHero" "0"
+		"MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND"
+		"AttackCapabilities" "DOTA_UNIT_CAP_RANGED_ATTACK"
+		"ArmorPhysical" "0"
+		"MagicalResistance" "0"
+		"StatusHealth" "1"
+		"StatusHealthRegen" "0"
+		"StatusManaRegen" "0"
+		"BountyGoldMin" "0"
+		"BountyGoldMax" "0"
+		"BountyXP" "0"
+		"AutoAttacksByDefault" "1"
+		"AttackDamageMin" "30"
+		"AttackDamageMax" "40"
+		"AttackRate" "1"
+		"AttackAnimationPoint" "0.1000"
+		"AttackRange" "128"
+		"BoundsHullName" "DOTA_HULL_SIZE_SMALLEST"
+		"RingRadius" "70"
+		"GameSoundsFile" "soundevents/game_sounds_heroes/game_sounds_zuus.vsndevts"
+		"VoiceFile" "soundevents/voscripts/game_sounds_vo_zuus.vsndevts"
+		"SoundSet" "Hero_zuus"
+		"HasInventory" "0"
 
 	}
 

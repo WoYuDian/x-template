@@ -1,0 +1,22 @@
+{
+    "book_name": "basic_witchcraft",
+    "texture_src": "rubick_arcane_supremacy",
+    "abilities": {
+        "rubick_arcane_supremacy": {
+            "parent_ability": null
+        },
+        "witch_doctor_maledict": {
+            "parent_ability": "rubick_arcane_supremacy",
+            "position_x": 20
+        },
+        "venomancer_venomous_gale": {
+            "parent_ability": "witchcraft_base"
+        },
+        "death_prophet_spirit_siphon": {
+            "parent_ability": "witchcraft_base"
+        },
+        "necrolyte_death_pulse": {
+            "parent_ability": "witchcraft_base"
+        }
+    }
+}

@@ -1,7 +1,8 @@
 import { Timers } from "../lib/timers";
 import { checkGameTime } from "../game_logic/state_manager";
 import { initPlayerAbilityInfo, addPlayerAbilityPoints } from "../game_logic/ability_manager";
-import { rollDrops, recordUnitKill, recordHeroKill } from "../game_logic/game_operation";
+import { rollDrops, recordUnitKill, recordHeroKill, createUnitInHomeForTest } from "../game_logic/game_operation";
+import { heroLevelUp } from "../game_logic/realm_manager";
 
 export function playerFullConnect(e: PlayerConnectFullEvent) {
     const playerMap = CustomNetTables.GetTableValue('player_info', 'player_map') || {};
@@ -13,6 +14,7 @@ export function playerFullConnect(e: PlayerConnectFullEvent) {
     AddFOWViewer(DotaTeam.CUSTOM_1, Vector(-3072, 0, 0), 4096, 10000000, false)
     AddFOWViewer(DotaTeam.CUSTOM_1, Vector(3072, 0, 0), 4096, 10000000, false)
     AddFOWViewer(DotaTeam.CUSTOM_1, Vector(0, 0, 0), 4096, 10000000, false)
+        
     for(let i = 0; i < 7; i++) {
         const bot = GameRules.AddBotPlayerWithEntityScript('', 'bot' + i, 7 + i,'', false)
         const id = i + 1;
@@ -35,6 +37,7 @@ export function gameStateChange(e: DotaGameStateChangeEvent) {
 
 export function playerLevelUp(e: DotaPlayerGainedLevelEvent) {
     addPlayerAbilityPoints(e.PlayerID)
+    heroLevelUp(e.PlayerID)
 }
 
 export function onEntityKilled(e: EntityKilledEvent) {

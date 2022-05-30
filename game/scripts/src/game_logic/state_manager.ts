@@ -2,7 +2,7 @@ import {cacheGet, cacheSet , cacheUpdate, CustomTableType} from '../cache'
 import * as heroConf from './configuration/hero.json'
 import {playerHeroSelection} from '../event_handlers/custom_events'
 import * as relicConf from './configuration/relic.json'
-import { teleportPlayerToHome, teleportPlayerToJungle, createUnitInArena, teleportPlayerToArena, createUnitInJungle, killAllUnits, createUnitCompositionInJungle, nextChallenge } from './game_operation'
+import { teleportPlayerToHome, teleportPlayerToJungle, createUnitInArena, createUnitInHomeForTest, createUnitInJungle, killAllUnits, createUnitCompositionInJungle, nextChallenge } from './game_operation'
 import { printObject } from '../util';
 import * as configuration from './configuration/game_state.json'
 
@@ -114,6 +114,8 @@ function practicePrepareIniter(stateInfo: stateInfo) {
     for(const playerId in playerMap) {
         teleportPlayerToHome(parseInt(playerId) as PlayerID);
 
+        //force advanture
+        stateInfo.plan_selection_info[playerId] = {plan_name: 'adventure'}
         const relicIndex = []
         while(relicIndex.length < configuration.relic_selection_size) {
             const randomIndex = RandomInt(1, relicConf.available_relics.length);
@@ -286,7 +288,7 @@ function cycleIniter(stateInfo: stateInfo) {
     const playerMap = CustomNetTables.GetTableValue('player_info', 'player_map')
 
     for(const playerId in playerMap) {
-        teleportPlayerToJungle(parseInt(playerId) as PlayerID);    
+        teleportPlayerToHome(parseInt(playerId) as PlayerID);    
     }
     const cycleBoss = createUnitInArena("npc_cycle_boss_zeus")
     cycleBoss.AddNewModifier(null, null, modifier_cycle_boss_zeus_ai.name, {})
@@ -334,12 +336,16 @@ function heroSelectionIniter(stateInfo: stateInfo) {
         if(playerIds[i]) {
             playerLocation[playerIds[i]] = {center: {x: centerX, y: centerY, z: 128}}
         }
-        DOTA_SpawnMapAtPosition('basic_home', Vector(centerX, centerY, 128), false, null, null, null)
+        DOTA_SpawnMapAtPosition('basic_home', Vector(centerX, centerY, 128), false, null, null, null)        
     }
 
+    
     DOTA_SpawnMapAtPosition('basic_arena', Vector(0, 0, 128), false, null, null, null)
 
     CustomNetTables.SetTableValue('player_configuration', 'player_location', playerLocation)
+
+    //for test
+    createUnitInHomeForTest('npc_test_unit', 0 as PlayerID)
 }
 
 function heroSelectionSettler(stateInfo: stateInfo) {

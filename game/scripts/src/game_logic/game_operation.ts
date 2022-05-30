@@ -44,6 +44,11 @@ export function teleportPlayerToArena(playerId: PlayerID, side: 'left' | 'right'
     }    
 }
 
+export function createUnitInHomeForTest(unitName: string, playerId: PlayerID) {
+    const homePosition = getPlayerHomePosition(playerId)
+    CreateUnitByName(unitName, Vector(homePosition.x + 500, homePosition.y + 500, homePosition.z) , true, null, PlayerResource.GetPlayer(playerId), DotaTeam.BADGUYS)    
+}
+
 export function createUnitInJungle(unitName: string, playerId: PlayerID) {
     CreateUnitByName(unitName, getPlayerUnitJunglePosition(playerId), true, null, PlayerResource.GetPlayer(playerId), DotaTeam.NEUTRALS)    
 }
@@ -112,7 +117,7 @@ export function killAllUnits() {
             if(unit.GetOwnerEntity()) {
                 const playerId = PlayerResource.GetNthPlayerIDOnTeam(unit.GetOwnerEntity().GetTeam(), 1);
 
-                if(battleInfo && battleInfo[playerId.toString()].score) {
+                if(battleInfo && battleInfo[playerId.toString()] && battleInfo[playerId.toString()].score) {
                     battleInfo[playerId.toString()].score += (unit.GetMaxHealth() - unit.GetHealth());
                 }
             }
@@ -125,13 +130,13 @@ export function killAllUnits() {
 function getPlayerHomePosition(playerId: PlayerID) {
     const playerLocation = CustomNetTables.GetTableValue('player_configuration', 'player_location')[playerId.toString()].center;
 
-    return Vector(playerLocation.x - 1024, playerLocation.y + 1024, playerLocation.z)
+    return Vector(playerLocation.x + 1024, playerLocation.y - 1024, playerLocation.z)
 }
 
 function getPlayerJunglePosition(playerId: PlayerID) {
     const playerLocation = CustomNetTables.GetTableValue('player_configuration', 'player_location')[playerId.toString()].center;
 
-    return Vector(playerLocation.x - 512, playerLocation.y - 1024, playerLocation.z)
+    return Vector(playerLocation.x - 1024, playerLocation.y + 1024, playerLocation.z)
 }
 
 function getArenaPosition(side: 'left' | 'right') {
@@ -145,7 +150,7 @@ function getArenaPosition(side: 'left' | 'right') {
 function getPlayerUnitJunglePosition(playerId: PlayerID, offset?: Vector) {
     const playerLocation = CustomNetTables.GetTableValue('player_configuration', 'player_location')[playerId.toString()].center;
     offset = offset || Vector(0, 0, 0);
-    return Vector(playerLocation.x + offset.x, playerLocation.y - 1024 + offset.y, playerLocation.z + offset.z)
+    return Vector(playerLocation.x + offset.x - 512, playerLocation.y + 1024 + offset.y, playerLocation.z + offset.z)
 }
 
 export function rollDrops(unit: CDOTA_BaseNPC_Creature) {
@@ -222,4 +227,14 @@ export function nextChallenge() {
         stateInfo.last_round_time = GameRules.GetGameTime() - configuration.rank_duration + 5;
     }
     
+}
+
+export function getPlayerHeroById(playerId: PlayerID) {
+    const player = PlayerResource.GetPlayer(playerId)
+
+    if(player) {
+        return player.GetAssignedHero()
+    } else {
+        return null;
+    }
 }

@@ -1,0 +1,9 @@
+{
+    "book_name": "marksmanship",
+    "texture_src": "drow_ranger_marksmanship",
+    "abilities": {
+        "sniper_take_aim": {
+            "parent_ability": null
+        }
+    }
+}

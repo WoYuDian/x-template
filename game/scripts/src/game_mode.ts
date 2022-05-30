@@ -13,9 +13,11 @@ declare global {
 
 @reloadable
 export class GameMode {
-    public static Precache(this: void, context: CScriptPrecacheContext) {
-        PrecacheResource("particle", "particles/units/heroes/hero_meepo/meepo_earthbind_projectile_fx.vpcf", context);
-        PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_meepo.vsndevts", context);
+    public static Precache(this: void, context: CScriptPrecacheContext) {        
+        const units = LoadKeyValues("scripts/npc/npc_units_custom.txt")
+        for(const key in units) {
+            PrecacheUnitByNameAsync(key, function() {})
+        }        
     }
 
     public static Activate(this: void) {
@@ -56,8 +58,15 @@ export class GameMode {
         gamemode.SetUseCustomHeroLevels(true)
         gamemode.SetCustomHeroMaxLevel(100)
         let xpConf = []
-        for(let i = 0; i < 100; i++) {
-            xpConf.push(i * 10)
+        let curXp = 0
+        for(let i = 0; i < 100; i++) {            
+            if((i + 1) % 5 == 0) {
+                curXp = curXp + 500000
+                xpConf.push(curXp)
+            } else {
+                curXp = curXp + i * 200
+                xpConf.push(curXp)
+            }            
         }
         gamemode.SetCustomXPRequiredToReachNextLevel(xpConf)
 
@@ -74,6 +83,7 @@ export class GameMode {
         CustomGameEventManager.RegisterListener('player_relic_selection', customEventHandlers.playerRelicSelection.bind(this))
         CustomGameEventManager.RegisterListener('player_upgrade_ability', abilityHandlers.playerUpgradeAbility.bind(this))
         CustomGameEventManager.RegisterListener('player_challenge_selection', customEventHandlers.playerChallengeSelection.bind(this))
+        CustomGameEventManager.RegisterListener('player_break_realm', customEventHandlers.playerBreakRealm.bind(this))
         loadAbilityGraph()     
 
         // MapWearables()
