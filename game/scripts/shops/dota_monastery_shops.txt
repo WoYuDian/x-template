@@ -6,8 +6,12 @@
 		"item"		"item_book_basic_fitness"
 		"item"		"item_book_necromancer_collection"
 		"item"		"item_book_swordmanship"		
-		"item"		"item_book_marksmanship"	
+		"item"		"item_book_marksmanship"
+		"item"		"item_book_xuanbingjue"	
 		"item"		"item_elixir_zhuji"
+		"item"		"item_elixir_jindan"
+		"item"		"item_elixir_yuanying"
+		"item"		"item_fabao_embryo"
 	}
  
 	"attributes"

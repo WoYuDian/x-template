@@ -1,7 +1,7 @@
 
 import { BaseModifier, registerModifier } from "../../lib/dota_ts_adapter";
 @registerModifier()
-export class modifier_elixir_jindan extends BaseModifier {
+export class modifier_elixir_yuanying extends BaseModifier {
     OnCreated(params: any): void {
         if(!IsServer()) return;
         this.SetStackCount(params.percentage || 0)
@@ -11,7 +11,7 @@ export class modifier_elixir_jindan extends BaseModifier {
     }
 
     GetTexture(): string {
-        return 'item_elixir_jindan'
+        return 'item_elixir_yuanying'
     }
 
     IsPurgable(): boolean {

@@ -4,7 +4,7 @@ import * as customEventHandlers from './event_handlers/custom_events'
 import { loadAbilityGraph, getBookRoot } from './ability_graph/graph_helper'
 import {printObject, MapWearables, GenerateDefaultBlock, GenerateBundleBlock} from './util'
 import * as abilityHandlers from './game_logic/ability_manager'
-
+import {precacheAllResource} from './precache'
 declare global {
     interface CDOTAGamerules {
         Addon: GameMode;
@@ -18,6 +18,8 @@ export class GameMode {
         for(const key in units) {
             PrecacheUnitByNameAsync(key, function() {})
         }        
+
+        precacheAllResource(context)
     }
 
     public static Activate(this: void) {

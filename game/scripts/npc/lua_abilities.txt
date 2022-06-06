@@ -90,8 +90,8 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/basic_magic/mana_recovery"
 		"AbilityValues" {
-			"recovery_percentage" "0.05 0.08 0.1"
-			"recovery_probability" "0.2 0.3 0.4"
+			"recovery_percentage" "5 8 10"
+			"recovery_probability" "20 30 40"
 
 		}
 		"MaxLevel" "3"
@@ -644,6 +644,56 @@
 		"AbilityUnitTargetType" ""
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_2"
+		"AbilityCastPoint" "0.2000"
+		"SpellImmunityType" "0"
+		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
+
+	}
+	"ice_piton" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/xuanbingjue/ice_piton"
+		"AbilityValues" {
+			"primary_state_factor" "100 150 200"
+			"basic_damage" "50 100 150"
+			"aoe_radius" "300"
+			"slow_rate" "20 35 50"
+			"slow_duration" "2"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "2"
+		"AbilityManaCost" "50 100 150"
+		"AbilityTextureName" "tusk_ice_shards"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_ALL"
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.2000"
+		"SpellImmunityType" "0"
+		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
+
+	}
+	"cold_touch" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/xuanbingjue/cold_touch"
+		"AbilityValues" {
+			"regen_reduction_per_stack" "10 15 20"
+			"debuff_duration" "2"
+			"max_stack_level" "5"
+			"freezing_duration" "3"
+			"damage_bonus_percentage" "100 200 00"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "0"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "cold_touch"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
 		"AbilityCastPoint" "0.2000"
 		"SpellImmunityType" "0"
 		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"

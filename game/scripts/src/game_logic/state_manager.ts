@@ -346,6 +346,7 @@ function heroSelectionIniter(stateInfo: stateInfo) {
 
     //for test
     createUnitInHomeForTest('npc_test_unit', 0 as PlayerID)
+    createUnitInHomeForTest('npc_test_unit', 0 as PlayerID)
 }
 
 function heroSelectionSettler(stateInfo: stateInfo) {

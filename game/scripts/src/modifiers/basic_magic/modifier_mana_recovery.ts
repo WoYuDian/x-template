@@ -6,13 +6,13 @@ export class modifier_mana_recovery extends BaseModifier {
     recoveryProbability: number
     recoveryPercentage: number
     OnCreated(params: object): void {
-            this.recoveryProbability = this.GetAbility().GetLevelSpecialValueFor('recovery_probability', this.GetAbility().GetLevel())
-            this.recoveryPercentage = this.GetAbility().GetLevelSpecialValueFor('recovery_percentage', this.GetAbility().GetLevel() - 1)   
+            this.recoveryProbability = this.GetAbility().GetSpecialValueFor('recovery_probability')
+            this.recoveryPercentage = this.GetAbility().GetSpecialValueFor('recovery_percentage')   
     }
 
     OnRefresh(params: object): void {
-        this.recoveryProbability = this.GetAbility().GetLevelSpecialValueFor('recovery_probability', this.GetAbility().GetLevel())
-        this.recoveryPercentage = this.GetAbility().GetLevelSpecialValueFor('recovery_percentage', this.GetAbility().GetLevel() - 1)
+        this.recoveryProbability = this.GetAbility().GetSpecialValueFor('recovery_probability')
+        this.recoveryPercentage = this.GetAbility().GetSpecialValueFor('recovery_percentage')
     }
 
     IsAura(): boolean {
@@ -33,5 +33,17 @@ export class modifier_mana_recovery extends BaseModifier {
 
     GetModifierAura(): string {
         return modifier_mana_recovery_debuff.name
+    }
+
+    DeclareFunctions(): ModifierFunction[] {
+        return [ModifierFunction.TOOLTIP, ModifierFunction.TOOLTIP2]
+    }
+
+    OnTooltip(): number {
+        return this.recoveryProbability
+    }
+
+    OnTooltip2(): number {
+        return this.recoveryPercentage
     }
 }

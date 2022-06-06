@@ -14,6 +14,7 @@ export class item_book_necromancer_collection extends BaseItem
             const result = learnBook(this.bookName, playerId)
             
             if(result) {
+                EmitSoundOn('Item.TomeOfKnowledge', owner)
                 this.SpendCharge()                
             }
         }

@@ -17,14 +17,22 @@ export class modifier_mana_recovery_debuff extends BaseModifier {
     }
 
     DeclareFunctions(): ModifierFunction[] {
-        return [ModifierFunction.ON_TAKEDAMAGE]
+        return [ModifierFunction.ON_TAKEDAMAGE, ModifierFunction.TOOLTIP, ModifierFunction.TOOLTIP2]
+    }
+    
+    OnTooltip(): number {
+        return this.recoveryProbability
+    }
+
+    OnTooltip2(): number {
+        return this.recoveryPercentage
     }
 
     OnTakeDamage(event: ModifierInstanceEvent): void {
         if(event.attacker != this.GetAbility().GetOwner()) return;
         if(event.damage_type != DamageTypes.MAGICAL) return;
 
-        if(RollPercentage(this.recoveryProbability * 100)) {
+        if(RollPercentage(this.recoveryProbability)) {
             ProjectileManager.CreateLinearProjectile({
                 Ability: this.GetAbility(),
                 EffectName: 'particles/skywrath_mage_concussive_shot_linear.vpcf',
@@ -47,7 +55,7 @@ export class modifier_mana_recovery_debuff extends BaseModifier {
                 iVisionRadius	: 200	,
                 iVisionTeamNumber: event.attacker.GetTeam(),
                 ExtraData: {
-                    mana_recovery: event.damage * this.recoveryPercentage
+                    mana_recovery: event.damage * (this.recoveryPercentage / 100)
                 }
             })
         }   

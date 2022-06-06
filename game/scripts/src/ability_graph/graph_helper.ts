@@ -11,6 +11,8 @@ import * as swordmanship from  './swordmanship.json'
 abilityBooks[swordmanship.book_name] = swordmanship;
 import * as marksmanship from  './marksmanship.json'
 abilityBooks[marksmanship.book_name] = marksmanship;
+import * as xuanbingjue from  './xuanbingjue.json'
+abilityBooks[xuanbingjue.book_name] = xuanbingjue;
 // import * as basic_witchcraft from  './basic_witchcraft.json'
 // abilityBooks[basic_witchcraft.book_name] = basic_witchcraft;
 // import * as ice_magic from  './ice_magic.json'
@@ -95,7 +97,8 @@ export function getPlayerAbilityState(playerAbilityPoints: number | undefined, p
 
     return {
         learnable: parentLearned && (parseInt(playerBookMap[ability.book_name] || 0) > 0) && (playerAbilityPoints > 0),
-        level: parseInt(playerAbilityMap[abilityName] || 0)
+        level: parseInt(playerAbilityMap[abilityName] || 0),
+        ability: ability
     };
 }
 

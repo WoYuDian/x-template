@@ -97,9 +97,9 @@
 		"ArmorPhysical" "5"
 		"MagicalResistance" "0"
 		"StatusHealth" "10000"
-		"StatusHealthRegen" "2000"
+		"StatusHealthRegen" "1000"
 		"StatusMana" "2000"
-		"StatusManaRegen" "2000"
+		"StatusManaRegen" "1000"
 		"BountyGoldMin" "0"
 		"BountyGoldMax" "0"
 		"BountyXP" "10"
@@ -227,6 +227,41 @@
 		"VoiceFile" "soundevents/voscripts/game_sounds_vo_zuus.vsndevts"
 		"SoundSet" "Hero_zuus"
 		"HasInventory" "0"
+
+	}
+	"fabao_embryo" {
+		"Searchable" "1"
+		"Cost" "1"
+		"BaseClass" "npc_dota_creature"
+		"Model" "models/fabao_embryo.vmdl"
+		"ModelScale" "1"
+		"Creature" {
+			"AttachWearables" {
+
+			}
+
+		}
+		"Ability1" ""
+		"Ability2" ""
+		"Ability3" ""
+		"Ability4" ""
+		"Ability5" ""
+		"Ability6" ""
+		"ConsideredHero" "0"
+		"HealthBarOffset" "200"
+		"MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND"
+		"AttackCapabilities" "DOTA_UNIT_CAP_RANGED_ATTACK"
+		"ArmorPhysical" "0"
+		"MagicalResistance" "0"
+		"StatusHealth" "1"
+		"StatusHealthRegen" "0"
+		"StatusManaRegen" "0"
+		"BountyGoldMin" "0"
+		"BountyGoldMax" "0"
+		"BountyXP" "0"
+		"BoundsHullName" "DOTA_HULL_SIZE_SMALLEST"
+		"RingRadius" "50"
+		"HasInventory" "1"
 
 	}
 

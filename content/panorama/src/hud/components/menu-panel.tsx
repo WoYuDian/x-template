@@ -26,7 +26,7 @@ export class MenuPanel extends React.Component<props, state> {
         
         if(this.props.playerInfo) {
             const level = this.props.playerInfo.level;
-            if(((level + 1) % 5) == 0) {                
+            if((((level + 1) % 5) == 0) && (level < 15)) {                
                 buttons.push(<Label onactivate={this.breakRealm} key="break_realm" style={{margin: '10px 0 0 0', textAlign: 'center', lineHeight: '30px', width: '100px', height: '40px', backgroundColor: '#333333', fontSize: '20px', color: '#ffffff', borderRadius: '5px'}} localizedText='#break_realm'></Label>)
             }
         }

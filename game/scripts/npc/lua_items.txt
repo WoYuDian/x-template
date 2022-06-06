@@ -115,6 +115,29 @@
 		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
 
 	}
+	"item_book_xuanbingjue" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/item_book_xuanbingjue"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "30"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "item_tome_of_knowledge"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
 	"item_elixir_zhuji" {
 		"BaseClass" "item_lua"
 		"ScriptFile" "items/elixir/item_elixir_zhuji"
@@ -133,6 +156,75 @@
 		"AbilityCooldown" ""
 		"AbilityManaCost" ""
 		"AbilityTextureName" "item_elixir_zhuji"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_elixir_jindan" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/elixir/item_elixir_jindan"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "30"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "item_elixir_jindan"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_elixir_yuanying" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/elixir/item_elixir_yuanying"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "30"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "item_elixir_yuanying"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_fabao_embryo" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/elixir/item_fabao_embryo"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "30"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "1"
+		"ItemRequiresCharges" "0"
+		"ItemInitialCharges" "0"
+		"ItemDroppable" "0"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "item_fabao_embryo"
 		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"

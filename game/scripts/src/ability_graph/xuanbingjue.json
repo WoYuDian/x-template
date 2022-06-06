@@ -1,0 +1,14 @@
+{
+    "book_name": "xuanbingjue",
+    "texture_src": "crystal_maiden_brilliance_aura",
+    "abilities": {
+        "ice_piton": {
+            "parent_ability": null,
+            "force_of_rule_bonus": [{"rule_name": "water", "bonus": 1}]
+        },
+        "cold_touch": {
+            "parent_ability": "ice_piton",
+            "force_of_rule_bonus": [{"rule_name": "water", "bonus": 1}]
+        }
+    }
+}

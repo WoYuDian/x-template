@@ -11,7 +11,7 @@ export class modifier_elixir_zhuji extends BaseModifier {
     }
 
     GetTexture(): string {
-        return 'item_tango_single'
+        return 'item_elixir_zhuji'
     }
 
     IsPurgable(): boolean {

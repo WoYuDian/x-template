@@ -46,7 +46,7 @@ export function teleportPlayerToArena(playerId: PlayerID, side: 'left' | 'right'
 
 export function createUnitInHomeForTest(unitName: string, playerId: PlayerID) {
     const homePosition = getPlayerHomePosition(playerId)
-    CreateUnitByName(unitName, Vector(homePosition.x + 500, homePosition.y + 500, homePosition.z) , true, null, PlayerResource.GetPlayer(playerId), DotaTeam.BADGUYS)    
+    CreateUnitByName(unitName, Vector(homePosition.x + RandomInt(500, 550), homePosition.y + RandomInt(500, 550), homePosition.z) , true, null, PlayerResource.GetPlayer(playerId), DotaTeam.BADGUYS)    
 }
 
 export function createUnitInJungle(unitName: string, playerId: PlayerID) {

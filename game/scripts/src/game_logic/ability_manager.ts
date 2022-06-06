@@ -1,6 +1,7 @@
 import {cacheGet, cacheSet , cacheUpdate, CustomTableType} from '../cache'
 import {getPlayerAbilityState, getPlayerBookState} from '../ability_graph/graph_helper'
 import {printObject} from '../util'
+import { forceOfRuleMap, addForceOfRule } from './realm_manager'
 
 const configuration = {
     playerInitialAbilityPoints: 3
@@ -56,6 +57,13 @@ export function playerUpgradeAbility(event) {
         }
         abilityInfo.ability_level_map[playerIdStr][event.abilityName] += 1;
         cacheUpdate('playerAbilityInfo')
+
+        if(abilityState.ability.force_of_rule_bonus) {
+            for(const key in abilityState.ability.force_of_rule_bonus) {
+                const bonusInfo = abilityState.ability.force_of_rule_bonus[key];
+                addForceOfRule(bonusInfo, hero)
+            }
+        }
     }    
 }
 

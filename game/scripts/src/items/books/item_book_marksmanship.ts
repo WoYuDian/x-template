@@ -14,6 +14,7 @@ export class item_book_marksmanship extends BaseItem
             const result = learnBook(this.bookName, playerId)
             
             if(result) {
+                EmitSoundOn('Item.TomeOfKnowledge', owner)
                 this.SpendCharge()                
             }
         }

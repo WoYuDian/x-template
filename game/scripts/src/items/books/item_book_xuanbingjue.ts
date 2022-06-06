@@ -2,9 +2,9 @@ import { BaseItem, registerAbility } from "../../lib/dota_ts_adapter"
 import { learnBook } from "../../game_logic/ability_manager"
 
 @registerAbility()
-export class item_book_swordmanship extends BaseItem
+export class item_book_xuanbingjue extends BaseItem
 {
-    bookName: string = 'swordmanship'
+    bookName: string = 'xuanbingjue'
     OnSpellStart(): void {
         const owner = this.GetOwner()
 
@@ -14,7 +14,7 @@ export class item_book_swordmanship extends BaseItem
             const result = learnBook(this.bookName, playerId)
             
             if(result) {
-                EmitSoundOn('Hero_Alchemist.AcidSpray', owner)
+                EmitSoundOn('Item.TomeOfKnowledge', owner)
                 this.SpendCharge()                
             }
         }
