@@ -1,3 +1,4 @@
+import { getForceOfRuleLevel } from "../../game_logic/realm_manager";
 import { BaseAbility, registerAbility } from "../../lib/dota_ts_adapter"
 import { modifier_sword_mean_stacking } from "../../modifiers/swordmanship/sword_mean_stacking"
 @registerAbility()
@@ -50,7 +51,7 @@ export class sword_rain extends BaseAbility
             const origin = caster.GetAbsOrigin() - (this.direction * 200) + RandomVector(this.shotRange)
             ProjectileManager.CreateLinearProjectile( {
                 Ability: this,
-                EffectName: 'particles/sword_linear_projectile.vpcf',
+                EffectName: 'particles/sword_shot/sword_shot.vpcf',
                 //@ts-ignore
                 vSpawnOrigin	: origin,
                 fDistance		: this.travelDistance,
@@ -78,14 +79,12 @@ export class sword_rain extends BaseAbility
     OnProjectileHit(target: CDOTA_BaseNPC, location: Vector): boolean | void {
         if(target && !target.IsMagicImmune() && !target.IsInvulnerable() && (target.GetTeam() != this.GetCaster().GetTeam())) {
             const caster = this.GetCaster();
-            let primaryStateDamage = 0;
-            if(caster.IsHero()) {
-                primaryStateDamage = this.GetSpecialValueFor('primary_state_factor') * caster.GetPrimaryStatValue()
-            }                        
+            
+            const damage = this.GetSpecialValueFor('damage_factor') * getForceOfRuleLevel('metal', caster)
             ApplyDamage({
                 victim: target,
                 attacker: caster,
-                damage: primaryStateDamage + this.GetSpecialValueFor('basic_damage'),
+                damage: damage,
                 damage_type: DamageTypes.PHYSICAL,
                 damage_flags: DamageFlag.NONE,
                 ability: this

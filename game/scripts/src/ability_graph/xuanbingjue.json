@@ -2,12 +2,32 @@
     "book_name": "xuanbingjue",
     "texture_src": "crystal_maiden_brilliance_aura",
     "abilities": {
+        "ji_han_zhi_qi": {
+            "parent_ability": null,
+            "force_of_rule_bonus": [{"rule_name": "water", "bonus": 1}]
+        },
         "ice_piton": {
             "parent_ability": null,
             "force_of_rule_bonus": [{"rule_name": "water", "bonus": 1}]
         },
-        "cold_touch": {
-            "parent_ability": "ice_piton",
+        "han_qi_ru_ti": {
+            "parent_ability": "ji_han_zhi_qi",
+            "force_of_rule_bonus": [{"rule_name": "water", "bonus": 1}]
+        },
+        "ice_gland": {
+            "parent_ability": "ji_han_zhi_qi",
+            "force_of_rule_bonus": [{"rule_name": "water", "bonus": 1}]
+        },
+        "han_qi_ru_hun": {
+            "parent_ability": "han_qi_ru_ti",
+            "force_of_rule_bonus": [{"rule_name": "water", "bonus": 1}]
+        },
+        "han_qi_fan_she": {
+            "parent_ability": "han_qi_ru_hun",
+            "force_of_rule_bonus": [{"rule_name": "water", "bonus": 1}]
+        },
+        "xuan_han_ling_yu": {
+            "parent_ability": "han_qi_ru_hun",
             "force_of_rule_bonus": [{"rule_name": "water", "bonus": 1}]
         }
     }

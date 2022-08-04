@@ -1,3 +1,4 @@
+import { getForceOfRuleLevel } from "../../game_logic/realm_manager";
 import { BaseAbility, registerAbility } from "../../lib/dota_ts_adapter"
 import { modifier_sword_mean_stacking } from "../../modifiers/swordmanship/sword_mean_stacking"
 @registerAbility()
@@ -35,7 +36,7 @@ export class sword_shot extends BaseAbility
 
             ProjectileManager.CreateLinearProjectile( {
                 Ability: this,
-                EffectName: 'particles/sword_linear_projectile.vpcf',
+                EffectName: 'particles/sword_shot/sword_shot.vpcf',
                 vSpawnOrigin	: this.GetCaster().GetAbsOrigin(),
                 fDistance		: 2000,
                 fStartRadius	: 50,
@@ -64,14 +65,11 @@ export class sword_shot extends BaseAbility
         if(target && !target.IsMagicImmune() && !target.IsInvulnerable() && (target.GetTeam() != this.GetCaster().GetTeam())) {
             const caster = this.GetCaster();
             const basicDamage = this.GetSpecialValueFor('basic_damage')
-            let primaryStateDamage = 0;
-            if(caster.IsHero()) {
-                primaryStateDamage = this.GetSpecialValueFor('primary_state_factor') * caster.GetPrimaryStatValue()
-            }                        
+            let extraDamage = this.GetSpecialValueFor('damage_factor') * getForceOfRuleLevel('metal', caster)
             ApplyDamage({
                 victim: target,
                 attacker: caster,
-                damage: primaryStateDamage + basicDamage,
+                damage: extraDamage + basicDamage,
                 damage_type: DamageTypes.PHYSICAL,
                 damage_flags: DamageFlag.NONE,
                 ability: this

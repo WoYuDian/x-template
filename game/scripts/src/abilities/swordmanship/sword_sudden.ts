@@ -1,3 +1,4 @@
+import { getForceOfRuleLevel } from "../../game_logic/realm_manager";
 import { BaseAbility, registerAbility } from "../../lib/dota_ts_adapter"
 import { modifier_sword_mean_stacking } from "../../modifiers/swordmanship/sword_mean_stacking"
 @registerAbility()
@@ -51,16 +52,13 @@ export class sword_sudden extends BaseAbility
         const enemies = FindUnitsInLine(this.GetCaster().GetTeamNumber(), this.GetCaster().GetAbsOrigin(), final_position, null, this.GetSpecialValueFor("radius"), UnitTargetTeam.ENEMY, UnitTargetType.HERO + UnitTargetType.CREEP, UnitTargetFlags.NONE)
         
         const caster = this.GetCaster();
-        const basicDamage = this.GetSpecialValueFor('basic_damage')
-        let primaryStateDamage = 0;
-        if(caster.IsHero()) {
-            primaryStateDamage = this.GetSpecialValueFor('primary_state_factor') * caster.GetPrimaryStatValue()
-        }   
+        
+        const damage = this.GetSpecialValueFor('damage_factor') * getForceOfRuleLevel('metal', caster)
         for(const enemy of enemies) {
             ApplyDamage({
                 victim: enemy,
                 attacker: caster,
-                damage: primaryStateDamage + basicDamage,
+                damage: damage,
                 damage_type: DamageTypes.PHYSICAL,
                 damage_flags: DamageFlag.NONE,
                 ability: this

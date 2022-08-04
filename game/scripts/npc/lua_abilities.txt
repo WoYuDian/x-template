@@ -16,7 +16,9 @@
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_5"
 		"AbilityCastPoint" "0.4000"
+		"AbilityCastRangeBuffer" ""
 		"SpellImmunityType" "1"
+		"AbilityUnitDamageType" ""
 		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
 
 	}
@@ -38,7 +40,9 @@
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
 		"AbilityCastPoint" "0.4000"
+		"AbilityCastRangeBuffer" ""
 		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
 		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
 
 	}
@@ -60,7 +64,9 @@
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
 		"AbilityCastPoint" "0.4000"
+		"AbilityCastRangeBuffer" ""
 		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
 		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
 
 	}
@@ -82,7 +88,9 @@
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
 		"AbilityCastPoint" "0.4000"
+		"AbilityCastRangeBuffer" ""
 		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
 		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
 
 	}
@@ -104,7 +112,9 @@
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
 		"AbilityCastPoint" "0.4000"
+		"AbilityCastRangeBuffer" ""
 		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
 		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
 
 	}
@@ -125,7 +135,9 @@
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
 		"AbilityCastPoint" "0.4000"
+		"AbilityCastRangeBuffer" ""
 		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
 		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
 
 	}
@@ -147,7 +159,9 @@
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
 		"AbilityCastPoint" "0.4000"
+		"AbilityCastRangeBuffer" ""
 		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
 		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
 
 	}
@@ -169,7 +183,9 @@
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
 		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
 		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
 		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
 
 	}
@@ -191,7 +207,9 @@
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
 		"AbilityCastPoint" "0.4000"
+		"AbilityCastRangeBuffer" ""
 		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
 		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
 
 	}
@@ -213,7 +231,9 @@
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
 		"AbilityCastPoint" "0.4000"
+		"AbilityCastRangeBuffer" ""
 		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
 		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
 
 	}
@@ -235,7 +255,9 @@
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
 		"AbilityCastPoint" "0.4000"
+		"AbilityCastRangeBuffer" ""
 		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
 		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
 
 	}
@@ -257,7 +279,9 @@
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
 		"AbilityCastPoint" "0.4000"
+		"AbilityCastRangeBuffer" ""
 		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
 		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
 
 	}
@@ -278,7 +302,9 @@
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
 		"AbilityCastPoint" "0.4000"
+		"AbilityCastRangeBuffer" ""
 		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
 		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
 
 	}
@@ -300,7 +326,9 @@
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
 		"AbilityCastPoint" "0.4000"
+		"AbilityCastRangeBuffer" ""
 		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
 		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
 
 	}
@@ -321,7 +349,9 @@
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
 		"AbilityCastPoint" "0.4000"
+		"AbilityCastRangeBuffer" ""
 		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
 		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
 
 	}
@@ -342,7 +372,9 @@
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
 		"AbilityCastPoint" "0.4000"
+		"AbilityCastRangeBuffer" ""
 		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
 		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
 
 	}
@@ -350,7 +382,10 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/necromancer_collection/summon_zombie"
 		"AbilityValues" {
-			"zombie_num" "2 3 4"
+			"force_of_rule_per_zombie" "5"
+			"health_bonus_factor" "15 30 45"
+			"damage_bonus_factor" "5 10 15"
+			"base_zombie_num" "1"
 
 		}
 		"MaxLevel" "3"
@@ -363,7 +398,9 @@
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
 		"AbilityCastPoint" "0.4000"
+		"AbilityCastRangeBuffer" ""
 		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
 		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
 
 	}
@@ -385,7 +422,9 @@
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
 		"AbilityCastPoint" "0.4000"
+		"AbilityCastRangeBuffer" ""
 		"SpellImmunityType" "1"
+		"AbilityUnitDamageType" ""
 		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
 
 	}
@@ -393,7 +432,7 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/necromancer_collection/swallow_zombie"
 		"AbilityValues" {
-			"recovery_factor" "10 20 30"
+			"recovery_factor" "50 100 150"
 			"base_recovery" "100 200 300"
 
 		}
@@ -407,7 +446,9 @@
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
 		"AbilityCastPoint" "0.1000"
+		"AbilityCastRangeBuffer" ""
 		"SpellImmunityType" "1"
+		"AbilityUnitDamageType" ""
 		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
 
 	}
@@ -422,14 +463,141 @@
 		"MaxLevel" "3"
 		"AbilityCooldown" "0"
 		"AbilityManaCost" "0"
-		"AbilityTextureName" "treant_leech_seed"
+		"AbilityTextureName" "pugna_nether_blast"
 		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityUnitTargetTeam" ""
 		"AbilityUnitTargetType" ""
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
 		"AbilityCastPoint" "0.4000"
+		"AbilityCastRangeBuffer" ""
 		"SpellImmunityType" "1"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
+
+	}
+	"shi_du" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/necromancer_collection/shi_du"
+		"AbilityValues" {
+			"duration_factor" "0.2 0.4 0.6"
+			"damage_factor" "5 10 15"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "0"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "pugna_life_drain"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.4000"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "1"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
+
+	}
+	"fu_shen" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/necromancer_collection/fu_shen"
+		"AbilityValues" {
+			"health_factor" "20 40 60"
+			"damage_factor" "5 10 15"
+			"move_speed_factor" "2 4 6"
+			"attack_speed_factor" "3 6 9"
+			"cast_range" "300"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "20"
+		"AbilityManaCost" "50 100 150"
+		"AbilityTextureName" "fu_shen"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.4000"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "1"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
+
+	}
+	"li_ti" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/necromancer_collection/li_ti"
+		"AbilityValues" {
+
+		}
+		"MaxLevel" "1"
+		"AbilityCooldown" "0"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "fu_shen"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.4000"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "1"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
+
+	}
+	"you_ming_ji_dian" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/necromancer_collection/you_ming_ji_dian"
+		"AbilityValues" {
+			"radius" "300"
+			"cast_range" "600 800 100"
+			"fire_damage_factor" "10 20 30"
+			"attack_stack_factor" " 0.2 0.3 0.4"
+			"attack_speed_stack_factor" "0.1 0.15 0.2"
+			"summon_delay" "2"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "60"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "you_ming_ji_dian"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.4000"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "1"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
+
+	}
+	"gui_wang_fire" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/necromancer_collection/gui_wang_fire"
+		"AbilityValues" {
+			"fire_radius" "300"
+			"burning_interval" "0.5"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "0"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "gui_wang_fire"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.4000"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "1"
+		"AbilityUnitDamageType" ""
 		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
 
 	}
@@ -437,8 +605,6 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/necromancer_collection/resentment_stacking"
 		"AbilityValues" {
-			"damage_bonus_per_stack" "5 10 20"
-			"attack_speed_bonus_per_stack" "2 4 6"
 
 		}
 		"MaxLevel" "3"
@@ -451,16 +617,48 @@
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
 		"AbilityCastPoint" "0.4000"
+		"AbilityCastRangeBuffer" ""
 		"SpellImmunityType" "1"
+		"AbilityUnitDamageType" ""
 		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
+
+	}
+	"she_hun_lian_yu" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/necromancer_collection/she_hun_lian_yu"
+		"AbilityValues" {
+			"damage_interval" "0.2"
+			"damage_factor" "1 2 3"
+			"heal_percentage" "10 20 30"
+			"search_radius" "800"
+			"mana_cost_per_wave" "10 20 30"
+			"prepare_time" "3"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "5"
+		"AbilityManaCost" "100 150 200"
+		"AbilityTextureName" "death_prophet_spirit_siphon"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_2"
+		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
 
 	}
 	"sword_mean_stacking" {
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/swordmanship/sword_mean_stacking"
 		"AbilityValues" {
-			"stacking_probability" "10 20 30"
-			"extra_damage_percentage" "20 30 40"
+			"stacking_factor" "0.2 0.3 0.4"
+			"damage_factor" "20 40 60"
+			"max_stack_factor" "3 6 9"
+			"interval" "1"
 
 		}
 		"MaxLevel" "3"
@@ -473,8 +671,64 @@
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
 		"AbilityCastPoint" "0.4000"
+		"AbilityCastRangeBuffer" ""
 		"SpellImmunityType" "1"
+		"AbilityUnitDamageType" ""
 		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
+
+	}
+	"sword_shield" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/swordmanship/sword_shield"
+		"AbilityValues" {
+			"damage_reduction_factor" "1 2 3"
+			"sowrd_mean_cost_per_damage" "1"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "0"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "juggernaut_blade_fury"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.4000"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "1"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
+
+	}
+	"ju_jian_shu" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/swordmanship/ju_jian_shu"
+		"AbilityValues" {
+			"damage_factor" "200 250 300"
+			"health_factor" "50 75 100"
+			"charge_cost" "5"
+			"life_factor" "0.5 0.75 1"
+			"delay" "0.5"
+			"radius" "300"
+			"cast_range" "1000"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "2"
+		"AbilityManaCost" "50 100 150"
+		"AbilityTextureName" "ju_jian_shu"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_ALL"
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
+		"AbilityCharges" "0"
 
 	}
 	"sword_mean_accelerate" {
@@ -494,7 +748,9 @@
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
 		"AbilityCastPoint" "0.4000"
+		"AbilityCastRangeBuffer" ""
 		"SpellImmunityType" "1"
+		"AbilityUnitDamageType" ""
 		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
 
 	}
@@ -502,7 +758,7 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/swordmanship/sword_shot"
 		"AbilityValues" {
-			"primary_state_factor" "2 4 6"
+			"damage_factor" "100 150 200"
 			"basic_damage" "100 250 400"
 			"charge_cost" "3"
 
@@ -517,7 +773,9 @@
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
 		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
 		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
 		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
 		"AbilityCharges" "0"
 
@@ -526,12 +784,11 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/swordmanship/sword_sudden"
 		"AbilityValues" {
-			"primary_state_factor" "2 4 6"
-			"basic_damage" "100 250 400"
-			"charge_cost" "5"
+			"damage_factor" "100 150 200"
+			"radius" "100"
+			"charge_cost" "10"
 			"max_travel_distance" "500"
 			"min_travel_distance" "50"
-			"radius" "100"
 
 		}
 		"MaxLevel" "3"
@@ -544,7 +801,9 @@
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
 		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
 		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
 		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
 		"AbilityCharges" "0"
 
@@ -553,14 +812,13 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/swordmanship/sword_rain"
 		"AbilityValues" {
-			"primary_state_factor" "1 2 3"
-			"basic_damage" "100 200 300"
+			"damage_factor" "50 75 100"
+			"charge_cost" "1"
 			"charge_cost_per_sword" "1"
 			"travel_distance" "2000"
 			"hit_radius" "50"
 			"interval" "0.05"
 			"shot_range" "500"
-			"charge_cost" "1"
 
 		}
 		"MaxLevel" "3"
@@ -574,11 +832,38 @@
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_2"
 		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
 		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
 		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
 		"AbilityCharges" "0"
 		"AbilityDuration" "5"
 		"AbilityChannelTime" "5"
+
+	}
+	"jian_qi_zong_heng" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/swordmanship/jian_qi_zong_heng"
+		"AbilityValues" {
+			"damage_factor" "25 50 75"
+			"radius" "1000"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "2"
+		"AbilityManaCost" "50 100 150"
+		"AbilityTextureName" "jian_qi_zong_heng"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_2"
+		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
+		"AbilityCharges" "0"
 
 	}
 	"dodge_move" {
@@ -599,7 +884,9 @@
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_2"
 		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
 		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
 		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
 
 	}
@@ -622,7 +909,9 @@
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_2"
 		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
 		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
 		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
 
 	}
@@ -645,7 +934,9 @@
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_2"
 		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
 		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
 		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
 
 	}
@@ -656,8 +947,132 @@
 			"primary_state_factor" "100 150 200"
 			"basic_damage" "50 100 150"
 			"aoe_radius" "300"
-			"slow_rate" "20 35 50"
-			"slow_duration" "2"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "2"
+		"AbilityManaCost" "50 100 150"
+		"AbilityTextureName" "winter_wyvern_splinter_blast"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_ALL"
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
+
+	}
+	"ji_han_zhi_qi" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/xuanbingjue/ji_han_zhi_qi"
+		"AbilityValues" {
+			"move_slow_rate_per_stack" "2 4 6"
+			"attack_slow_rate_per_stack" "2 4 6"
+			"debuff_duration" "2"
+			"max_stack_level" "10"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "0"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "ji_han_zhi_qi"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
+
+	}
+	"han_qi_ru_ti" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/xuanbingjue/han_qi_ru_ti"
+		"AbilityValues" {
+			"regen_reduction_per_stack" "10 15 20"
+			"debuff_duration" "2"
+			"max_stack_level" "5"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "0"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "ji_han_zhi_qi"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
+
+	}
+	"han_qi_ru_hun" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/xuanbingjue/han_qi_ru_hun"
+		"AbilityValues" {
+			"debuff_duration" "2"
+			"damage_bonus_percentage" "100 200 00"
+			"freezing_duration" "3"
+			"max_stack_level" "50"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "0"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "ji_han_zhi_qi"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
+
+	}
+	"han_qi_fan_she" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/xuanbingjue/han_qi_fan_she"
+		"AbilityValues" {
+			"primary_state_factor" "20 40 60"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "0"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "han_qi_fan_she"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
+
+	}
+	"ice_gland" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/xuanbingjue/ice_gland"
+		"AbilityValues" {
+			"distance" "600 750 900"
+			"basic_damage" "300 400 500"
+			"radius" "300"
+			"primary_state_factor" "100 150 200"
 
 		}
 		"MaxLevel" "3"
@@ -670,33 +1085,1037 @@
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
 		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
 		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
 		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
 
 	}
-	"cold_touch" {
+	"xuan_han_ling_yu" {
 		"BaseClass" "ability_lua"
-		"ScriptFile" "abilities/xuanbingjue/cold_touch"
+		"ScriptFile" "abilities/xuanbingjue/xuan_han_ling_yu"
 		"AbilityValues" {
-			"regen_reduction_per_stack" "10 15 20"
-			"debuff_duration" "2"
-			"max_stack_level" "5"
-			"freezing_duration" "3"
-			"damage_bonus_percentage" "100 200 00"
+			"primary_state_factor" "20 30 40"
+			"damage_interval" "1"
+			"radius" "800"
+			"mana_cost_per_wave" "100 150 200"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "2"
+		"AbilityManaCost" "100 150 200"
+		"AbilityTextureName" "crystal_maiden_freezing_field"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_2"
+		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
+
+	}
+	"huo_dan_shu" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/fentianjue/huo_dan_shu"
+		"AbilityValues" {
+			"primary_state_factor" "100 150 200"
+			"basic_damage" "50 100 150"
+			"aoe_radius" "300"
+			"aoe_damage_percentage" "0.5"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "2"
+		"AbilityManaCost" "50 100 150"
+		"AbilityTextureName" "huo_dan_shu"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_ALL"
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_2"
+		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
+
+	}
+	"sheng_ming_zhuo_shao" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/fentianjue/sheng_ming_zhuo_shao"
+		"AbilityValues" {
+			"primary_state_factor" "5 10 15"
+			"duration_factor" "0.5 1 1.5"
+			"damage_interval" "0.5"
 
 		}
 		"MaxLevel" "3"
 		"AbilityCooldown" "0"
 		"AbilityManaCost" "0"
-		"AbilityTextureName" "cold_touch"
+		"AbilityTextureName" "sheng_ming_zhuo_shao"
 		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityUnitTargetTeam" ""
 		"AbilityUnitTargetType" ""
 		"AbilityUnitTargetFlags" ""
 		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
 		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
 		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
 		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
+
+	}
+	"fa_li_zhuo_shao" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/fentianjue/fa_li_zhuo_shao"
+		"AbilityValues" {
+			"primary_state_factor" "0.5 1 1.5"
+			"duration_factor" "0.5 1 1.5"
+			"damage_interval" "0.5"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "0"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "fa_li_zhuo_shao"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
+
+	}
+	"fang_yu_zhuo_shao" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/fentianjue/fang_yu_zhuo_shao"
+		"AbilityValues" {
+			"debuff_duration" "3"
+			"reduction_factor" "0.5 1 1.5"
+			"max_stack_level" "5"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "0"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "fang_yu_zhuo_shao"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
+
+	}
+	"zhuo_mu" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/fentianjue/zhuo_mu"
+		"AbilityValues" {
+			"primary_state_factor" "1 2 3"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "0"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "zhuo_mu"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_NONE"
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
+
+	}
+	"fen_tian_zhi_yan" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/fentianjue/fen_tian_zhi_yan"
+		"AbilityValues" {
+			"primary_state_factor" "100 200 300"
+			"radius" "200"
+			"delay" "1"
+			"interval" "0.5"
+			"duration_factor" "0.1"
+			"base_duration" "1.5"
+			"cast_range" "1000"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "0"
+		"AbilityManaCost" "50 100 150"
+		"AbilityTextureName" "ember_spirit_flame_guard"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_NONE"
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
+
+	}
+	"fen_tian_ling_yu" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/fentianjue/fen_tian_ling_yu"
+		"AbilityValues" {
+			"primary_state_factor" "20 30 40"
+			"damage_interval" "1"
+			"force_of_rule_per_flower" "5"
+			"mana_cost_per_wave" "100 150 200"
+			"prepare_time" "3"
+			"base_flower_num" "1"
+			"search_radius" "800"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "2"
+		"AbilityManaCost" "100 150 200"
+		"AbilityTextureName" "fen_tian_ling_yu"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_2"
+		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
+
+	}
+	"hui_chun_shu" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/xilingji/hui_chun_shu"
+		"AbilityValues" {
+			"health_heal_per_mana_factor" "0.5 1 1.5"
+			"mana_cost_per_wave" "1 2 3"
+			"wave_interval" "0.1"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "2"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "treant_living_armor"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_2"
+		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
+
+	}
+	"zhong_ling_shu" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/xilingji/zhong_ling_shu"
+		"AbilityValues" {
+			"primary_state_factor" "75 125 200"
+			"cast_range" "2000"
+			"tree_base_life" "5"
+			"life_factor" "1"
+			"base_damage" "50 100 150"
+			"health_factor" "20 40 60"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "2"
+		"AbilityManaCost" "50 100 150"
+		"AbilityTextureName" "hoodwink_sharpshooter"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_ALL"
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
+
+	}
+	"ji_sheng" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/xilingji/ji_sheng"
+		"AbilityValues" {
+			"mana_recover_factor" "2 4 6"
+			"damage_percentage" "4 8 12"
+			"recover_interval" "1"
+			"duration_factor" "1"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "2"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "treant_leech_seed"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
+
+	}
+	"fu_su" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/xilingji/fu_su"
+		"AbilityValues" {
+			"attack_factor" "10 20 30"
+			"attack_speed_factor" "10 20 30"
+			"bound_duration_factor" "0.1 0.15 0.2"
+			"damage_factor" "100 150 200"
+			"radius" "400"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "2"
+		"AbilityManaCost" "100 200 300"
+		"AbilityTextureName" "fu_su"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
+
+	}
+	"sheng_ming_lian_jie" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/xilingji/sheng_ming_lian_jie"
+		"AbilityValues" {
+			"damage_percentage_factor" "0.5 1 1.5"
+			"radius" "800"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "2"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "sheng_ming_lian_jie"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
+
+	}
+	"zhuan_sheng_shu" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/xilingji/zhuan_sheng_shu"
+		"AbilityValues" {
+			"radius" "800"
+			"cold_down_reduction_factor" "0.8 1 1.2"
+			"base_cold_down" "60"
+			"delay" "1.5"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "60 50 40"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "treant_overgrowth"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
+
+	}
+	"yun_ling_zhi_jing" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/xilingji/yun_ling_zhi_jing"
+		"AbilityValues" {
+			"mana_cost_per_tick" "50 75 100"
+			"probability_factor" "1 1.5 2"
+			"interval" "1"
+			"radius" "300"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "2"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "treant_natures_grasp"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_2"
+		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
+
+	}
+	"yan_dun" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/banshanjue/yan_dun"
+		"AbilityValues" {
+			"block_factor" "10 15 20"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "2"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "pangolier_shield_crash"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_2"
+		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
+
+	}
+	"di_ci" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/banshanjue/di_ci"
+		"AbilityValues" {
+			"damage_factor" "100 150 200"
+			"radius" "200"
+			"delay" "0.5"
+			"cast_range" "1000"
+			"knockback_duration" "0.2"
+			"health_factor" "80 150 220 "
+			"rock_resistance" "90"
+			"split_num" "2"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "2"
+		"AbilityManaCost" "50 100 150"
+		"AbilityTextureName" "di_ci"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_2"
+		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
+
+	}
+	"di_dong_shu" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/banshanjue/di_dong_shu"
+		"AbilityValues" {
+			"damage_factor" "100 150 200"
+			"radius" "200"
+			"delay" "0.3"
+			"cast_range" "1000"
+			"distance" "800"
+			"speed" "2000"
+			"base_size_factor" "0.25"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "2"
+		"AbilityManaCost" "50 100 150"
+		"AbilityTextureName" "tiny_avalanche"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_2"
+		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" "250"
+		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
+
+	}
+	"shi_bao_shu" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/banshanjue/shi_bao_shu"
+		"AbilityValues" {
+			"damage_factor" "50 80 110"
+			"base_size_factor" "0.25"
+			"radius" "1500"
+			"blast_radius" "150"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "3"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "tiny_toss"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_NONE"
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
+
+	}
+	"zhong_li_chang" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/banshanjue/zhong_li_chang"
+		"AbilityValues" {
+			"move_speed_reduction_factor" "5 10 15"
+			"attack_speed_reduction_factor" "5 8 10"
+			"radius" "800"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "3"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "zhong_li_chang"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_NONE"
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
+
+	}
+	"shan_yue_zhi_li" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/banshanjue/shan_yue_zhi_li"
+		"AbilityValues" {
+			"damage_factor" "50 80 110"
+			"radius" "500"
+			"point_cost_per_attack" "5"
+			"max_stack" "100"
+			"aura_radius" "800"
+			"stun_duration_factor" "0.05 0.08 0.11"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "0"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "tiny_grow"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0"
+		"AbilityCastRangeBuffer" ""
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
+		"SpellImmunityType" "SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityUnitDamageType" "DAMAGE_TYPE_MAGICAL"
+
+	}
+	"lei_dian_zhi_chu" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/yuleizhenjing/lei_dian_zhi_chu"
+		"AbilityValues" {
+			"damage_factor" "1 2 3"
+			"max_stack" "100"
+			"stack_speed_factor" "2 4 6"
+			"radius" "100"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "0"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "storm_spirit_overload"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0"
+		"AbilityCastRangeBuffer" ""
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
+		"SpellImmunityType" "SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityUnitDamageType" "DAMAGE_TYPE_MAGICAL"
+
+	}
+	"yu_lei_shu" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/yuleizhenjing/yu_lei_shu"
+		"AbilityValues" {
+			"damage_factor" "50 75 100"
+			"radius" "200"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "3"
+		"AbilityManaCost" "50 100 150"
+		"AbilityTextureName" "zuus_lightning_bolt"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_ALL"
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
+		"SpellImmunityType" "SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityUnitDamageType" "DAMAGE_TYPE_MAGICAL"
+
+	}
+	"lei_dian_chang" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/yuleizhenjing/lei_dian_chang"
+		"AbilityValues" {
+			"stack_per_interval" "1 2 3"
+			"damage_factor" "10 20 30"
+			"max_stack" "10"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "3"
+		"AbilityManaCost" ""
+		"AbilityTextureName" "razor_plasma_field"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.2000"
+
+	}
+	"lei_dun" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/yuleizhenjing/lei_dun"
+		"AbilityValues" {
+			"damage_factor" "10 20 30"
+			"probability_factor" "1 2 3"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "3"
+		"AbilityManaCost" ""
+		"AbilityTextureName" "storm_spirit_electric_vortex"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.2000"
+
+	}
+	"lei_dun_shu" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/yuleizhenjing/lei_dun_shu"
+		"AbilityValues" {
+			"speed" "2000 3000 4000"
+			"radius" "800"
+			"damage_factor" "25 50 75"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "3"
+		"AbilityManaCost" "50 100 150"
+		"AbilityTextureName" "storm_spirit_ball_lightning"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.2000"
+
+	}
+	"wu_jin_lei_yu" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/yuleizhenjing/wu_jin_lei_yu"
+		"AbilityValues" {
+			"force_of_rule_per_attack" "5"
+			"damage_interval" "1"
+			"damage_factor" "25 50 75"
+			"mana_cost_per_wave" "100 150 200"
+			"prepare_time" "3"
+			"base_attack_num" "1"
+			"search_radius" "800"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "2"
+		"AbilityManaCost" "100 150 200"
+		"AbilityTextureName" "razor_eye_of_the_storm"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_2"
+		"AbilityCastPoint" "0.2000"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "0"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ConcussiveShot.Cast"
+
+	}
+	"lei_tin_zhen_ji" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/yuleizhenjing/lei_tin_zhen_ji"
+		"AbilityValues" {
+			"duration_factor" "0.01 0.015 0.02"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "3"
+		"AbilityManaCost" ""
+		"AbilityTextureName" "lei_tin_zhen_ji"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.2000"
+
+	}
+	"luo_han_quan" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/jingangjue/luo_han_quan"
+		"AbilityValues" {
+			"damage_factor" "40 60 80"
+			"width" "200"
+			"radius" "200"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "1"
+		"AbilityManaCost" "50"
+		"AbilityTextureName" "luo_han_quan"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_ATTACK"
+		"AbilityCastPoint" "0.2000"
+
+	}
+	"jin_gang_zhao" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/jingangjue/jin_gang_zhao"
+		"AbilityValues" {
+			"damage_factor" "50 75 100"
+			"duration_factor" "1"
+			"buff_cost" "1"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "5 4 3"
+		"AbilityManaCost" "50 100 150"
+		"AbilityTextureName" "jin_gang_zhao"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" ""
+		"AbilityCastPoint" "0.2000"
+
+	}
+	"jin_gang_hou" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/jingangjue/jin_gang_hou"
+		"AbilityValues" {
+			"damage_factor" "50 75 100"
+			"distance" "500 700 900"
+			"speed" "1500"
+			"start_radius" "50"
+			"end_radius" "450"
+			"stun_factor" "0.1 0.15 0.2"
+			"buff_cost" "3"
+			"range" "800"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "5 4 3"
+		"AbilityManaCost" "50 100 150"
+		"AbilityTextureName" "primal_beast_uproar"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_ATTACK"
+		"AbilityCastPoint" "0.2000"
+
+	}
+	"xu_mi_zhi" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/jingangjue/xu_mi_zhi"
+		"AbilityValues" {
+			"damage_factor" "50 75 100"
+			"distance" "800 1000 1200"
+			"speed" "1000 1500 2000"
+			"angle_range" "60"
+			"buff_cost" "1"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "5 4 3"
+		"AbilityManaCost" "50 100 150"
+		"AbilityTextureName" "xu_mi_zhi"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_ATTACK"
+		"AbilityCastPoint" "0.2000"
+
+	}
+	"hou_che_bu" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/jingangjue/hou_che_bu"
+		"AbilityValues" {
+			"distance" "600"
+			"speed" "600 900 1200"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "5 4 3"
+		"AbilityManaCost" "50"
+		"AbilityTextureName" "marci_companion_run"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_ATTACK"
+		"AbilityCastPoint" "0.2000"
+
+	}
+	"shan_shen_ji" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/jingangjue/shan_shen_ji"
+		"AbilityValues" {
+			"damage_factor" "80 120 160"
+			"cast_range" "800"
+			"delay" "0.2"
+			"buff_cost" "3"
+			"radius" "200"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "5 4 3"
+		"AbilityManaCost" "50 100 150"
+		"AbilityTextureName" "earthshaker_echo_slam"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_ATTACK"
+		"AbilityCastPoint" "0.2000"
+
+	}
+	"da_shou_yin" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/jingangjue/da_shou_yin"
+		"AbilityValues" {
+			"damage_factor" "150 225 300"
+			"move_speed_reduction_factor" "1 2 3"
+			"delay" "1"
+			"root_duration_factor" "0.05 0.08 0.12"
+			"radius" "300 400 500"
+			"buff_cost" "5"
+			"slow_duration" "1"
+			"cast_range" "1000"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "5 4 3"
+		"AbilityManaCost" "50 100 150"
+		"AbilityTextureName" "da_shou_yin"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_ATTACK"
+		"AbilityCastPoint" "0.2000"
+
+	}
+	"shi_jian_yan_chi" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/suiyuejing/shi_jian_yan_chi"
+		"AbilityValues" {
+			"delay_duration_factor" "0.05 0.1 0.15"
+			"damage_interval" "0.2"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "0"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "shi_jian_yan_chi"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_ATTACK"
+		"AbilityCastPoint" "0.2000"
+
+	}
+	"shi_jian_jia_su" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/suiyuejing/shi_jian_jia_su"
+		"AbilityValues" {
+			"force_of_rule_level_per_attack" "15 10 5"
+			"base_attack" "1 2 3"
+			"attack_speed" "3000"
+			"duration" "10"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "5"
+		"AbilityManaCost" "50 100 150"
+		"AbilityTextureName" "dawnbreaker_fire_wreath"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.4000"
+
+	}
+	"shi_jian_dui_ji" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/suiyuejing/shi_jian_dui_ji"
+		"AbilityValues" {
+			"radius" "800"
+			"damage_increment_factor" "0.02 0.04 0.06"
+			"increment_interval" "1"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "10 8 5"
+		"AbilityManaCost" "50 100 150"
+		"AbilityTextureName" "oracle_fortunes_end"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.4000"
+
+	}
+	"sui_yue_zhi_yan" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/suiyuejing/sui_yue_zhi_yan"
+		"AbilityValues" {
+			"radius" "200"
+			"damage_factor" "4 8 12"
+			"cast_range" "800 1000 1200"
+			"distance" "1500"
+			"speed" "800"
+			"duration_factor" "0.06 0.08 0.1"
+			"damage_interval" "1"
+			"force_of_rule_reduction_factor" " 0.02 0.04 0.06"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "10 8 5"
+		"AbilityManaCost" "50 100 150"
+		"AbilityTextureName" "sui_yue_zhi_yan"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.4000"
+
+	}
+	"shi_jian_jian_shi" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/suiyuejing/shi_jian_jian_shi"
+		"AbilityValues" {
+			"speed" "800 1200 1600"
+			"distance" "800 1200 1600"
+			"damage_interval" "0.5"
+			"damage_factor" "2 4 6"
+			"duration" "1 2 3"
+			"distance_factor" "0.002 0.004 0.006"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "15 12 9"
+		"AbilityManaCost" "50 100 150"
+		"AbilityTextureName" "shi_jian_jian_shi"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.8000"
+
+	}
+	"shi_jian_jie_yong" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/suiyuejing/shi_jian_jie_yong"
+		"AbilityValues" {
+			"duration" "8 12 16"
+			"point_factor" "0.15 0.3 0.45"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "20 18 16"
+		"AbilityManaCost" "50 100 150"
+		"AbilityTextureName" "oracle_false_promise"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.8000"
+
+	}
+	"shi_jian_ling_yu" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/suiyuejing/shi_jian_ling_yu"
+		"AbilityValues" {
+			"duration_factor" "0.005 0.01 0.015"
+			"radius" "300 400 500"
+			"move_speed" "600 800 1000"
+			"projectile_speed" "10000"
+			"cast_time_percentage" "90"
+
+		}
+		"MaxLevel" "3"
+		"AbilityCooldown" "20 15 10"
+		"AbilityManaCost" "50 100 150"
+		"AbilityTextureName" "shi_jian_ling_yu"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastPoint" "0.4000"
 
 	}
 

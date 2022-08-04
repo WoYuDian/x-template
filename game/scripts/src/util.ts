@@ -77,3 +77,39 @@ export function GenerateBundleBlock( setname ) {
 export function GenerateItemDefLine( i, itemID, comment ) {
     print("            \"", tostring(i), "\" { ", "\"ItemDef\" \"", itemID, "\" } // ", comment, '++++++++++++++')
 }
+
+export function calcDistanceOfTwoPoint(from: Vector, to: Vector) {
+    const distance = Math.sqrt(Math.pow(to.x - from.x, 2) + Math.pow(to.y - from.y, 2))
+    return distance
+}
+
+export function findUnitsInRing(
+    team: DotaTeam, 
+    cacheUnit: CBaseEntity, 
+    position: Vector, 
+    outerRadius: number, 
+    innerRadius: number, 
+    targetTeam: UnitTargetTeam, 
+    targetType: UnitTargetType, 
+    targetFlag: UnitTargetFlags, 
+    findOrder: FindOrder, 
+    canGrowCache: boolean): CDOTA_BaseNPC[] {
+    const unitsInRing = [];
+    const units = FindUnitsInRadius(team, position, cacheUnit, outerRadius, targetTeam, targetType, targetFlag, findOrder, canGrowCache);
+
+    for(const unit of units) {
+        if(calcDistanceOfTwoPoint(unit.GetAbsOrigin(), position) >= innerRadius) {
+            unitsInRing.push(unit)
+        }
+    }
+
+    return unitsInRing
+}
+
+export function rotateVector(direction: Vector, angle: number) {
+    angle = Math.PI * (angle / 180);
+    return Vector(
+        math.cos(angle) * direction.x - direction.y * Math.sin(angle), 
+        direction.x * Math.sin(angle) + direction.y * Math.cos(angle), 
+        0)
+}

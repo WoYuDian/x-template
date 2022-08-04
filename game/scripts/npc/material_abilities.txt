@@ -1,0 +1,29 @@
+// generate with Xavier's kv generator https://github.com/XavierCHN/x-template
+"XLSXContent" {
+	"ma_ignite" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/cast/material_abilities/ma_ignite/ma_ignite"
+		"AbilityValues" {
+			"duration_factor" "0.05"
+			"damage_factor" "10"
+			"damage_interval" "0.5"
+
+		}
+		"MaxLevel" "1"
+		"AbilityCooldown" "0"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "ogre_magi_ignite"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "0"
+		"AbilityCastPoint" "0"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "1"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
+
+	}
+
+}

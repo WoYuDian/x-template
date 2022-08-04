@@ -1,0 +1,34 @@
+{
+    "book_name": "jingangjue",
+    "texture_src": "dawnbreaker_luminosity",
+    "abilities": {
+        "luo_han_quan": {
+            "parent_ability": null,
+            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 1}, {"rule_name": "body", "bonus": 1}]
+        },
+        "jin_gang_zhao": {
+            "parent_ability": null,
+            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 1}, {"rule_name": "body", "bonus": 1}]
+        },
+        "hou_che_bu": {
+            "parent_ability": "luo_han_quan",
+            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 1}, {"rule_name": "body", "bonus": 1}]
+        },
+        "xu_mi_zhi": {
+            "parent_ability": "luo_han_quan",
+            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 1}, {"rule_name": "body", "bonus": 1}]
+        },
+        "jin_gang_hou": {
+            "parent_ability": "xu_mi_zhi",
+            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 1}, {"rule_name": "body", "bonus": 1}]
+        },
+        "shan_shen_ji": {
+            "parent_ability": "hou_che_bu",
+            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 1}, {"rule_name": "body", "bonus": 1}]
+        },
+        "da_shou_yin": {
+            "parent_ability": "jin_gang_hou",
+            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 1}, {"rule_name": "body", "bonus": 1}]
+        }
+    }
+}

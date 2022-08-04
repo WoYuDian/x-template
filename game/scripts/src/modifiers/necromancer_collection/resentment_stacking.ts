@@ -12,11 +12,11 @@ export class modifier_resentment_stacking extends BaseModifier {
     }
 
     GetAuraSearchTeam(): UnitTargetTeam {
-        return UnitTargetTeam.FRIENDLY
+        return UnitTargetTeam.BOTH
     }
 
     GetAuraSearchType(): UnitTargetType {
-        return UnitTargetType.BASIC
+        return UnitTargetType.BASIC + UnitTargetType.HERO
     }
 
     GetAuraRadius(): number {

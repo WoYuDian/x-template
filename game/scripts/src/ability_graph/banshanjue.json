@@ -1,0 +1,30 @@
+{
+    "book_name": "banshanjue",
+    "texture_src": "sandking_epicenter",
+    "abilities": {
+        "yan_dun": {
+            "parent_ability": null,
+            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 1}]
+        },
+        "di_ci": {
+            "parent_ability": null,
+            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 1}]
+        },
+        "di_dong_shu": {
+            "parent_ability": "yan_dun",
+            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 1}]
+        },
+        "shi_bao_shu": {
+            "parent_ability": "di_ci",
+            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 1}]
+        },
+        "zhong_li_chang": {
+            "parent_ability": "di_dong_shu",
+            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 1}]
+        },
+        "shan_yue_zhi_li": {
+            "parent_ability": "di_dong_shu",
+            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 1}]
+        }
+    }
+}

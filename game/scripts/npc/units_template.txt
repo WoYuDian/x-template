@@ -96,7 +96,7 @@
 		"AttackCapabilities" "DOTA_UNIT_CAP_RANGED_ATTACK"
 		"ArmorPhysical" "5"
 		"MagicalResistance" "0"
-		"StatusHealth" "10000"
+		"StatusHealth" "100000"
 		"StatusHealthRegen" "1000"
 		"StatusMana" "2000"
 		"StatusManaRegen" "1000"
@@ -104,7 +104,7 @@
 		"BountyGoldMax" "0"
 		"BountyXP" "10"
 		"AutoAttacksByDefault" "1"
-		"AttackDamageMin" "1"
+		"AttackDamageMin" "10"
 		"AttackDamageMax" "100"
 		"AttackRate" "0.5000"
 		"AttackAnimationPoint" "0.1000"
@@ -199,7 +199,7 @@
 
 		}
 		"Ability1" "undying_tombstone_zombie_deathstrike"
-		"Ability2" "neutral_spell_immunity"
+		"Ability2" ""
 		"Ability3" ""
 		"Ability4" ""
 		"Ability5" ""
@@ -232,6 +232,191 @@
 	"fabao_embryo" {
 		"Searchable" "1"
 		"Cost" "1"
+		"BaseClass" "npc_dota_lone_druid_bear"
+		"Model" "models/fabao_embryo.vmdl"
+		"ModelScale" "1"
+		"Creature" {
+			"AttachWearables" {
+
+			}
+
+		}
+		"Ability1" ""
+		"Ability2" ""
+		"Ability3" ""
+		"Ability4" ""
+		"Ability5" ""
+		"Ability6" ""
+		"ConsideredHero" "0"
+		"HealthBarOffset" "200"
+		"MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND"
+		"AttackCapabilities" "DOTA_UNIT_CAP_RANGED_ATTACK"
+		"ArmorPhysical" "0"
+		"MagicalResistance" "0"
+		"StatusHealth" "1"
+		"StatusHealthRegen" "0"
+		"StatusManaRegen" "0"
+		"BountyGoldMin" "0"
+		"BountyGoldMax" "0"
+		"BountyXP" "0"
+		"AttackRange" "0"
+		"BoundsHullName" "DOTA_HULL_SIZE_SMALLEST"
+		"RingRadius" "70"
+		"IsAncient" "1"
+		"HasInventory" "1"
+
+	}
+	"zhong_ling_shu_tree" {
+		"Searchable" "1"
+		"Cost" "1"
+		"BaseClass" "npc_dota_creature"
+		"Model" "models/props_tree/dire_tree005.vmdl"
+		"ModelScale" "1"
+		"Creature" {
+			"AttachWearables" {
+
+			}
+
+		}
+		"Ability1" "neutral_spell_immunity"
+		"Ability2" ""
+		"Ability3" ""
+		"Ability4" ""
+		"Ability5" ""
+		"Ability6" ""
+		"ConsideredHero" "1"
+		"HealthBarOffset" "200"
+		"MovementTurnRate" "0"
+		"MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND"
+		"AttackCapabilities" "DOTA_UNIT_CAP_RANGED_ATTACK"
+		"ArmorPhysical" "0"
+		"MagicalResistance" "0"
+		"StatusHealth" "1"
+		"StatusHealthRegen" "0"
+		"StatusManaRegen" "0"
+		"BountyGoldMin" "0"
+		"BountyGoldMax" "0"
+		"BountyXP" "0"
+		"AttackRange" "0"
+		"BoundsHullName" "DOTA_HULL_SIZE_SMALL"
+		"RingRadius" "70"
+		"HasInventory" "0"
+
+	}
+	"rock_big" {
+		"Searchable" "1"
+		"Cost" "1"
+		"BaseClass" "npc_dota_creature"
+		"Model" "models/particle/earth_spirit_rockspike05.vmdl"
+		"ModelScale" "1.6000"
+		"Creature" {
+			"AttachWearables" {
+
+			}
+
+		}
+		"Ability1" ""
+		"Ability2" ""
+		"Ability3" ""
+		"Ability4" ""
+		"Ability5" ""
+		"Ability6" ""
+		"ConsideredHero" "0"
+		"HealthBarOffset" "200"
+		"MovementTurnRate" "0"
+		"MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND"
+		"AttackCapabilities" "DOTA_UNIT_CAP_RANGED_ATTACK"
+		"ArmorPhysical" "0"
+		"MagicalResistance" "0"
+		"StatusHealth" "1"
+		"StatusHealthRegen" "0"
+		"StatusManaRegen" "0"
+		"BountyGoldMin" "0"
+		"BountyGoldMax" "0"
+		"BountyXP" "0"
+		"AttackRange" "0"
+		"BoundsHullName" "DOTA_HULL_SIZE_REGULAR"
+		"RingRadius" "70"
+		"HasInventory" "0"
+
+	}
+	"rock_medium" {
+		"Searchable" "1"
+		"Cost" "1"
+		"BaseClass" "npc_dota_creature"
+		"Model" "models/particle/earth_spirit_rockspike05.vmdl"
+		"ModelScale" "1"
+		"Creature" {
+			"AttachWearables" {
+
+			}
+
+		}
+		"Ability1" ""
+		"Ability2" ""
+		"Ability3" ""
+		"Ability4" ""
+		"Ability5" ""
+		"Ability6" ""
+		"ConsideredHero" "0"
+		"HealthBarOffset" "200"
+		"MovementTurnRate" "0"
+		"MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND"
+		"AttackCapabilities" "DOTA_UNIT_CAP_RANGED_ATTACK"
+		"ArmorPhysical" "0"
+		"MagicalResistance" "0"
+		"StatusHealth" "1"
+		"StatusHealthRegen" "0"
+		"StatusManaRegen" "0"
+		"BountyGoldMin" "0"
+		"BountyGoldMax" "0"
+		"BountyXP" "0"
+		"AttackRange" "0"
+		"BoundsHullName" "DOTA_HULL_SIZE_SMALL"
+		"RingRadius" "60"
+		"HasInventory" "0"
+
+	}
+	"rock_small" {
+		"Searchable" "1"
+		"Cost" "1"
+		"BaseClass" "npc_dota_creature"
+		"Model" "models/particle/earth_spirit_rockspike05.vmdl"
+		"ModelScale" "0.7000"
+		"Creature" {
+			"AttachWearables" {
+
+			}
+
+		}
+		"Ability1" ""
+		"Ability2" ""
+		"Ability3" ""
+		"Ability4" ""
+		"Ability5" ""
+		"Ability6" ""
+		"ConsideredHero" "0"
+		"HealthBarOffset" "200"
+		"MovementTurnRate" "0"
+		"MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND"
+		"AttackCapabilities" "DOTA_UNIT_CAP_RANGED_ATTACK"
+		"ArmorPhysical" "0"
+		"MagicalResistance" "0"
+		"StatusHealth" "1"
+		"StatusHealthRegen" "0"
+		"StatusManaRegen" "0"
+		"BountyGoldMin" "0"
+		"BountyGoldMax" "0"
+		"BountyXP" "0"
+		"AttackRange" "0"
+		"BoundsHullName" "DOTA_HULL_SIZE_SMALLEST"
+		"RingRadius" "50"
+		"HasInventory" "0"
+
+	}
+	"ju_jian_shu_unit" {
+		"Searchable" "1"
+		"Cost" "1"
 		"BaseClass" "npc_dota_creature"
 		"Model" "models/fabao_embryo.vmdl"
 		"ModelScale" "1"
@@ -259,8 +444,48 @@
 		"BountyGoldMin" "0"
 		"BountyGoldMax" "0"
 		"BountyXP" "0"
-		"BoundsHullName" "DOTA_HULL_SIZE_SMALLEST"
-		"RingRadius" "50"
+		"AttackRange" "0"
+		"BoundsHullName" "DOTA_HULL_SIZE_REGULAR"
+		"RingRadius" "70"
+		"HasInventory" "0"
+
+	}
+	"gui_wang" {
+		"Searchable" "1"
+		"Cost" "1"
+		"BaseClass" "npc_dota_creature"
+		"Model" "models/items/warlock/golem/hellsworn_golem/hellsworn_golem.vmdl"
+		"ModelScale" "1"
+		"Creature" {
+			"AttachWearables" {
+
+			}
+
+		}
+		"Ability1" "resentment_stacking"
+		"Ability2" "gui_wang_fire"
+		"Ability3" ""
+		"Ability4" ""
+		"Ability5" ""
+		"Ability6" ""
+		"ConsideredHero" "0"
+		"HealthBarOffset" "200"
+		"MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND"
+		"AttackCapabilities" "DOTA_UNIT_CAP_RANGED_ATTACK"
+		"ArmorPhysical" "0"
+		"MagicalResistance" "0"
+		"StatusHealth" "2000"
+		"StatusHealthRegen" "200"
+		"StatusManaRegen" "0"
+		"BountyGoldMin" "0"
+		"BountyGoldMax" "0"
+		"BountyXP" "0"
+		"AttackDamageMin" "300"
+		"AttackDamageMax" "300"
+		"AttackRate" "1"
+		"AttackRange" "256"
+		"BoundsHullName" "DOTA_HULL_SIZE_HUGE"
+		"RingRadius" "120"
 		"HasInventory" "1"
 
 	}

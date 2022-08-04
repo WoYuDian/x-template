@@ -238,3 +238,35 @@ export function getPlayerHeroById(playerId: PlayerID) {
         return null;
     }
 }
+
+export function clearUnitAbility(unit: CDOTA_BaseNPC) {
+    for(let i = 0; i < 32; i++) {
+        const ability = unit.GetAbilityByIndex(i) 
+        if(ability) {
+            unit.RemoveAbility(ability.GetName())
+        }
+    }
+}
+
+export function getUnitFirstItem(unit: CDOTA_BaseNPC) {
+    if(!unit.HasInventory()) return;
+
+    const item = unit.GetItemInSlot(0)
+
+    if(!item) return null;
+
+    const toughness = item.GetSpecialValueFor('toughness')
+    const hardness = item.GetSpecialValueFor('hardness')
+    const weight = item.GetSpecialValueFor('weight')
+    const forceOfFire = item.GetSpecialValueFor('fire')
+    const forceOfWater = item.GetSpecialValueFor('water')
+    const forceOfRock = item.GetSpecialValueFor('rock')
+    const forceOfWood = item.GetSpecialValueFor('wood')
+    const forceOfMetal = item.GetSpecialValueFor('metal')
+    const forceOfBody = item.GetSpecialValueFor('body')
+    const forceOfSpirit = item.GetSpecialValueFor('spirit')
+    const materialAbility1 = item.GetSpecialValueFor('material_ability_1') || 0
+    const materialAbility2 = item.GetSpecialValueFor('material_ability_2') || 0
+
+    return {item, toughness, hardness, weight, forceOfFire, forceOfWater, forceOfRock, forceOfWood, forceOfMetal, forceOfBody, forceOfSpirit, materialAbility1, materialAbility2}
+}

@@ -3,19 +3,32 @@
     "texture_src": "necrolyte_sadist",
     "abilities": {
         "summon_zombie": {
-            "parent_ability": null
-        },
-        "zombie_augmentation": {
-            "parent_ability": "summon_zombie"
+            "parent_ability": null,
+            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 1}, {"rule_name": "spirit", "bonus": 1}]
         },
         "swallow_zombie": {
-            "parent_ability": "zombie_augmentation"
+            "parent_ability": null,
+            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 1}, {"rule_name": "spirit", "bonus": 1}]
+        },
+        "shi_du": {
+            "parent_ability": "summon_zombie",
+            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 1}, {"rule_name": "spirit", "bonus": 1}]
         },
         "zombie_blast": {
-            "parent_ability": "zombie_augmentation"
+            "parent_ability": "summon_zombie",
+            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 1}, {"rule_name": "spirit", "bonus": 1}]
         },
-        "resentment_stacking": {
-            "parent_ability": "zombie_augmentation"
-        }     
+        "fu_shen": {
+            "parent_ability": "shi_du",
+            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 1}, {"rule_name": "spirit", "bonus": 1}]
+        },
+        "you_ming_ji_dian": {
+            "parent_ability": "shi_du",
+            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 1}, {"rule_name": "spirit", "bonus": 1}]
+        },
+        "she_hun_lian_yu": {
+            "parent_ability": "fu_shen",
+            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 1}, {"rule_name": "spirit", "bonus": 1}]
+        }
     }
 }

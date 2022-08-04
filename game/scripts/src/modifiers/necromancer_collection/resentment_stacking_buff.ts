@@ -1,18 +1,13 @@
-import { BaseModifier, registerModifier } from "../../lib/dota_ts_adapter";
+import { BaseAbility, BaseModifier, registerModifier } from "../../lib/dota_ts_adapter";
 import { resentment_stacking_owner_buff } from "./resentment_stacking_owner_buff";
 @registerModifier()
 export class modifier_resentment_stacking_buff extends BaseModifier {
-    damageBonusPerStack: number
-    healthBonusPerStack: number
     OnCreated(params: object): void {
-        this.damageBonusPerStack = this.GetAbility().GetSpecialValueFor('damage_bonus_per_stack')
-        this.healthBonusPerStack = this.GetAbility().GetSpecialValueFor('health_bonus_per_stack')
     }
 
     OnRefresh(params: object): void {
-        this.damageBonusPerStack = this.GetAbility().GetSpecialValueFor('damage_bonus_per_stack')
-        this.healthBonusPerStack = this.GetAbility().GetSpecialValueFor('health_bonus_per_stack')
     }
+
     DeclareFunctions(): ModifierFunction[] {
         return [ModifierFunction.ON_DEATH]
     }    
@@ -24,16 +19,17 @@ export class modifier_resentment_stacking_buff extends BaseModifier {
         
 
         if(this.GetParent().GetUnitName() == 'npc_necromance_zombie') {
-            if(owner.IsBaseNPC() && owner.IsHero()) {
+            if(owner.IsBaseNPC()) {
                 const effectTarget = ParticleManager.CreateParticle('particles/econ/items/ogre_magi/ogre_magi_arcana/ogre_magi_arcana_secondstyle_fireblast_solarfeathers.vpcf', ParticleAttachment.ABSORIGIN_FOLLOW, owner)
                 ParticleManager.SetParticleControl( effectTarget, 1, owner.GetAbsOrigin())
                 ParticleManager.ReleaseParticleIndex( effectTarget )
 
                 const modifier = owner.FindModifierByName(resentment_stacking_owner_buff.name)
-
                 if(modifier) {                    
                     modifier.IncrementStackCount()
-                    modifier.SetDuration(8, true)           
+                    modifier.SetDuration(8, true)    
+                    //@ts-ignore
+                    modifier.OnRefresh()
                 } else {
                     owner.AddNewModifier(owner, this.GetAbility(), resentment_stacking_owner_buff.name, {duration: 8})
                 }

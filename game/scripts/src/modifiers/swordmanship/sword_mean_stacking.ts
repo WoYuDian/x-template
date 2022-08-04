@@ -1,23 +1,40 @@
+import { getForceOfRuleLevel } from "../../game_logic/realm_manager";
 import { BaseModifier, registerModifier } from "../../lib/dota_ts_adapter";
 
-const relatedAbilityList = ['sword_shot', 'sword_sudden']
+const relatedAbilityList = ['sword_shot', 'sword_sudden', 'ju_jian_shu']
 
 @registerModifier()
 export class modifier_sword_mean_stacking extends BaseModifier {
-    stackingProbability: number
-    extraDamagePercentage: number
+    stackingFactor: number
+    damageFactor: number
+    maxStackFactor: number
     OnCreated(params: object): void {
+        this.stackingFactor = this.GetAbility().GetSpecialValueFor('stacking_factor')
+        this.damageFactor = this.GetAbility().GetSpecialValueFor('damage_factor')
+        this.maxStackFactor = this.GetAbility().GetSpecialValueFor('max_stack_factor')
+
         if(!IsServer()) return;
-        this.SetStackCount(999)
-        this.stackingProbability = this.GetAbility().GetSpecialValueFor('stacking_probability')
-        this.extraDamagePercentage = this.GetAbility().GetSpecialValueFor('extra_damage_percentage')
+
+        this.StartIntervalThink(1)
     }
 
-    OnRefresh(params: object): void {
+    OnIntervalThink(): void {
+        if(!IsServer()) return;
+        const stackingNum = Math.ceil(this.stackingFactor * getForceOfRuleLevel('metal', this.GetCaster()))
+
+        this.addStacking(stackingNum)
+    }
+
+    OnDestroy(): void {
         if(!IsServer()) return;
 
-        this.stackingProbability = this.GetAbility().GetSpecialValueFor('stacking_probability')
-        this.extraDamagePercentage = this.GetAbility().GetSpecialValueFor('extra_damage_percentage')
+    }
+    
+    OnRefresh(params: object): void {
+        this.stackingFactor = this.GetAbility().GetSpecialValueFor('stacking_factor')
+        this.damageFactor = this.GetAbility().GetSpecialValueFor('damage_factor')
+        this.maxStackFactor = this.GetAbility().GetSpecialValueFor('max_stack_factor')      
+        if(!IsServer()) return;
     }
 
     DeclareFunctions(): ModifierFunction[] {
@@ -42,7 +59,8 @@ export class modifier_sword_mean_stacking extends BaseModifier {
     OnAttack(event: ModifierAttackEvent): void {
         if(!IsServer()) return;
         if(event.attacker == this.GetParent()) {
-            const extraDamage = (this.extraDamagePercentage / 100) * this.GetParent().GetAttackDamage()
+            const extraDamage = this.damageFactor * getForceOfRuleLevel('metal', event.attacker)
+            
             ApplyDamage({
                 victim: event.target,
                 attacker: this.GetParent(),
@@ -55,14 +73,26 @@ export class modifier_sword_mean_stacking extends BaseModifier {
             ParticleManager.SetParticleControl( effectTarget, 1, event.target.GetAbsOrigin())
             ParticleManager.ReleaseParticleIndex( effectTarget )
             
-            if(RollPercentage(this.stackingProbability)) {
-                this.IncrementStackCount()
-                this.updateAbilityState()
+            if(RollPercentage(this.stackingFactor)) {
+                this.addStacking(1)
                 const effectTarget = ParticleManager.CreateParticle('particles/econ/items/juggernaut/jugg_ti8_sword/juggernaut_blade_fury_abyssal_tgt.vpcf', ParticleAttachment.ABSORIGIN_FOLLOW, this.GetParent())
                 ParticleManager.SetParticleControl( effectTarget, 1, this.GetParent().GetAbsOrigin())
                 ParticleManager.ReleaseParticleIndex( effectTarget )
             }
         }
+    }
+
+    addStacking(num: number) {
+        const curStack = this.GetStackCount();
+
+        const maxStack = this.maxStackFactor * getForceOfRuleLevel('metal', this.GetCaster())
+        if((curStack + num) < maxStack) {
+            this.SetStackCount(curStack + num)
+        } else {
+            this.SetStackCount(maxStack)
+        }
+        
+        this.updateAbilityState()
     }
 
     IsHidden(): boolean {

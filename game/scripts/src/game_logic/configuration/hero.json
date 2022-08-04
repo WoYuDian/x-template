@@ -1,19 +1,8 @@
 {
 	"available_heros": [
-		"npc_dota_hero_ancient_apparition",
 		"npc_dota_hero_antimage",
-		"npc_dota_hero_axe",
-		"npc_dota_hero_bounty_hunter",
-		"npc_dota_hero_ember_spirit",
-		"npc_dota_hero_enchantress",
-		"npc_dota_hero_enigma",
-		"npc_dota_hero_faceless_void",
-		"npc_dota_hero_furion",
-		"npc_dota_hero_gyrocopter",
-		"npc_dota_hero_huskar",
-		"npc_dota_hero_invoker",
-		"npc_dota_hero_jakiro",
-		"npc_dota_hero_juggernaut"
+		"npc_dota_hero_juggernaut",
+		"npc_dota_hero_lion"
 	]
 
 }

@@ -1,5 +1,6 @@
 #base "lua_abilities.txt"
-
+#base "cast_abilities.txt"
+#base "material_abilities.txt"
 "DOTAAbilities"
 {
 }

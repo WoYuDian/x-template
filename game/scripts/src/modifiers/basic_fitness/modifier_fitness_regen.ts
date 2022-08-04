@@ -13,7 +13,9 @@ export class modifier_fitness_regen extends BaseModifier {
     }
 
     OnDestroy(): void {
+        if(!IsServer()) return;
         ParticleManager.DestroyParticle(this.particleId, false)
+		ParticleManager.ReleaseParticleIndex(this.particleId)
     }
     OnRefresh(params: object): void {
             this.healthRegenFactor = this.GetAbility().GetLevelSpecialValueFor('health_regen_factor', this.GetAbility().GetLevel() - 1)

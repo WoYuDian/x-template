@@ -1,3 +1,4 @@
+import { getForceOfRuleLevel } from "../../game_logic/realm_manager";
 import { BaseModifier, registerModifier } from "../../lib/dota_ts_adapter";
 
 @registerModifier()
@@ -19,6 +20,7 @@ export class modifier_zombie_blast_buff extends BaseModifier {
     }    
 
     OnDeath(event: ModifierInstanceEvent): void {
+        if(!IsServer()) return;
         if(event.unit != this.GetParent()) return;
 
         const owner = this.GetAbility().GetOwner()        
@@ -30,7 +32,7 @@ export class modifier_zombie_blast_buff extends BaseModifier {
                 ParticleManager.ReleaseParticleIndex( effectTarget )
         
 
-                const damage = owner.GetPrimaryStatValue() * this.damageFactor;
+                const damage = (getForceOfRuleLevel('rock', owner) + getForceOfRuleLevel('spirit', owner)) * this.damageFactor;
                 const enemies = FindUnitsInRadius(
                     this.GetParent().GetTeamNumber(), 
                     this.GetParent().GetAbsOrigin(), 

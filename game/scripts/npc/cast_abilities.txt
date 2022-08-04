@@ -1,0 +1,99 @@
+// generate with Xavier's kv generator https://github.com/XavierCHN/x-template
+"XLSXContent" {
+	"cast_sword_hilt" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/cast/sword/cast_sword_hilt"
+		"AbilityValues" {
+			"toughness" "0"
+			"hardness" "3"
+			"weight" "0"
+
+		}
+		"MaxLevel" "1"
+		"AbilityCooldown" "3"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "cast_sword_hilt"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "0"
+		"AbilityCastPoint" "0"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "1"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
+
+	}
+	"cast_sword_blade" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/cast/sword/cast_sword_blade"
+		"AbilityValues" {
+			"toughness" "0"
+			"weight" "0"
+
+		}
+		"MaxLevel" "1"
+		"AbilityCooldown" "3"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "cast_sword_blade"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "0"
+		"AbilityCastPoint" "0"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "1"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
+
+	}
+	"cast_sword_shot" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/cast/sword/cast_sword_shot"
+		"AbilityValues" {
+			"basic_damage" "300"
+
+		}
+		"MaxLevel" "1"
+		"AbilityCooldown" "3"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "cast_sword_shot"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "0"
+		"AbilityCastPoint" "0"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "1"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
+
+	}
+	"cast_sword_fusion" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/cast/sword/cast_sword_fusion"
+		"AbilityValues" {
+			"basic_attack_bonus" "100"
+
+		}
+		"MaxLevel" "1"
+		"AbilityCooldown" "3"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "cast_sword_fusion"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "0"
+		"AbilityCastPoint" "0"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "1"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
+
+	}
+
+}

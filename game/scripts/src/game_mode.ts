@@ -20,6 +20,9 @@ export class GameMode {
         }        
 
         precacheAllResource(context)
+        PrecacheResource("particle", 'particles/units/heroes/hero_juggernaut/jugg_attack_blur.vpcf', context)
+        PrecacheResource("particle", 'particles/econ/items/juggernaut/jugg_ti8_sword/juggernaut_ti8_sword_attack_b.vpcf', context)
+        PrecacheResource("particle", 'particles/econ/items/juggernaut/jugg_ti8_sword/juggernaut_ti8_sword_attack_a.vpcf', context)
     }
 
     public static Activate(this: void) {

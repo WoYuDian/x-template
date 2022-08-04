@@ -1,0 +1,48 @@
+{
+    "book_name": "suiyuejing",
+    "texture_src": "oracle_false_promise",
+    "abilities": {
+        "shi_jian_yan_chi": {
+            "parent_ability": null,
+            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 1}, {"rule_name": "metal", "bonus": 1}, {"rule_name": "water", "bonus": 1}, 
+                {"rule_name": "wood", "bonus": 1}, {"rule_name": "fire", "bonus": 1}
+            ]
+        },
+        "shi_jian_jia_su": {
+            "parent_ability": null,
+            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 1}, {"rule_name": "metal", "bonus": 1}, {"rule_name": "water", "bonus": 1}, 
+                {"rule_name": "wood", "bonus": 1}, {"rule_name": "fire", "bonus": 1}
+            ]
+        },
+        "shi_jian_dui_ji": {
+            "parent_ability": "shi_jian_yan_chi",
+            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 1}, {"rule_name": "metal", "bonus": 1}, {"rule_name": "water", "bonus": 1}, 
+                {"rule_name": "wood", "bonus": 1}, {"rule_name": "fire", "bonus": 1}
+            ]
+        },
+        "sui_yue_zhi_yan": {
+            "parent_ability": "shi_jian_yan_chi",
+            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 1}, {"rule_name": "metal", "bonus": 1}, {"rule_name": "water", "bonus": 1}, 
+                {"rule_name": "wood", "bonus": 1}, {"rule_name": "fire", "bonus": 1}
+            ]
+        },
+        "shi_jian_jian_shi": {
+            "parent_ability": "shi_jian_dui_ji",
+            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 1}, {"rule_name": "metal", "bonus": 1}, {"rule_name": "water", "bonus": 1}, 
+                {"rule_name": "wood", "bonus": 1}, {"rule_name": "fire", "bonus": 1}
+            ]
+        },
+        "shi_jian_jie_yong": {
+            "parent_ability": "shi_jian_dui_ji",
+            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 1}, {"rule_name": "metal", "bonus": 1}, {"rule_name": "water", "bonus": 1}, 
+                {"rule_name": "wood", "bonus": 1}, {"rule_name": "fire", "bonus": 1}
+            ]
+        },
+        "shi_jian_ling_yu": {
+            "parent_ability": "shi_jian_jie_yong",
+            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 1}, {"rule_name": "metal", "bonus": 1}, {"rule_name": "water", "bonus": 1}, 
+                {"rule_name": "wood", "bonus": 1}, {"rule_name": "fire", "bonus": 1}
+            ]
+        }
+    }
+}

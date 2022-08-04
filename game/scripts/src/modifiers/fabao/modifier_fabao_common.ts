@@ -1,8 +1,10 @@
 
 import { BaseModifier, registerModifier } from "../../lib/dota_ts_adapter";
+
 @registerModifier()
 export class modifier_fabao_common extends BaseModifier {
     particleId: ParticleID
+    owner: CDOTA_BaseNPC_Hero
     OnCreated(params: any): void {
         if(!IsServer()) return;
 
@@ -17,7 +19,11 @@ export class modifier_fabao_common extends BaseModifier {
     }
 
     DeclareFunctions(): ModifierFunction[] {
-        return [ModifierFunction.ATTACKSPEED_PERCENTAGE, ModifierFunction.MODEL_CHANGE]
+        return [ModifierFunction.ATTACKSPEED_PERCENTAGE]
+    }
+
+    setOwner(owner: CDOTA_BaseNPC_Hero) {
+        this.owner = owner
     }
 
     // GetModifierModelChange(): string {

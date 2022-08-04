@@ -6,7 +6,9 @@
         "player_info",
         "player_configuration",
         "game_state_info",
-        "player_ability_info"
+        "player_ability_info",
+        "player_battle_info",
+        "vector_targeting"
     ]
 }
 

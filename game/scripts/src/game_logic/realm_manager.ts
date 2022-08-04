@@ -7,11 +7,24 @@ import { modifier_elixir_yuanying } from "../modifiers/break_buff/modifier_elixi
 import { modifier_realm_yuanying } from "../modifiers/realm/modifier_realm_yuanying";
 
 import { modifier_force_of_water } from "../modifiers/realm/modifier_force_of_water";
+import { modifier_force_of_fire } from "../modifiers/realm/modifier_force_of_fire";
+import { modifier_force_of_wood } from "../modifiers/realm/modifier_force_of_wood";
+import { modifier_force_of_rock } from "../modifiers/realm/modifier_force_of_rock";
+import { modifier_force_of_metal } from "../modifiers/realm/modifier_force_of_metal";
+import { modifier_force_of_body } from "../modifiers/realm/modifier_force_of_body";
+import { modifier_force_of_spirit } from "../modifiers/realm/modifier_force_of_spirit";
 import { Timers } from "../lib/timers";
+import { modifier_fabao_common } from "../modifiers/fabao/modifier_fabao_common";
 export const forceOfRuleMap = {
-    water: modifier_force_of_water
+    water: modifier_force_of_water,
+    fire: modifier_force_of_fire,
+    wood: modifier_force_of_wood,
+    rock: modifier_force_of_rock,
+    metal: modifier_force_of_metal,
+    body: modifier_force_of_body,
+    spirit: modifier_force_of_spirit
 }
-export function breakRealm(playerId: PlayerID) {    
+export function breakRealm(playerId: PlayerID) {
     const hero = getPlayerHeroById(playerId)
 
     if(!hero) return;
@@ -151,7 +164,7 @@ function zhujiBreak(hero: CDOTA_BaseNPC_Hero) {
     }
 }
 
-export function addForceOfRule(bonusInfo: {rule_name: string, bonus: number}, hero: CDOTA_BaseNPC_Hero) {
+export function addForceOfRule(bonusInfo: {rule_name: string, bonus: number}, hero: CDOTA_BaseNPC_Hero | CDOTA_BaseNPC) {
     const modifier = forceOfRuleMap[bonusInfo.rule_name];
     if(!hero.FindModifierByName(modifier.name)) {
         hero.AddNewModifier(hero, null, modifier.name, {})        
@@ -161,4 +174,64 @@ export function addForceOfRule(bonusInfo: {rule_name: string, bonus: number}, he
         const heroModifier = hero.FindModifierByName(modifier.name)
         heroModifier.SetStackCount(heroModifier.GetStackCount() + bonusInfo.bonus)
     })        
+}
+
+export function getForceOfRuleLevel(ruleName: string, unit: CDOTA_BaseNPC) {
+    if(!unit || !unit.FindAbilityByName) return;
+    const buff = unit.FindModifierByName(forceOfRuleMap[ruleName]?.name || '')
+
+    if(buff) {
+        return buff.GetStackCount();
+    } else { 
+        return 0
+    }
+}
+
+export function getSumOfForceOfRuleLevels(ruleNames: string[], unit: CDOTA_BaseNPC) {    
+    if(!unit || !unit.FindAbilityByName) return;
+
+    let totalLevel = 0
+
+    for(const ruleName of ruleNames) {
+        const buff = unit.FindModifierByName(forceOfRuleMap[ruleName]?.name || '')
+
+        if(buff) {
+            totalLevel += buff.GetStackCount();
+        }
+    }
+
+    return totalLevel
+}
+
+export function getFabaoSumOfForceOfRuleLevels(ruleNames: string[], unit: CDOTA_BaseNPC) {    
+    if(!unit || !unit.FindAbilityByName) return;
+
+    let totalLevel = 0
+    const fabaoBuff = unit.FindModifierByName(modifier_fabao_common.name) as modifier_fabao_common;
+
+    if(fabaoBuff) {
+        totalLevel += getSumOfForceOfRuleLevels(ruleNames, fabaoBuff.owner) 
+    }
+
+    for(const ruleName of ruleNames) {
+        const buff = unit.FindModifierByName(forceOfRuleMap[ruleName]?.name || '')
+
+        if(buff) {
+            totalLevel += buff.GetStackCount();
+        }
+    }
+
+    return totalLevel
+}
+
+export function getRuleNamesOfUnit(unit: CDOTA_BaseNPC) {
+    const ruleNames = []
+    for(const key in forceOfRuleMap) {
+        const buff = unit.FindModifierByName(forceOfRuleMap[key].name)
+        if(buff) {
+            ruleNames.push(key)
+        }
+    }
+
+    return ruleNames
 }

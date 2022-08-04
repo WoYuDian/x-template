@@ -6,20 +6,16 @@ export class item_fabao_embryo extends BaseItem
 {
     unit: CDOTA_BaseNPC
     OnSpellStart(): void {
-        if(!IsServer()) return;
-        const owner = this.GetOwner()
-
+        const owner = this.GetOwner()        
         
         if(owner.IsBaseNPC() && owner.IsHero()) {
-            print(this.unit,'+++++++++++')
             if(!this.unit) {
                 //@ts-ignore
-                this.unit = CreateUnitByName('fabao_embryo', owner.GetAbsOrigin() + RandomVector(200) + Vector(0, 0, 1000), true, owner, owner, owner.GetTeam())
+                this.unit = CreateUnitByName('fabao_embryo', owner.GetAbsOrigin() + RandomVector(200), true, owner, owner, owner.GetTeamNumber()) 
                 this.unit.SetControllableByPlayer(owner.GetPlayerID(), false);
-                this.unit.AddNewModifier(this.GetCaster(), this, modifier_fabao_common.name, {}) 
-            }
-
-            
+                const buff = this.unit.AddNewModifier(owner, this, modifier_fabao_common.name, {}) as modifier_fabao_common
+                buff.setOwner(owner)
+            }            
         }
     }
 }

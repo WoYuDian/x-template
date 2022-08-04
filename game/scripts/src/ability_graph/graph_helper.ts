@@ -13,6 +13,18 @@ import * as marksmanship from  './marksmanship.json'
 abilityBooks[marksmanship.book_name] = marksmanship;
 import * as xuanbingjue from  './xuanbingjue.json'
 abilityBooks[xuanbingjue.book_name] = xuanbingjue;
+import * as fentianjue from  './fentianjue.json'
+abilityBooks[fentianjue.book_name] = fentianjue;
+import * as xilingji from  './xilingji.json'
+abilityBooks[xilingji.book_name] = xilingji;
+import * as banshanjue from  './banshanjue.json'
+abilityBooks[banshanjue.book_name] = banshanjue;
+import * as yuleizhenjing from  './yuleizhenjing.json'
+abilityBooks[yuleizhenjing.book_name] = yuleizhenjing;
+import * as jingangjue from  './jingangjue.json'
+abilityBooks[jingangjue.book_name] = jingangjue;
+import * as suiyuejing from  './suiyuejing.json'
+abilityBooks[suiyuejing.book_name] = suiyuejing;
 // import * as basic_witchcraft from  './basic_witchcraft.json'
 // abilityBooks[basic_witchcraft.book_name] = basic_witchcraft;
 // import * as ice_magic from  './ice_magic.json'

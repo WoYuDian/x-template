@@ -39,5 +39,6 @@ declare interface CustomNetTableDeclarations {
         battle_info: {
             [player_id: string]: {unit_stats: {[unit_name: string]: {num: number, killed: number}}, score: number}
         }
-    }
+    },
+    vector_targeting: any
 }

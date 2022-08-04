@@ -1,5 +1,5 @@
 import { cacheGet, cacheUpdate, CustomTableType } from "../cache";
-import { teleportPlayerToHome } from '../game_logic/game_operation'
+import { clearUnitAbility, teleportPlayerToHome } from '../game_logic/game_operation'
 import { breakRealm } from '../game_logic/realm_manager'
 
 type GameStateInfo = CustomTableType<'game_state_info', 'state_info'>
@@ -25,6 +25,7 @@ export function playerHeroSelection(event) {
             hero.SetControllableByPlayer(event.playerId, true);
             hero.SetRespawnsDisabled(true)
             hero.SetAbilityPoints(-100)
+            clearUnitAbility(hero)
             
             CenterCameraOnUnit(event.playerId, hero)
             player.SetAssignedHeroEntity(hero)

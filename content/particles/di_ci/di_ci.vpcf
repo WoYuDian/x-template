@@ -1,0 +1,134 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vpcf37:version{f9a1c8c4-159b-4786-b740-4d1a118c8f46} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 1
+	m_flConstantRadius = 1.0
+	m_ConstantColor = [ 219, 209, 182, 255 ]
+	m_flConstantLifespan = 6.0
+	m_nBehaviorVersion = 5
+	m_nFirstMultipleOverride_BackwardCompat = 6
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+	m_Emitters = 
+	[
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_nParticlesToEmit = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 1.0
+			}
+		},
+	]
+	m_Initializers = 
+	[
+		{
+			_class = "C_INIT_RandomLifeTime"
+			m_fLifetimeMin = 0.06
+			m_fLifetimeMax = 0.06
+		},
+		{
+			_class = "C_INIT_CreateWithinSphere"
+		},
+		{
+			_class = "C_INIT_RandomRotation"
+			m_nFieldOutput = 12
+			m_flDegreesMin = 100.0
+			m_flDegreesMax = 140.0
+			m_bRandomlyFlipDirection = false
+			m_bDisableOperator = true
+		},
+		{
+			_class = "C_INIT_RandomRadius"
+			m_flRadiusMax = 1.6
+			m_flRadiusMin = 1.6
+		},
+		{
+			_class = "C_INIT_RandomRotation"
+			m_flDegreesMin = -10.0
+			m_flDegreesMax = 10.0
+			m_nFieldOutput = 20
+			m_bRandomlyFlipDirection = false
+			m_bDisableOperator = true
+		},
+		{
+			_class = "C_INIT_RandomColor"
+			m_ColorMax = [ 224, 229, 186, 255 ]
+		},
+		{
+			_class = "C_INIT_PositionOffset"
+		},
+	]
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_BasicMovement"
+			m_Gravity = [ 0.0, 0.0, -200.0 ]
+			m_flOpStartFadeInTime = 2.15
+		},
+		{
+			_class = "C_OP_Decay"
+		},
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flBias = 0.95
+			m_flStartScale = 0.0
+		},
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flStartTime = 0.95
+			m_flEndScale = 0.0
+			m_bDisableOperator = true
+		},
+	]
+	m_Renderers = 
+	[
+		{
+			_class = "C_OP_RenderModels"
+			m_nAnimationField = 19
+			m_bOrientZ = true
+			m_ModelList = 
+			[
+				{
+					m_model = resource:"models/particle/earth_spirit_rockspike05.vmdl"
+				},
+			]
+			m_nLOD = 1
+			m_nSkin = 1
+			m_bForceLoopingAnimation = true
+			m_bIgnoreNormal = true
+		},
+	]
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/events/fall_major_2016/cyclone_fm06_rock_b.vpcf"
+			m_flDelay = 0.05
+		},
+		{
+			m_ChildRef = resource:"particles/econ/events/fall_major_2016/cyclone_fm06_rock_c.vpcf"
+			m_flDelay = 0.1
+		},
+		{
+			m_ChildRef = resource:"particles/econ/events/fall_major_2016/cyclone_fm06_ground_dust.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/events/fall_major_2016/cyclone_fm06_ground_cracks.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/events/fall_major_2016/cyclone_fm06_ground_debries.vpcf"
+		},
+	]
+}
