@@ -5,10 +5,10 @@
 	IsTemplate = false
 	maps = 
 	[
-		"dota",
+		"dota_monastery"
 	]
 	CheckAFKPlayers = false
-	DefaultMap = "dota"
+	DefaultMap = "dota_monastery"
 	Default_Keys = 
 	[
 		{
@@ -19,16 +19,19 @@
 	DisableIK = false
 	EnablePickRules = false
 	EventGame = false
-	hero_picker = null
+	hero_picker = 
+	{
+	}
 	HeroGuidesSupported = false
 	ForceDefaultGuide = false
 	MinimalPrecache = false
 	MinPlayers = 1
-	MaxPlayers = 10
+	MaxPlayers = 8
 	map_options = 
 	[
 		{
-			map = "dota"
+			MaxPlayers = 8
+			map = "dota_monastery"
 		},
 	]
 	PenaltiesEnabled = false

@@ -1,13 +1,13 @@
 {
-    "hero_selection_duration": 5,
+    "hero_selection_duration": 20,
     "hero_selection_pool_size": 3,
-    "practice_prepare_duration": 5000,
-    "practice_duration": 5,
-    "practice_round_num_before_rank": 1,
-    "rank_prepare_duration": 5,
-    "rank_duration": 5,
-    "rank_round_num_before_cycle": 1,
-    "cycle_prepare_duration": 5,
-    "cycle_duration": 25,
+    "practice_prepare_duration": 20,
+    "practice_duration": 30,
+    "practice_round_num_before_rank": 5,
+    "rank_prepare_duration": 20,
+    "rank_duration": 30,
+    "rank_round_num_before_cycle": 2,
+    "cycle_prepare_duration": 20,
+    "cycle_duration": 30 ,
     "relic_selection_size": 3
 }

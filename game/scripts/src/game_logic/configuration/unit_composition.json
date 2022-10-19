@@ -1,14 +1,133 @@
 {
     "first_rank": {
+        "modifiers": ["modifier_practice_creep"],
         "units": [
-            {"name": "npc_kv_generator_test", "offset": {"x": 0, "y": 0}},
-            {"name": "npc_kv_generator_test", "offset": {"x": 0, "y": 10}},
-            {"name": "npc_kv_generator_test", "offset": {"x": 0, "y": -10}}
+            {"name": "practice_melee", "offset": {"x": 0, "y": 0}, "modifiers": ["modifier_common_ai"], "force_of_rules": {"fire": 2, "wood": 2, "rock": 2}},
+            {"name": "practice_ranged", "offset": {"x": 0, "y": 10}},
+            {"name": "practice_ranged", "offset": {"x": 0, "y": -10}}
         ]
     },
     "cycle_boss_zuus": {
         "units": [
             {"name": "npc_cycle_boss_zuus", "offset": {"x": 0, "y": 0}}
+        ]
+    },
+    "jing_ji_lin": {
+        "modifiers": ["modifier_practice_creep"],
+        "units": [
+            {"name": "jing_ji_lin_boss", "offset": {"x": 0, "y": 0}, "modifiers": ["modifier_common_ai"], "force_of_rules": {"wood": 1}, "ability_map": {
+                "1": ["treant_natures_grasp", "zhong_ling_shu"],
+                "2": ["enchantress_impetus", "furion_sprout"],
+                "3": ["enchantress_untouchable"]
+                }
+            },
+            {"name": "jing_ji_lin_creep", "offset": {"x": -10, "y": 20}},
+            {"name": "jing_ji_lin_creep", "offset": {"x": -10, "y": -20}},
+            {"name": "jing_ji_lin_creep", "offset": {"x": -10, "y": 10}},
+            {"name": "jing_ji_lin_creep", "offset": {"x": -10, "y": -10}}
+        ]
+    },
+    "you_tan": {
+        "modifiers": ["modifier_practice_creep"],
+        "units": [
+            {"name": "you_tan_guard", "offset": {"x": 0, "y": 0}, "modifiers": ["modifier_common_ai"], "force_of_rules": {"water": 2}, "ability_map": {
+                "1": ["ice_piton", "ji_han_zhi_qi"],
+                "2": ["ice_gland", "han_qi_ru_ti", "morphling_waveform"],
+                "3": ["han_qi_fan_she"]
+                }
+            }
+        ]
+    },
+    "ling_yan_gu": {
+        "modifiers": ["modifier_practice_creep"],
+        "units": [
+            {"name": "ling_yan_gu_boss", "offset": {"x": 0, "y": 0}, "modifiers": ["modifier_common_ai"], "force_of_rules": {"rock": 1}, "ability_map": {
+                "1": ["yan_dun"],
+                "2": ["tiny_toss", "tiny_avalanche"],
+                "3": ["zhong_li_chang"]
+                }
+            },
+            {"name": "ling_yan_gu_creep", "offset": {"x": 0, "y": 10}, "multiple": {"num": 2, "radius": 200}, "ability_map": {
+                "1": ["yan_dun"]
+                }
+            }
+        ]
+    },
+    "di_huo_chi": {
+        "modifiers": ["modifier_practice_creep"],
+        "units": [
+            {"name": "di_huo_chi_guard", "offset": {"x": 0, "y": 10}, "modifiers": ["modifier_common_ai"], "force_of_rules": {"fire": 1}, "multiple": {"num": 2, "radius": 200}, "ability_map": {
+                "1": ["huo_dan_shu"],
+                "2": ["sheng_ming_zhuo_shao", "fa_li_zhuo_shao"],
+                "3": ["zhuo_mu"]
+                }
+            }
+        ]
+    },
+    "fei_qi_kuang_mai": {
+        "modifiers": ["modifier_practice_creep"],
+        "units": [
+            {"name": "fei_qi_kuang_mai_guard", "offset": {"x": 0, "y": 0}, "modifiers": ["modifier_common_ai"], "force_of_rules": {"metal": 1}, "multiple": {"num": 3, "radius": 300}, "ability_map": {
+                "1": ["sword_mean_stacking"],
+                "2": ["juggernaut_blade_dance"],
+                "3": ["slardar_bash"]
+                }
+            }
+        ]
+    },
+    "shang_gu_zhan_chang": {
+        "modifiers": ["modifier_practice_creep"],
+        "units": [
+            {"name": "shang_gu_zhan_chang_ghost", "offset": {"x": 0, "y": 0}, "modifiers": ["modifier_common_ai"], "force_of_rules": {"spirit": 1}, "multiple": {"num": 5, "radius": 200}, "ability_map": {
+                "1": ["undying_tombstone_zombie_deathstrike"],
+                "2": ["zombie_blast"],
+                "3": ["resentment_stacking"]
+                }
+            }
+        ]
+    },
+    "hei_long_chao_xue": {
+        "modifiers": ["modifier_practice_creep"],
+        "units": [
+            {"name": "black_dragon", "offset": {"x": 0, "y": 0}, "modifiers": ["modifier_common_ai"], "force_of_rules": {"fire": 2}, "ability_map": {
+                "1": ["jakiro_liquid_fire"],
+                "2": ["fen_tian_zhi_yan", "zhuo_mu"],
+                "3": ["huskar_berserkers_blood"]
+                }
+            }
+        ]
+    },
+    "yuan_ling_zhao_ze": {
+        "modifiers": ["modifier_practice_creep"],
+        "units": [
+            {"name": "yuan_ling_zhao_ze_boss", "offset": {"x": 0, "y": 0}, "modifiers": ["modifier_common_ai"], "force_of_rules": {"rock": 2, "spirit": 2}, "ability_map": {
+                "1": ["summon_zombie"],
+                "2": ["zombie_blast", "shi_du"],
+                "3": ["she_hun_lian_yu", "necrolyte_death_pulse"]
+                }
+            }
+        ]
+    },
+    "tong_tian_feng": {
+        "modifiers": ["modifier_practice_creep"],
+        "units": [
+            {"name": "tong_tian_feng_guard", "offset": {"x": 0, "y": 0}, "modifiers": ["modifier_common_ai"], "force_of_rules": {"fire": 2, "metal": 2}, "multiple": {"num": 2, "radius": 200}, "ability_map": {
+                "1": ["yu_lei_shu"],
+                "2": ["lei_dun", "razor_plasma_field"],
+                "3": ["lei_tin_zhen_ji", "lei_dun_shu"]
+                }
+            }
+        ]
+    },
+    "hua_xue_zhao_ze": {
+        "modifiers": ["modifier_practice_creep"],
+        "units": [
+            {"name": "hua_xue_zhao_ze_guard", "offset": {"x": 0, "y": 0}, "modifiers": ["modifier_common_ai"], "force_of_rules": {"wood": 2}, "multiple": {"num": 3, "radius": 200}, "ability_map": {
+                "1": ["venomancer_poison_sting", "venomancer_plague_ward"],
+                "2": ["viper_poison_attack", "viper_corrosive_skin"],
+                "3": ["venomancer_poison_nova"]
+                }
+            }
         ]
     }
 }

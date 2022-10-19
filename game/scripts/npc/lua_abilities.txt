@@ -382,10 +382,12 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/necromancer_collection/summon_zombie"
 		"AbilityValues" {
-			"force_of_rule_per_zombie" "5"
-			"health_bonus_factor" "15 30 45"
-			"damage_bonus_factor" "5 10 15"
+			"force_of_rule_per_zombie" "15"
+			"health_bonus_factor" "2 4 6"
+			"damage_bonus_factor" "1 2 3"
 			"base_zombie_num" "1"
+			"base_life" "5"
+			"life_factor" "0.05 0.1 0.15"
 
 		}
 		"MaxLevel" "3"
@@ -432,7 +434,7 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/necromancer_collection/swallow_zombie"
 		"AbilityValues" {
-			"recovery_factor" "50 100 150"
+			"recovery_factor" "5 10 15"
 			"base_recovery" "100 200 300"
 
 		}
@@ -456,7 +458,7 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/necromancer_collection/zombie_blast"
 		"AbilityValues" {
-			"damage_factor" "1 2 3"
+			"damage_factor" "2 4 6"
 			"blast_radius" "200 200 200"
 
 		}
@@ -480,8 +482,9 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/necromancer_collection/shi_du"
 		"AbilityValues" {
-			"duration_factor" "0.2 0.4 0.6"
-			"damage_factor" "5 10 15"
+			"duration_factor" "0.1 0.2 0.3"
+			"damage_factor" "2 4 6"
+			"damage_interval" "1"
 
 		}
 		"MaxLevel" "3"
@@ -505,9 +508,9 @@
 		"ScriptFile" "abilities/necromancer_collection/fu_shen"
 		"AbilityValues" {
 			"health_factor" "20 40 60"
-			"damage_factor" "5 10 15"
-			"move_speed_factor" "2 4 6"
-			"attack_speed_factor" "3 6 9"
+			"damage_factor" "3 6 9"
+			"move_speed_factor" "1 2 3"
+			"attack_speed_factor" "1 2 3"
 			"cast_range" "300"
 
 		}
@@ -555,8 +558,8 @@
 		"AbilityValues" {
 			"radius" "300"
 			"cast_range" "600 800 100"
-			"fire_damage_factor" "10 20 30"
-			"attack_stack_factor" " 0.2 0.3 0.4"
+			"fire_damage_factor" "2 4 6"
+			"attack_stack_factor" " 0.1 0.2 0.3"
 			"attack_speed_stack_factor" "0.1 0.15 0.2"
 			"summon_delay" "2"
 
@@ -628,7 +631,7 @@
 		"ScriptFile" "abilities/necromancer_collection/she_hun_lian_yu"
 		"AbilityValues" {
 			"damage_interval" "0.2"
-			"damage_factor" "1 2 3"
+			"damage_factor" "0.5 1 1.5"
 			"heal_percentage" "10 20 30"
 			"search_radius" "800"
 			"mana_cost_per_wave" "10 20 30"
@@ -655,8 +658,8 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/swordmanship/sword_mean_stacking"
 		"AbilityValues" {
-			"stacking_factor" "0.2 0.3 0.4"
-			"damage_factor" "20 40 60"
+			"stacking_factor" "0.1 0.2 0.3"
+			"damage_factor" "2 4 6"
 			"max_stack_factor" "3 6 9"
 			"interval" "1"
 
@@ -681,8 +684,8 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/swordmanship/sword_shield"
 		"AbilityValues" {
-			"damage_reduction_factor" "1 2 3"
-			"sowrd_mean_cost_per_damage" "1"
+			"damage_reduction_factor" "0.3 0.6 0.9"
+			"sword_mean_cost_per_damage" "1"
 
 		}
 		"MaxLevel" "3"
@@ -705,10 +708,10 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/swordmanship/ju_jian_shu"
 		"AbilityValues" {
-			"damage_factor" "200 250 300"
-			"health_factor" "50 75 100"
+			"damage_factor" "10 15 20"
+			"health_factor" "10 15 20"
 			"charge_cost" "5"
-			"life_factor" "0.5 0.75 1"
+			"life_factor" "0.1 0.2 0.3"
 			"delay" "0.5"
 			"radius" "300"
 			"cast_range" "1000"
@@ -758,7 +761,7 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/swordmanship/sword_shot"
 		"AbilityValues" {
-			"damage_factor" "100 150 200"
+			"damage_factor" "5 10 15"
 			"basic_damage" "100 250 400"
 			"charge_cost" "3"
 
@@ -784,7 +787,7 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/swordmanship/sword_sudden"
 		"AbilityValues" {
-			"damage_factor" "100 150 200"
+			"damage_factor" "10 15 20"
 			"radius" "100"
 			"charge_cost" "10"
 			"max_travel_distance" "500"
@@ -812,8 +815,7 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/swordmanship/sword_rain"
 		"AbilityValues" {
-			"damage_factor" "50 75 100"
-			"charge_cost" "1"
+			"damage_factor" "2 4 6"
 			"charge_cost_per_sword" "1"
 			"travel_distance" "2000"
 			"hit_radius" "50"
@@ -845,7 +847,7 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/swordmanship/jian_qi_zong_heng"
 		"AbilityValues" {
-			"damage_factor" "25 50 75"
+			"damage_factor" "2 4 6"
 			"radius" "1000"
 
 		}
@@ -944,7 +946,7 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/xuanbingjue/ice_piton"
 		"AbilityValues" {
-			"primary_state_factor" "100 150 200"
+			"primary_state_factor" "5 10 15"
 			"basic_damage" "50 100 150"
 			"aoe_radius" "300"
 
@@ -1021,7 +1023,7 @@
 		"ScriptFile" "abilities/xuanbingjue/han_qi_ru_hun"
 		"AbilityValues" {
 			"debuff_duration" "2"
-			"damage_bonus_percentage" "100 200 00"
+			"damage_bonus_percentage" "100 200 300"
 			"freezing_duration" "3"
 			"max_stack_level" "50"
 
@@ -1046,7 +1048,8 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/xuanbingjue/han_qi_fan_she"
 		"AbilityValues" {
-			"primary_state_factor" "20 40 60"
+			"primary_state_factor" "2 4 6"
+			"possibility_factor" "0.5 1 1.5"
 
 		}
 		"MaxLevel" "3"
@@ -1072,7 +1075,7 @@
 			"distance" "600 750 900"
 			"basic_damage" "300 400 500"
 			"radius" "300"
-			"primary_state_factor" "100 150 200"
+			"primary_state_factor" "5 10 15"
 
 		}
 		"MaxLevel" "3"
@@ -1095,7 +1098,7 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/xuanbingjue/xuan_han_ling_yu"
 		"AbilityValues" {
-			"primary_state_factor" "20 30 40"
+			"primary_state_factor" "4 8 12"
 			"damage_interval" "1"
 			"radius" "800"
 			"mana_cost_per_wave" "100 150 200"
@@ -1121,8 +1124,8 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/fentianjue/huo_dan_shu"
 		"AbilityValues" {
-			"primary_state_factor" "100 150 200"
-			"basic_damage" "50 100 150"
+			"primary_state_factor" "4 8 12"
+			"basic_damage" "20 40 60"
 			"aoe_radius" "300"
 			"aoe_damage_percentage" "0.5"
 
@@ -1147,8 +1150,8 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/fentianjue/sheng_ming_zhuo_shao"
 		"AbilityValues" {
-			"primary_state_factor" "5 10 15"
-			"duration_factor" "0.5 1 1.5"
+			"primary_state_factor" "1 2 3"
+			"duration_factor" "0.1 0.2 0.3"
 			"damage_interval" "0.5"
 
 		}
@@ -1173,7 +1176,7 @@
 		"ScriptFile" "abilities/fentianjue/fa_li_zhuo_shao"
 		"AbilityValues" {
 			"primary_state_factor" "0.5 1 1.5"
-			"duration_factor" "0.5 1 1.5"
+			"duration_factor" "0.1 0.2 0.3"
 			"damage_interval" "0.5"
 
 		}
@@ -1198,7 +1201,7 @@
 		"ScriptFile" "abilities/fentianjue/fang_yu_zhuo_shao"
 		"AbilityValues" {
 			"debuff_duration" "3"
-			"reduction_factor" "0.5 1 1.5"
+			"reduction_factor" "0.1 0.2 0.3"
 			"max_stack_level" "5"
 
 		}
@@ -1222,7 +1225,7 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/fentianjue/zhuo_mu"
 		"AbilityValues" {
-			"primary_state_factor" "1 2 3"
+			"primary_state_factor" "0.2 0.4 0.6"
 
 		}
 		"MaxLevel" "3"
@@ -1245,7 +1248,7 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/fentianjue/fen_tian_zhi_yan"
 		"AbilityValues" {
-			"primary_state_factor" "100 200 300"
+			"primary_state_factor" "4 8 12"
 			"radius" "200"
 			"delay" "1"
 			"interval" "0.5"
@@ -1255,7 +1258,7 @@
 
 		}
 		"MaxLevel" "3"
-		"AbilityCooldown" "0"
+		"AbilityCooldown" "6 4 2"
 		"AbilityManaCost" "50 100 150"
 		"AbilityTextureName" "ember_spirit_flame_guard"
 		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
@@ -1274,9 +1277,9 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/fentianjue/fen_tian_ling_yu"
 		"AbilityValues" {
-			"primary_state_factor" "20 30 40"
+			"primary_state_factor" "2 4 6"
 			"damage_interval" "1"
-			"force_of_rule_per_flower" "5"
+			"force_of_rule_per_flower" "25"
 			"mana_cost_per_wave" "100 150 200"
 			"prepare_time" "3"
 			"base_flower_num" "1"
@@ -1303,7 +1306,7 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/xilingji/hui_chun_shu"
 		"AbilityValues" {
-			"health_heal_per_mana_factor" "0.5 1 1.5"
+			"health_heal_per_mana_factor" "0.15 0.3 0.45"
 			"mana_cost_per_wave" "1 2 3"
 			"wave_interval" "0.1"
 
@@ -1328,12 +1331,12 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/xilingji/zhong_ling_shu"
 		"AbilityValues" {
-			"primary_state_factor" "75 125 200"
+			"primary_state_factor" "5 10 15"
 			"cast_range" "2000"
 			"tree_base_life" "5"
-			"life_factor" "1"
+			"life_factor" "0.1"
 			"base_damage" "50 100 150"
-			"health_factor" "20 40 60"
+			"health_factor" "10 20 30"
 
 		}
 		"MaxLevel" "3"
@@ -1356,10 +1359,10 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/xilingji/ji_sheng"
 		"AbilityValues" {
-			"mana_recover_factor" "2 4 6"
+			"mana_recover_factor" "0.5 1 1.5"
 			"damage_percentage" "4 8 12"
 			"recover_interval" "1"
-			"duration_factor" "1"
+			"duration_factor" "0.1 0.2 0.3"
 
 		}
 		"MaxLevel" "3"
@@ -1382,10 +1385,10 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/xilingji/fu_su"
 		"AbilityValues" {
-			"attack_factor" "10 20 30"
-			"attack_speed_factor" "10 20 30"
-			"bound_duration_factor" "0.1 0.15 0.2"
-			"damage_factor" "100 150 200"
+			"attack_factor" "1 2 3"
+			"attack_speed_factor" "1 2 3"
+			"bound_duration_factor" "0.03 0.06 0.09"
+			"damage_factor" "10 15 20"
 			"radius" "400"
 
 		}
@@ -1409,7 +1412,7 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/xilingji/sheng_ming_lian_jie"
 		"AbilityValues" {
-			"damage_percentage_factor" "0.5 1 1.5"
+			"damage_percentage_factor" "0.3 0.6 0.9"
 			"radius" "800"
 
 		}
@@ -1434,7 +1437,7 @@
 		"ScriptFile" "abilities/xilingji/zhuan_sheng_shu"
 		"AbilityValues" {
 			"radius" "800"
-			"cold_down_reduction_factor" "0.8 1 1.2"
+			"cold_down_reduction_factor" "0.2 0.4 0.6"
 			"base_cold_down" "60"
 			"delay" "1.5"
 
@@ -1460,7 +1463,7 @@
 		"ScriptFile" "abilities/xilingji/yun_ling_zhi_jing"
 		"AbilityValues" {
 			"mana_cost_per_tick" "50 75 100"
-			"probability_factor" "1 1.5 2"
+			"probability_factor" "0.5 1 1.5"
 			"interval" "1"
 			"radius" "300"
 
@@ -1485,7 +1488,7 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/banshanjue/yan_dun"
 		"AbilityValues" {
-			"block_factor" "10 15 20"
+			"block_factor" "3 6 9"
 
 		}
 		"MaxLevel" "3"
@@ -1508,7 +1511,7 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/banshanjue/di_ci"
 		"AbilityValues" {
-			"damage_factor" "100 150 200"
+			"damage_factor" "5 10 15"
 			"radius" "200"
 			"delay" "0.5"
 			"cast_range" "1000"
@@ -1538,7 +1541,7 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/banshanjue/di_dong_shu"
 		"AbilityValues" {
-			"damage_factor" "100 150 200"
+			"damage_factor" "5 10 15"
 			"radius" "200"
 			"delay" "0.3"
 			"cast_range" "1000"
@@ -1567,7 +1570,7 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/banshanjue/shi_bao_shu"
 		"AbilityValues" {
-			"damage_factor" "50 80 110"
+			"damage_factor" "3 6 9"
 			"base_size_factor" "0.25"
 			"radius" "1500"
 			"blast_radius" "150"
@@ -1593,8 +1596,8 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/banshanjue/zhong_li_chang"
 		"AbilityValues" {
-			"move_speed_reduction_factor" "5 10 15"
-			"attack_speed_reduction_factor" "5 8 10"
+			"move_speed_reduction_factor" "1 2 3"
+			"attack_speed_reduction_factor" "1 2 3"
 			"radius" "800"
 
 		}
@@ -1618,12 +1621,12 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/banshanjue/shan_yue_zhi_li"
 		"AbilityValues" {
-			"damage_factor" "50 80 110"
+			"damage_factor" "5 10 15"
 			"radius" "500"
 			"point_cost_per_attack" "5"
 			"max_stack" "100"
 			"aura_radius" "800"
-			"stun_duration_factor" "0.05 0.08 0.11"
+			"stun_duration_factor" "0.02 0.04 0.06"
 
 		}
 		"MaxLevel" "3"
@@ -1646,9 +1649,9 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/yuleizhenjing/lei_dian_zhi_chu"
 		"AbilityValues" {
-			"damage_factor" "1 2 3"
+			"damage_factor" "0.05 0.1 0.15"
 			"max_stack" "100"
-			"stack_speed_factor" "2 4 6"
+			"stack_speed_factor" "0.2 0.4 0.6"
 			"radius" "100"
 
 		}
@@ -1672,7 +1675,7 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/yuleizhenjing/yu_lei_shu"
 		"AbilityValues" {
-			"damage_factor" "50 75 100"
+			"damage_factor" "5 10 15"
 			"radius" "200"
 
 		}
@@ -1697,8 +1700,9 @@
 		"ScriptFile" "abilities/yuleizhenjing/lei_dian_chang"
 		"AbilityValues" {
 			"stack_per_interval" "1 2 3"
-			"damage_factor" "10 20 30"
+			"damage_factor" "0.4 0.8 1.2"
 			"max_stack" "10"
+			"interval" "1"
 
 		}
 		"MaxLevel" "3"
@@ -1717,8 +1721,8 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/yuleizhenjing/lei_dun"
 		"AbilityValues" {
-			"damage_factor" "10 20 30"
-			"probability_factor" "1 2 3"
+			"damage_factor" "0.3 0.6 0.9"
+			"probability_factor" "0.3 0.6 0.9"
 
 		}
 		"MaxLevel" "3"
@@ -1739,7 +1743,7 @@
 		"AbilityValues" {
 			"speed" "2000 3000 4000"
 			"radius" "800"
-			"damage_factor" "25 50 75"
+			"damage_factor" "3 6 9"
 
 		}
 		"MaxLevel" "3"
@@ -1758,9 +1762,9 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/yuleizhenjing/wu_jin_lei_yu"
 		"AbilityValues" {
-			"force_of_rule_per_attack" "5"
+			"force_of_rule_per_attack" "25"
 			"damage_interval" "1"
-			"damage_factor" "25 50 75"
+			"damage_factor" "2 4 6"
 			"mana_cost_per_wave" "100 150 200"
 			"prepare_time" "3"
 			"base_attack_num" "1"
@@ -1806,7 +1810,7 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/jingangjue/luo_han_quan"
 		"AbilityValues" {
-			"damage_factor" "40 60 80"
+			"damage_factor" "5 10 15"
 			"width" "200"
 			"radius" "200"
 
@@ -1827,8 +1831,8 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/jingangjue/jin_gang_zhao"
 		"AbilityValues" {
-			"damage_factor" "50 75 100"
-			"duration_factor" "1"
+			"damage_factor" "4 8 12"
+			"duration_factor" "0.3"
 			"buff_cost" "1"
 
 		}
@@ -1848,12 +1852,12 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/jingangjue/jin_gang_hou"
 		"AbilityValues" {
-			"damage_factor" "50 75 100"
+			"damage_factor" "3 6 9"
 			"distance" "500 700 900"
 			"speed" "1500"
 			"start_radius" "50"
 			"end_radius" "450"
-			"stun_factor" "0.1 0.15 0.2"
+			"stun_factor" "0.3 0.6 0.9"
 			"buff_cost" "3"
 			"range" "800"
 
@@ -1874,7 +1878,7 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/jingangjue/xu_mi_zhi"
 		"AbilityValues" {
-			"damage_factor" "50 75 100"
+			"damage_factor" "4 8 12"
 			"distance" "800 1000 1200"
 			"speed" "1000 1500 2000"
 			"angle_range" "60"
@@ -1917,7 +1921,7 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/jingangjue/shan_shen_ji"
 		"AbilityValues" {
-			"damage_factor" "80 120 160"
+			"damage_factor" "5 10 15"
 			"cast_range" "800"
 			"delay" "0.2"
 			"buff_cost" "3"
@@ -1940,8 +1944,8 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/jingangjue/da_shou_yin"
 		"AbilityValues" {
-			"damage_factor" "150 225 300"
-			"move_speed_reduction_factor" "1 2 3"
+			"damage_factor" "10 15 20"
+			"move_speed_reduction_factor" "0.5 1 1.5"
 			"delay" "1"
 			"root_duration_factor" "0.05 0.08 0.12"
 			"radius" "300 400 500"
@@ -1986,7 +1990,7 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/suiyuejing/shi_jian_jia_su"
 		"AbilityValues" {
-			"force_of_rule_level_per_attack" "15 10 5"
+			"force_of_rule_level_per_attack" "20 15 10"
 			"base_attack" "1 2 3"
 			"attack_speed" "3000"
 			"duration" "10"
@@ -2009,7 +2013,7 @@
 		"ScriptFile" "abilities/suiyuejing/shi_jian_dui_ji"
 		"AbilityValues" {
 			"radius" "800"
-			"damage_increment_factor" "0.02 0.04 0.06"
+			"damage_increment_factor" "0.001 0.002 0.003"
 			"increment_interval" "1"
 
 		}
@@ -2030,7 +2034,7 @@
 		"ScriptFile" "abilities/suiyuejing/sui_yue_zhi_yan"
 		"AbilityValues" {
 			"radius" "200"
-			"damage_factor" "4 8 12"
+			"damage_factor" "1 2 3"
 			"cast_range" "800 1000 1200"
 			"distance" "1500"
 			"speed" "800"
@@ -2060,7 +2064,7 @@
 			"damage_interval" "0.5"
 			"damage_factor" "2 4 6"
 			"duration" "1 2 3"
-			"distance_factor" "0.002 0.004 0.006"
+			"distance_factor" "0.0005 0.001 0.0015"
 
 		}
 		"MaxLevel" "3"
@@ -2099,7 +2103,7 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/suiyuejing/shi_jian_ling_yu"
 		"AbilityValues" {
-			"duration_factor" "0.005 0.01 0.015"
+			"duration_factor" "0.015 0.03 0.045"
 			"radius" "300 400 500"
 			"move_speed" "600 800 1000"
 			"projectile_speed" "10000"

@@ -64,4 +64,8 @@ export class modifier_fu_su_transfiguration extends BaseModifier {
     IsPurgable(): boolean {
         return false
     }
+
+    IsHidden(): boolean {
+        return true;
+    }
 }

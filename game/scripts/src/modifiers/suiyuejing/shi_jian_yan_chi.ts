@@ -106,4 +106,8 @@ export class modifier_shi_jian_yan_chi extends BaseModifier {
     IsPurgable(): boolean {
         return false
     }
+
+    IsHidden(): boolean {
+        return true;
+    }
 }

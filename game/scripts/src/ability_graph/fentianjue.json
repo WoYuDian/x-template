@@ -1,34 +1,35 @@
 {
     "book_name": "fentianjue",
-    "texture_src": "sheng_ming_zhuo_shao",
+    "texture_src": "item_book_fentianjue",
+    "force_of_rules": ["fire"],
     "abilities": {
         "sheng_ming_zhuo_shao": {
             "parent_ability": null,
-            "force_of_rule_bonus": [{"rule_name": "fire", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "fire", "bonus": 5}]
         },
         "huo_dan_shu": {
             "parent_ability": null,
-            "force_of_rule_bonus": [{"rule_name": "fire", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "fire", "bonus": 5}]
         },
         "fa_li_zhuo_shao": {
             "parent_ability": "sheng_ming_zhuo_shao",
-            "force_of_rule_bonus": [{"rule_name": "fire", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "fire", "bonus": 5}]
         },
         "fang_yu_zhuo_shao": {
             "parent_ability": "fa_li_zhuo_shao",
-            "force_of_rule_bonus": [{"rule_name": "fire", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "fire", "bonus": 5}]
         },
         "fen_tian_zhi_yan": {
             "parent_ability": "fa_li_zhuo_shao",
-            "force_of_rule_bonus": [{"rule_name": "fire", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "fire", "bonus": 5}]
         },
         "zhuo_mu": {
             "parent_ability": "fang_yu_zhuo_shao",
-            "force_of_rule_bonus": [{"rule_name": "fire", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "fire", "bonus": 5}]
         },
         "fen_tian_ling_yu": {
             "parent_ability": "fang_yu_zhuo_shao",
-            "force_of_rule_bonus": [{"rule_name": "fire", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "fire", "bonus": 5}]
         }
     }
 }

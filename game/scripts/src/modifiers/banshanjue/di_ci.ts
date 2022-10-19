@@ -136,4 +136,8 @@ export class modifier_di_ci extends BaseModifier {
     IsPurgable(): boolean {
         return false
     }
+
+    IsHidden(): boolean {
+        return true;
+    }
 }

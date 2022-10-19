@@ -53,4 +53,8 @@ export class modifier_lei_dun extends BaseModifier {
     IsPurgable(): boolean {
         return false
     }
+
+    IsHidden(): boolean {
+        return true
+    }
 }

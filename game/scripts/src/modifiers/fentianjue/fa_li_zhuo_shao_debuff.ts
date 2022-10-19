@@ -5,10 +5,16 @@ import { BaseModifier, registerModifier } from "../../lib/dota_ts_adapter";
 export class fa_li_zhuo_shao_debuff extends BaseModifier {
     primaryStateFactor: number = 0
     damageInterval: number = 0
-
+    caster: CDOTA_BaseNPC
+    spellAmplification: number
+    ability: CDOTABaseAbility
     OnCreated(params: any): void {
+        if(!IsServer()) return;
         this.primaryStateFactor = this.GetAbility().GetSpecialValueFor('primary_state_factor');
         this.damageInterval = this.GetAbility().GetSpecialValueFor('damage_interval');
+        this.ability = this.GetAbility()
+        this.caster = this.ability.GetCaster()
+        this.spellAmplification = (this.caster && !this.caster.IsNull())? this.caster.GetSpellAmplification(false): 0;
         this.StartIntervalThink(this.damageInterval)
     }
 
@@ -20,8 +26,7 @@ export class fa_li_zhuo_shao_debuff extends BaseModifier {
     OnIntervalThink(): void {
         if(!IsServer()) return;
         
-        const caster = this.GetAbility().GetCaster()    
-        this.GetParent().ReduceMana(getForceOfRuleLevel('fire', caster) * this.primaryStateFactor * (1 + caster.GetSpellAmplification(false)))
+        this.GetParent().ReduceMana(getForceOfRuleLevel('fire', this.caster) * this.primaryStateFactor * (1 + this.spellAmplification))
     }
 
     IsPurgable(): boolean {

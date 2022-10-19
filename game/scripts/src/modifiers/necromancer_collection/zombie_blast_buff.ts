@@ -22,7 +22,8 @@ export class modifier_zombie_blast_buff extends BaseModifier {
     OnDeath(event: ModifierInstanceEvent): void {
         if(!IsServer()) return;
         if(event.unit != this.GetParent()) return;
-
+        if(!this.GetAbility()) return;
+        
         const owner = this.GetAbility().GetOwner()        
 
         if(this.GetParent().GetUnitName() == 'npc_necromance_zombie') {

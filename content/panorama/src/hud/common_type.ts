@@ -17,4 +17,15 @@ export type CustomTableType<
 
 export type RankNumber = '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8';
 
+export type ForceOfRule = 'metal' | 'wood' | 'water' | 'fire' | 'rock' | 'body' | 'spirit';
+
 export type userNameMap = {[playerId: string]: string}
+
+export type playerAccount = {lingshi: number}
+
+export type dropMap = {
+    [unit_name: string]: {
+        level: number,
+        drops: {name: string, chance: number}[]
+    }
+}

@@ -1,34 +1,35 @@
 {
     "book_name": "jingangjue",
-    "texture_src": "dawnbreaker_luminosity",
+    "texture_src": "item_book_jingangjue",
+    "force_of_rules": ["metal", "body"],
     "abilities": {
         "luo_han_quan": {
             "parent_ability": null,
-            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 1}, {"rule_name": "body", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 3}, {"rule_name": "body", "bonus": 3}]
         },
         "jin_gang_zhao": {
             "parent_ability": null,
-            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 1}, {"rule_name": "body", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 3}, {"rule_name": "body", "bonus": 3}]
         },
         "hou_che_bu": {
             "parent_ability": "luo_han_quan",
-            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 1}, {"rule_name": "body", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 3}, {"rule_name": "body", "bonus": 3}]
         },
         "xu_mi_zhi": {
             "parent_ability": "luo_han_quan",
-            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 1}, {"rule_name": "body", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 3}, {"rule_name": "body", "bonus": 3}]
         },
         "jin_gang_hou": {
             "parent_ability": "xu_mi_zhi",
-            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 1}, {"rule_name": "body", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 3}, {"rule_name": "body", "bonus": 3}]
         },
         "shan_shen_ji": {
             "parent_ability": "hou_che_bu",
-            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 1}, {"rule_name": "body", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 3}, {"rule_name": "body", "bonus": 3}]
         },
         "da_shou_yin": {
             "parent_ability": "jin_gang_hou",
-            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 1}, {"rule_name": "body", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 3}, {"rule_name": "body", "bonus": 3}]
         }
     }
 }

@@ -6,7 +6,7 @@
 		"AbilityValues" {
 
 		}
-		"ItemCost" "30"
+		"ItemCost" "0"
 		"ItemShareability" "ITEM_FULLY_SHAREABLE"
 		"ItemShopTags" "consumable"
 		"ItemQuality" "consumable"
@@ -29,7 +29,7 @@
 		"AbilityValues" {
 
 		}
-		"ItemCost" "30"
+		"ItemCost" "0"
 		"ItemShareability" "ITEM_FULLY_SHAREABLE"
 		"ItemShopTags" "consumable"
 		"ItemQuality" "consumable"
@@ -48,11 +48,11 @@
 	}
 	"item_book_necromancer_collection" {
 		"BaseClass" "item_lua"
-		"ScriptFile" "items/books/item_book_necromancer_collection"
+		"ScriptFile" "items/books/necromancer_collection/item_book_necromancer_collection"
 		"AbilityValues" {
 
 		}
-		"ItemCost" "30"
+		"ItemCost" "2000"
 		"ItemShareability" "ITEM_FULLY_SHAREABLE"
 		"ItemShopTags" "consumable"
 		"ItemQuality" "consumable"
@@ -63,7 +63,175 @@
 		"ItemStackable" "0"
 		"AbilityCooldown" ""
 		"AbilityManaCost" ""
-		"AbilityTextureName" "item_tome_of_knowledge"
+		"AbilityTextureName" "book_necromancer_collection"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_fu_shen" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/necromancer_collection/item_piece_fu_shen"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "400"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_necromancer_collection"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_she_hun_lian_yu" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/necromancer_collection/item_piece_she_hun_lian_yu"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "500"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_necromancer_collection"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_shi_du" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/necromancer_collection/item_piece_shi_du"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "200"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_necromancer_collection"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_summon_zombie" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/necromancer_collection/item_piece_summon_zombie"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "100"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_necromancer_collection"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_swallow_zombie" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/necromancer_collection/item_piece_swallow_zombie"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "100"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_necromancer_collection"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_you_ming_ji_dian" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/necromancer_collection/item_piece_you_ming_ji_dian"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "400"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_necromancer_collection"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_zombie_blast" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/necromancer_collection/item_piece_zombie_blast"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "200"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_necromancer_collection"
 		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
@@ -71,11 +239,11 @@
 	}
 	"item_book_swordmanship" {
 		"BaseClass" "item_lua"
-		"ScriptFile" "items/books/item_book_swordmanship"
+		"ScriptFile" "items/books/swordmanship/item_book_swordmanship"
 		"AbilityValues" {
 
 		}
-		"ItemCost" "30"
+		"ItemCost" "2000"
 		"ItemShareability" "ITEM_FULLY_SHAREABLE"
 		"ItemShopTags" "consumable"
 		"ItemQuality" "consumable"
@@ -86,7 +254,175 @@
 		"ItemStackable" "0"
 		"AbilityCooldown" ""
 		"AbilityManaCost" ""
-		"AbilityTextureName" "item_tome_of_knowledge"
+		"AbilityTextureName" "book_swordmanship"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_jian_qi_zong_heng" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/swordmanship/item_piece_jian_qi_zong_heng"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "500"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_swordmanship"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_ju_jian_shu" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/swordmanship/item_piece_ju_jian_shu"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "200"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_swordmanship"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_sword_mean_stacking" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/swordmanship/item_piece_sword_mean_stacking"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "100"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_swordmanship"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_sword_rain" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/swordmanship/item_piece_sword_rain"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "400"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_swordmanship"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_sword_shield" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/swordmanship/item_piece_sword_shield"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "200"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_swordmanship"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_sword_shot" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/swordmanship/item_piece_sword_shot"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "100"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_swordmanship"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_sword_sudden" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/swordmitems/books/item_piece_sword_sudden"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "400"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_swordmanship"
 		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
@@ -98,7 +434,7 @@
 		"AbilityValues" {
 
 		}
-		"ItemCost" "30"
+		"ItemCost" "0"
 		"ItemShareability" "ITEM_FULLY_SHAREABLE"
 		"ItemShopTags" "consumable"
 		"ItemQuality" "consumable"
@@ -117,11 +453,11 @@
 	}
 	"item_book_fentianjue" {
 		"BaseClass" "item_lua"
-		"ScriptFile" "items/books/item_book_fentianjue"
+		"ScriptFile" "items/books/fentianjue/item_book_fentianjue"
 		"AbilityValues" {
 
 		}
-		"ItemCost" "30"
+		"ItemCost" "2000"
 		"ItemShareability" "ITEM_FULLY_SHAREABLE"
 		"ItemShopTags" "consumable"
 		"ItemQuality" "consumable"
@@ -132,7 +468,175 @@
 		"ItemStackable" "0"
 		"AbilityCooldown" ""
 		"AbilityManaCost" ""
-		"AbilityTextureName" "item_tome_of_knowledge"
+		"AbilityTextureName" "book_fentianjue"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_fa_li_zhuo_shao" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/fentianjue/item_piece_fa_li_zhuo_shao"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "200"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_fentianjue"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_fang_yu_zhuo_shao" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/fentianjue/item_piece_fang_yu_zhuo_shao"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "400"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_fentianjue"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_fen_tian_ling_yu" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/fentianjue/item_piece_fen_tian_ling_yu"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "500"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_fentianjue"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_fen_tian_zhi_yan" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/fentianjue/item_piece_fen_tian_zhi_yan"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "200"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_fentianjue"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_huo_dan_shu" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/fentianjue/item_piece_huo_dan_shu"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "100"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_fentianjue"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_sheng_ming_zhuo_shao" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/fentianjue/item_piece_sheng_ming_zhuo_shao"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "100"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_fentianjue"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_zhuo_mu" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/fentianjue/item_piece_zhuo_mu"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "400"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_fentianjue"
 		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
@@ -140,11 +644,11 @@
 	}
 	"item_book_xuanbingjue" {
 		"BaseClass" "item_lua"
-		"ScriptFile" "items/books/item_book_xuanbingjue"
+		"ScriptFile" "items/books/xuanbingjue/item_book_xuanbingjue"
 		"AbilityValues" {
 
 		}
-		"ItemCost" "30"
+		"ItemCost" "2000"
 		"ItemShareability" "ITEM_FULLY_SHAREABLE"
 		"ItemShopTags" "consumable"
 		"ItemQuality" "consumable"
@@ -155,7 +659,175 @@
 		"ItemStackable" "0"
 		"AbilityCooldown" ""
 		"AbilityManaCost" ""
-		"AbilityTextureName" "item_tome_of_knowledge"
+		"AbilityTextureName" "book_xuanbingjue"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_han_qi_fan_she" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/xuanbingjue/item_piece_han_qi_fan_she"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "400"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_xuanbingjue"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_han_qi_ru_hun" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/xuanbingjue/item_piece_han_qi_ru_hun"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "400"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_xuanbingjue"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_han_qi_ru_ti" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/xuanbingjue/item_piece_han_qi_ru_ti"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "200"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_xuanbingjue"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_ice_gland" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/xuanbingjue/item_piece_ice_gland"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "200"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_xuanbingjue"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_ice_piton" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/xuanbingjue/item_piece_ice_piton"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "100"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_xuanbingjue"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_ji_han_zhi_qi" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/xuanbingjue/item_piece_ji_han_zhi_qi"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "100"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_xuanbingjue"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_xuan_han_ling_yu" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/xuanbingjue/item_piece_xuan_han_ling_yu"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "500"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_xuanbingjue"
 		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
@@ -163,11 +835,11 @@
 	}
 	"item_book_xilingji" {
 		"BaseClass" "item_lua"
-		"ScriptFile" "items/books/item_book_xilingji"
+		"ScriptFile" "items/books/xilingji/item_book_xilingji"
 		"AbilityValues" {
 
 		}
-		"ItemCost" "30"
+		"ItemCost" "2000"
 		"ItemShareability" "ITEM_FULLY_SHAREABLE"
 		"ItemShopTags" "consumable"
 		"ItemQuality" "consumable"
@@ -178,7 +850,175 @@
 		"ItemStackable" "0"
 		"AbilityCooldown" ""
 		"AbilityManaCost" ""
-		"AbilityTextureName" "item_tome_of_knowledge"
+		"AbilityTextureName" "book_xilingji"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_fu_su" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/xilingji/item_piece_fu_su"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "200"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_xilingji"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_hui_chun_shu" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/xilingji/item_piece_hui_chun_shu"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "100"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_xilingji"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_ji_sheng" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/xilingji/item_piece_ji_sheng"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "200"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_xilingji"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_sheng_ming_lian_jie" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/xilingji/item_piece_sheng_ming_lian_jie"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "400"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_xilingji"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_yun_ling_zhi_jing" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/xilingji/item_piece_yun_ling_zhi_jing"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "500"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_xilingji"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_zhong_ling_shu" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/xilingji/item_piece_zhong_ling_shu"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "100"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_xilingji"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_zhuan_sheng_shu" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/xilingji/item_piece_zhuan_sheng_shu"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "400"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_xilingji"
 		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
@@ -186,11 +1026,11 @@
 	}
 	"item_book_banshanjue" {
 		"BaseClass" "item_lua"
-		"ScriptFile" "items/books/item_book_banshanjue"
+		"ScriptFile" "items/books/banshanjue/item_book_banshanjue"
 		"AbilityValues" {
 
 		}
-		"ItemCost" "30"
+		"ItemCost" "2000"
 		"ItemShareability" "ITEM_FULLY_SHAREABLE"
 		"ItemShopTags" "consumable"
 		"ItemQuality" "consumable"
@@ -201,7 +1041,151 @@
 		"ItemStackable" "0"
 		"AbilityCooldown" ""
 		"AbilityManaCost" ""
-		"AbilityTextureName" "item_tome_of_knowledge"
+		"AbilityTextureName" "book_banshanjue"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_di_ci" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/banshanjue/item_piece_di_ci"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "100"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_banshanjue"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_di_dong_shu" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/banshanjue/item_piece_di_dong_shu"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "200"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_banshanjue"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_shan_yue_zhi_li" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/banshanjue/item_piece_shan_yue_zhi_li"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "500"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_banshanjue"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_shi_bao_shu" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/banshanjue/item_piece_shi_bao_shu"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "200"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_banshanjue"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_yan_dun" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/banshanjue/item_piece_yan_dun"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "100"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_banshanjue"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_zhong_li_chang" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/banshanjue/item_piece_zhong_li_chang"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "400"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_banshanjue"
 		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
@@ -209,11 +1193,11 @@
 	}
 	"item_book_yuleizhenjing" {
 		"BaseClass" "item_lua"
-		"ScriptFile" "items/books/item_book_yuleizhenjing"
+		"ScriptFile" "items/books/yuleizhenjing/item_book_yuleizhenjing"
 		"AbilityValues" {
 
 		}
-		"ItemCost" "30"
+		"ItemCost" "2000"
 		"ItemShareability" "ITEM_FULLY_SHAREABLE"
 		"ItemShopTags" "consumable"
 		"ItemQuality" "consumable"
@@ -224,7 +1208,175 @@
 		"ItemStackable" "0"
 		"AbilityCooldown" ""
 		"AbilityManaCost" ""
-		"AbilityTextureName" "item_tome_of_knowledge"
+		"AbilityTextureName" "book_yuleizhenjing"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_lei_dian_chang" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/yuleizhenjing/item_piece_lei_dian_chang"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "200"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_yuleizhenjing"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_lei_dian_zhi_chu" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/yuleizhenjing/item_piece_lei_dian_zhi_chu"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "100"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_yuleizhenjing"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_lei_dun_shu" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/yuleizhenjing/item_piece_lei_dun_shu"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "400"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_yuleizhenjing"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_lei_dun" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/yuleizhenjing/item_piece_lei_dun"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "200"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_yuleizhenjing"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_lei_tin_zhen_ji" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/yuleizhenjing/item_piece_lei_tin_zhen_ji"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "500"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_yuleizhenjing"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_wu_jin_lei_yu" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/yuleizhenjing/item_piece_wu_jin_lei_yu"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "400"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_yuleizhenjing"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_yu_lei_shu" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/yuleizhenjing/item_piece_yu_lei_shu"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "100"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_yuleizhenjing"
 		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
@@ -232,11 +1384,11 @@
 	}
 	"item_book_jingangjue" {
 		"BaseClass" "item_lua"
-		"ScriptFile" "items/books/item_book_jingangjue"
+		"ScriptFile" "items/books/jingangjue/item_book_jingangjue"
 		"AbilityValues" {
 
 		}
-		"ItemCost" "30"
+		"ItemCost" "2000"
 		"ItemShareability" "ITEM_FULLY_SHAREABLE"
 		"ItemShopTags" "consumable"
 		"ItemQuality" "consumable"
@@ -245,9 +1397,178 @@
 		"ItemInitialCharges" "1"
 		"ItemDroppable" "1"
 		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
 		"AbilityCooldown" ""
 		"AbilityManaCost" ""
-		"AbilityTextureName" "item_tome_of_knowledge"
+		"AbilityTextureName" "book_jingangjue"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_da_shou_yin" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/jingangjue/item_piece_da_shou_yin"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "500"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_jingangjue"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_hou_che_bu" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/jingangjue/item_piece_hou_che_bu"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "200"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_jingangjue"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_jin_gang_hou" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/jingangjue/item_piece_jin_gang_hou"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "400"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_jingangjue"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_jin_gang_zhao" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/jingangjue/item_piece_jin_gang_zhao"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "100"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_jingangjue"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_luo_han_quan" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/jingangjue/item_piece_luo_han_quan"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "100"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_jingangjue"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_shan_shen_ji" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/jingangjue/item_piece_shan_shen_ji"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "400"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_jingangjue"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_xu_mi_zhi" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/jingangjue/item_piece_xu_mi_zhi"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "200"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_jingangjue"
 		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
@@ -255,11 +1576,11 @@
 	}
 	"item_book_suiyuejing" {
 		"BaseClass" "item_lua"
-		"ScriptFile" "items/books/item_book_suiyuejing"
+		"ScriptFile" "items/books/suiyuejing/item_book_suiyuejing"
 		"AbilityValues" {
 
 		}
-		"ItemCost" "30"
+		"ItemCost" "2000"
 		"ItemShareability" "ITEM_FULLY_SHAREABLE"
 		"ItemShopTags" "consumable"
 		"ItemQuality" "consumable"
@@ -270,7 +1591,175 @@
 		"ItemStackable" "0"
 		"AbilityCooldown" ""
 		"AbilityManaCost" ""
-		"AbilityTextureName" "item_tome_of_knowledge"
+		"AbilityTextureName" "book_suiyuejing"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_shi_jian_dui_ji" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/suiyuejing/item_piece_shi_jian_dui_ji"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "200"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_suiyuejing"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_shi_jian_jia_su" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/suiyuejing/item_piece_shi_jian_jia_su"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "100"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_suiyuejing"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_shi_jian_jian_shi" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/suiyuejing/item_piece_shi_jian_jian_shi"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "400"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_suiyuejing"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_shi_jian_jie_yong" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/suiyuejing/item_piece_shi_jian_jie_yong"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "400"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_suiyuejing"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_shi_jian_ling_yu" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/suiyuejing/item_piece_shi_jian_ling_yu"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "500"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_suiyuejing"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_shi_jian_yan_chi" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/suiyuejing/item_piece_shi_jian_yan_chi"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "100"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_suiyuejing"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_piece_sui_yue_zhi_yan" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/books/suiyuejing/item_piece_sui_yue_zhi_yan"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "200"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/recipe.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "book_suiyuejing"
 		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
@@ -282,7 +1771,7 @@
 		"AbilityValues" {
 
 		}
-		"ItemCost" "30"
+		"ItemCost" "1000"
 		"ItemShareability" "ITEM_FULLY_SHAREABLE"
 		"ItemShopTags" "consumable"
 		"ItemQuality" "consumable"
@@ -299,13 +1788,34 @@
 		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
 
 	}
+	"item_recipe_elixir_zhuji" {
+		"BaseClass" "item_datadriven"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "500"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "item_elixir_zhuji"
+		"AbilityBehavior" ""
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"ItemRecipe" "1"
+		"ItemResult" "item_elixir_zhuji"
+		"ItemRequirements" {
+			"1" "item_material_jinyuancao;item_material_muyuancao;item_material_shuiyuancao;item_material_huoyuancao;item_material_tuyuancao;item_material_ronglingye"
+
+		}
+
+	}
 	"item_elixir_jindan" {
 		"BaseClass" "item_lua"
 		"ScriptFile" "items/elixir/item_elixir_jindan"
 		"AbilityValues" {
 
 		}
-		"ItemCost" "30"
+		"ItemCost" "2000"
 		"ItemShareability" "ITEM_FULLY_SHAREABLE"
 		"ItemShopTags" "consumable"
 		"ItemQuality" "consumable"
@@ -322,13 +1832,34 @@
 		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
 
 	}
+	"item_recipe_elixir_jindan" {
+		"BaseClass" "item_datadriven"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "1000"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "item_elixir_jindan"
+		"AbilityBehavior" ""
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"ItemRecipe" "1"
+		"ItemResult" "item_elixir_jindan"
+		"ItemRequirements" {
+			"1" "item_material_jinlingjing;item_material_mulingjing;item_material_shuilingjing;item_material_huolingjing;item_material_tulingjing;item_material_qixuezhijing;item_material_ronglingye"
+
+		}
+
+	}
 	"item_elixir_yuanying" {
 		"BaseClass" "item_lua"
 		"ScriptFile" "items/elixir/item_elixir_yuanying"
 		"AbilityValues" {
 
 		}
-		"ItemCost" "30"
+		"ItemCost" "4000"
 		"ItemShareability" "ITEM_FULLY_SHAREABLE"
 		"ItemShopTags" "consumable"
 		"ItemQuality" "consumable"
@@ -345,13 +1876,854 @@
 		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
 
 	}
+	"item_recipe_elixir_yuanying" {
+		"BaseClass" "item_datadriven"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "2000"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "item_elixir_yuanying"
+		"AbilityBehavior" ""
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"ItemRecipe" "1"
+		"ItemResult" "item_elixir_yuanying"
+		"ItemRequirements" {
+			"1" "item_material_jinyuanzhijing;item_material_muyuanzhijing;item_material_shuiyuanzhijing;item_material_huoyuanzhijing;item_material_tuyuanzhijing;item_material_qixueyuanjing;item_material_shenhunyuanjing;item_material_xilingye"
+
+		}
+
+	}
+	"item_material_jinyuancao" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/materials/item_material_jinyuancao"
+		"AbilityValues" {
+			"force_of_rule" "1"
+
+		}
+		"ItemCost" "500"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "jinyuancao"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_material_muyuancao" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/materials/item_material_muyuancao"
+		"AbilityValues" {
+			"force_of_rule" "1"
+
+		}
+		"ItemCost" "500"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "muyuancao"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_material_shuiyuancao" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/materials/item_material_shuiyuancao"
+		"AbilityValues" {
+			"force_of_rule" "1"
+
+		}
+		"ItemCost" "500"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "shuiyuancao"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_material_huoyuancao" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/materials/item_material_huoyuancao"
+		"AbilityValues" {
+			"force_of_rule" "1"
+
+		}
+		"ItemCost" "500"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "huoyuancao"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_material_tuyuancao" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/materials/item_material_tuyuancao"
+		"AbilityValues" {
+			"force_of_rule" "1"
+
+		}
+		"ItemCost" "500"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "tuyuancao"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_material_yanghunhua" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/materials/item_material_yanghunhua"
+		"AbilityValues" {
+			"force_of_rule" "1"
+
+		}
+		"ItemCost" "800"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "yanghunhua"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_material_hongluoguo" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/materials/item_material_hongluoguo"
+		"AbilityValues" {
+			"force_of_rule" "1"
+
+		}
+		"ItemCost" "800"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "hongluoguo"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_material_jinlingjing" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/materials/item_material_jinlingjing"
+		"AbilityValues" {
+			"force_of_rule" "3"
+
+		}
+		"ItemCost" "1000"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "jinlingjing"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_recipe_material_jinlingjing" {
+		"BaseClass" "item_datadriven"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "200"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "jinlingjing"
+		"AbilityBehavior" ""
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"ItemRecipe" "1"
+		"ItemResult" "item_material_jinlingjing"
+		"ItemRequirements" {
+			"1" "item_material_jinyuancao;item_material_jinyuancao;item_material_ronglingye"
+
+		}
+
+	}
+	"item_material_mulingjing" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/materials/item_material_mulingjing"
+		"AbilityValues" {
+			"force_of_rule" "3"
+
+		}
+		"ItemCost" "1000"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "mulingjing"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_recipe_material_mulingjing" {
+		"BaseClass" "item_datadriven"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "200"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "mulingjing"
+		"AbilityBehavior" ""
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"ItemRecipe" "1"
+		"ItemResult" "item_material_mulingjing"
+		"ItemRequirements" {
+			"1" "item_material_muyuancao;item_material_muyuancao;item_material_ronglingye"
+
+		}
+
+	}
+	"item_material_shuilingjing" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/materials/item_material_shuilingjing"
+		"AbilityValues" {
+			"force_of_rule" "3"
+
+		}
+		"ItemCost" "1000"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "shuilingjing"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_recipe_material_shuilingjing" {
+		"BaseClass" "item_datadriven"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "200"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "shuilingjing"
+		"AbilityBehavior" ""
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"ItemRecipe" "1"
+		"ItemResult" "item_material_shuilingjing"
+		"ItemRequirements" {
+			"1" "item_material_shuiyuancao;item_material_shuiyuancao;item_material_ronglingye"
+
+		}
+
+	}
+	"item_material_huolingjing" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/materials/item_material_huolingjing"
+		"AbilityValues" {
+			"force_of_rule" "3"
+
+		}
+		"ItemCost" "1000"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "huolingjing"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_recipe_material_huolingjing" {
+		"BaseClass" "item_datadriven"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "200"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "huolingjing"
+		"AbilityBehavior" ""
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"ItemRecipe" "1"
+		"ItemResult" "item_material_huolingjing"
+		"ItemRequirements" {
+			"1" "item_material_huoyuancao;item_material_huoyuancao;item_material_ronglingye"
+
+		}
+
+	}
+	"item_material_tulingjing" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/materials/item_material_tulingjing"
+		"AbilityValues" {
+			"force_of_rule" "3"
+
+		}
+		"ItemCost" "1000"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "tulingjing"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_recipe_material_tulingjing" {
+		"BaseClass" "item_datadriven"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "200"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "tulingjing"
+		"AbilityBehavior" ""
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"ItemRecipe" "1"
+		"ItemResult" "item_material_tulingjing"
+		"ItemRequirements" {
+			"1" "item_material_tuyuancao;item_material_tuyuancao;item_material_ronglingye"
+
+		}
+
+	}
+	"item_material_yanghunye" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/materials/item_material_yanghunye"
+		"AbilityValues" {
+			"force_of_rule" "3"
+
+		}
+		"ItemCost" "1500"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "yanghunye"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_recipe_material_yanghunye" {
+		"BaseClass" "item_datadriven"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "200"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "yanghunye"
+		"AbilityBehavior" ""
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"ItemRecipe" "1"
+		"ItemResult" "item_material_yanghunye"
+		"ItemRequirements" {
+			"1" "item_material_yanghunhua;item_material_yanghunhua;item_material_ronglingye"
+
+		}
+
+	}
+	"item_material_qixuezhijing" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/materials/item_material_qixuezhijing"
+		"AbilityValues" {
+			"force_of_rule" "3"
+
+		}
+		"ItemCost" "1500"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "qixuezhijing"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_recipe_material_qixuezhijing" {
+		"BaseClass" "item_datadriven"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "200"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "qixuezhijing"
+		"AbilityBehavior" ""
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"ItemRecipe" "1"
+		"ItemResult" "item_material_qixuezhijing"
+		"ItemRequirements" {
+			"1" "item_material_hongluoguo;item_material_hongluoguo;item_material_ronglingye"
+
+		}
+
+	}
+	"item_material_jinyuanzhijing" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/materials/item_material_jinyuanzhijing"
+		"AbilityValues" {
+			"force_of_rule" "6"
+
+		}
+		"ItemCost" "2000"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "jinyuanzhijing"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_recipe_material_jinyuanzhijing" {
+		"BaseClass" "item_datadriven"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "500"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "jinyuanzhijing"
+		"AbilityBehavior" ""
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"ItemRecipe" "1"
+		"ItemResult" "item_material_jinyuanzhijing"
+		"ItemRequirements" {
+			"1" "item_material_jinlingjing;item_material_jinlingjing;item_material_xilingye"
+
+		}
+
+	}
+	"item_material_muyuanzhijing" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/materials/item_material_muyuanzhijing"
+		"AbilityValues" {
+			"force_of_rule" "6"
+
+		}
+		"ItemCost" "2000"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "muyuanzhijing"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_recipe_material_muyuanzhijing" {
+		"BaseClass" "item_datadriven"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "500"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "muyuanzhijing"
+		"AbilityBehavior" ""
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"ItemRecipe" "1"
+		"ItemResult" "item_material_muyuanzhijing"
+		"ItemRequirements" {
+			"1" "item_material_mulingjing;item_material_mulingjing;item_material_xilingye"
+
+		}
+
+	}
+	"item_material_shuiyuanzhijing" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/materials/item_material_shuiyuanzhijing"
+		"AbilityValues" {
+			"force_of_rule" "6"
+
+		}
+		"ItemCost" "2000"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "shuiyuanzhijing"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_recipe_material_shuiyuanzhijing" {
+		"BaseClass" "item_datadriven"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "500"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "shuiyuanzhijing"
+		"AbilityBehavior" ""
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"ItemRecipe" "1"
+		"ItemResult" "item_material_shuiyuanzhijing"
+		"ItemRequirements" {
+			"1" "item_material_shuilingjing;item_material_shuilingjing;item_material_xilingye"
+
+		}
+
+	}
+	"item_material_huoyuanzhijing" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/materials/item_material_huoyuanzhijing"
+		"AbilityValues" {
+			"force_of_rule" "6"
+
+		}
+		"ItemCost" "2000"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "huoyuanzhijing"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_recipe_material_huoyuanzhijing" {
+		"BaseClass" "item_datadriven"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "500"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "huoyuanzhijing"
+		"AbilityBehavior" ""
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"ItemRecipe" "1"
+		"ItemResult" "item_material_huoyuanzhijing"
+		"ItemRequirements" {
+			"1" "item_material_huolingjing;item_material_huolingjing;item_material_xilingye"
+
+		}
+
+	}
+	"item_material_tuyuanzhijing" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/materials/item_material_tuyuanzhijing"
+		"AbilityValues" {
+			"force_of_rule" "6"
+
+		}
+		"ItemCost" "2000"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "tuyuanzhijing"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_recipe_material_tuyuanzhijing" {
+		"BaseClass" "item_datadriven"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "500"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "tuyuanzhijing"
+		"AbilityBehavior" ""
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"ItemRecipe" "1"
+		"ItemResult" "item_material_tuyuanzhijing"
+		"ItemRequirements" {
+			"1" "item_material_tulingjing;item_material_tulingjing;item_material_xilingye"
+
+		}
+
+	}
+	"item_material_shenhunyuanjing" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/materials/item_material_shenhunyuanjing"
+		"AbilityValues" {
+			"force_of_rule" "6"
+
+		}
+		"ItemCost" "2500"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "shenhunyuanjing"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_recipe_material_shenhunyuanjing" {
+		"BaseClass" "item_datadriven"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "500"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "shenhunyuanjing"
+		"AbilityBehavior" ""
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"ItemRecipe" "1"
+		"ItemResult" "item_material_shenhunyuanjing"
+		"ItemRequirements" {
+			"1" "item_material_yanghunye;item_material_yanghunye;item_material_xilingye"
+
+		}
+
+	}
+	"item_material_qixueyuanjing" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/materials/item_material_qixueyuanjing"
+		"AbilityValues" {
+			"force_of_rule" "6"
+
+		}
+		"ItemCost" "2500"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "qixueyuanjing"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_recipe_material_qixueyuanjing" {
+		"BaseClass" "item_datadriven"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "500"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "qixueyuanjing"
+		"AbilityBehavior" ""
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"ItemRecipe" "1"
+		"ItemResult" "item_material_qixueyuanjing"
+		"ItemRequirements" {
+			"1" "item_material_qixuezhijing;item_material_qixuezhijing;item_material_xilingye"
+
+		}
+
+	}
+	"item_material_ronglingye" {
+		"BaseClass" "item_datadriven"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "200"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "ronglingye"
+
+	}
+	"item_material_xilingye" {
+		"BaseClass" "item_datadriven"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "500"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "xilingye"
+
+	}
 	"item_fabao_embryo" {
 		"BaseClass" "item_lua"
 		"ScriptFile" "items/elixir/item_fabao_embryo"
 		"AbilityValues" {
 
 		}
-		"ItemCost" "30"
+		"ItemCost" "0"
 		"ItemShareability" "ITEM_FULLY_SHAREABLE"
 		"ItemShopTags" "consumable"
 		"ItemQuality" "consumable"
@@ -368,18 +2740,228 @@
 		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_HERO"
 
 	}
+	"item_thunder_stone" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/materials/item_thunder_stone"
+		"AbilityValues" {
+			"toughness" "0"
+			"hardness" "1"
+			"weight" "2"
+			"material_ability_1" "2"
+			"fire" "3"
+			"metal" "3"
+
+		}
+		"ItemCost" "2000"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "stormcrafter"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	}
+	"item_magnetic_stone" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/materials/item_magnetic_stone"
+		"AbilityValues" {
+			"toughness" "0"
+			"hardness" "1"
+			"weight" "5"
+			"material_ability_1" "3"
+			"rock" "5"
+
+		}
+		"ItemCost" "2000"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "magnetic_stone"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	}
+	"item_cold_iron" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/materials/item_cold_iron"
+		"AbilityValues" {
+			"toughness" "1"
+			"hardness" "3"
+			"weight" "1"
+			"material_ability_1" "4"
+			"metal" "3"
+			"water" "3"
+
+		}
+		"ItemCost" "2000"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "ocean_heart"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	}
+	"item_huaxueteng" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/materials/item_huaxueteng"
+		"AbilityValues" {
+			"toughness" "3"
+			"hardness" "0"
+			"weight" "1"
+			"material_ability_1" "5"
+			"wood" "5"
+
+		}
+		"ItemCost" "2000"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "huaxueteng"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	}
+	"item_jingangmu" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/materials/item_jingangmu"
+		"AbilityValues" {
+			"toughness" "0"
+			"hardness" "6"
+			"weight" "1"
+			"wood" "5"
+			"metal" "3"
+
+		}
+		"ItemCost" "2000"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "quarterstaff"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	}
+	"item_shehunmu" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/materials/item_shehunmu"
+		"AbilityValues" {
+			"toughness" "0"
+			"hardness" "1"
+			"weight" "1"
+			"material_ability_1" "6"
+			"spirit" "5"
+			"wood" "3"
+
+		}
+		"ItemCost" "2000"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "shehunmu"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	}
+	"item_longjin" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/materials/item_longjin"
+		"AbilityValues" {
+			"toughness" "6"
+			"hardness" "0"
+			"weight" "0"
+			"fire" "5"
+
+		}
+		"ItemCost" "2000"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "longjin"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	}
+	"item_shuangshengmu" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/materials/item_shuangshengmu"
+		"AbilityValues" {
+			"toughness" "1"
+			"hardness" "1"
+			"weight" "0"
+			"material_ability_1" "7"
+			"wood" "5"
+
+		}
+		"ItemCost" "2000"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "shuangshengmu"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+	}
 	"item_perfect_stone" {
 		"BaseClass" "item_lua"
 		"ScriptFile" "items/materials/item_perfect_stone"
 		"AbilityValues" {
-			"toughness" "10"
-			"hardness" "10"
-			"weight" "10"
-			"fire" "5"
+			"toughness" "0"
+			"hardness" "3"
+			"weight" "3"
 			"material_ability_1" "1"
+			"fire" "5"
 
 		}
-		"ItemCost" "30"
+		"ItemCost" "2000"
 		"ItemShareability" "ITEM_FULLY_SHAREABLE"
 		"ItemShopTags" "consumable"
 		"ItemQuality" "consumable"
@@ -394,13 +2976,39 @@
 		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
 	}
-	"item_blueprint_sword" {
+	"item_lingshi" {
 		"BaseClass" "item_lua"
-		"ScriptFile" "items/blueprints/item_blueprint_sword"
+		"ScriptFile" "items/common/item_lingshi"
 		"AbilityValues" {
 
 		}
-		"ItemCost" "30"
+		"ItemCost" "0"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"Model" "models/props_gameplay/moon_shard/moon_shard_003.vmdl"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "lingshi"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"ItemCastOnPickup" "1"
+
+	}
+	"item_blueprint_sword" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/sword/item_blueprint_sword"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "1000"
 		"ItemShareability" "ITEM_FULLY_SHAREABLE"
 		"ItemShopTags" "consumable"
 		"ItemQuality" "consumable"
@@ -415,13 +3023,36 @@
 		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 
 	}
-	"item_swrod" {
+	"item_sword" {
 		"BaseClass" "item_lua"
-		"ScriptFile" "items/fabao/item_sword"
+		"ScriptFile" "items/sword/item_sword"
 		"AbilityValues" {
 
 		}
-		"ItemCost" "30"
+		"ItemCost" "0"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "1"
+		"ItemRequiresCharges" "0"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" "3"
+		"AbilityManaCost" ""
+		"AbilityTextureName" "paladin_sword"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_blueprint_bow" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/bow/item_blueprint_bow"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "1000"
 		"ItemShareability" "ITEM_FULLY_SHAREABLE"
 		"ItemShopTags" "consumable"
 		"ItemQuality" "consumable"
@@ -432,8 +3063,163 @@
 		"ItemStackable" "0"
 		"AbilityCooldown" ""
 		"AbilityManaCost" ""
-		"AbilityTextureName" "paladin_sword"
-		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityTextureName" "blueprint_bow"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	}
+	"item_bow" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/bow/item_bow"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "0"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "1"
+		"ItemRequiresCharges" "0"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" "0"
+		"AbilityManaCost" ""
+		"AbilityTextureName" "eagle"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_blueprint_banner" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/banner/item_blueprint_banner"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "1000"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "blueprint_banner"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	}
+	"item_banner" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/banner/item_banner"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "0"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "1"
+		"ItemRequiresCharges" "0"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" "0"
+		"AbilityManaCost" ""
+		"AbilityTextureName" "banner"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_blueprint_tower" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/tower/item_blueprint_tower"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "1000"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "blueprint_tower"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	}
+	"item_tower" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/tower/item_tower"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "0"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "1"
+		"ItemRequiresCharges" "0"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" "3"
+		"AbilityManaCost" ""
+		"AbilityTextureName" "tower"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+
+	}
+	"item_blueprint_shield" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/shield/item_blueprint_shield"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "1000"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "0"
+		"ItemRequiresCharges" "1"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" ""
+		"AbilityManaCost" ""
+		"AbilityTextureName" "blueprint_shield"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+
+	}
+	"item_shield" {
+		"BaseClass" "item_lua"
+		"ScriptFile" "items/shield/item_shield"
+		"AbilityValues" {
+
+		}
+		"ItemCost" "0"
+		"ItemShareability" "ITEM_FULLY_SHAREABLE"
+		"ItemShopTags" "consumable"
+		"ItemQuality" "consumable"
+		"ItemPermanent" "1"
+		"ItemRequiresCharges" "0"
+		"ItemInitialCharges" "1"
+		"ItemDroppable" "1"
+		"ItemStackable" "0"
+		"AbilityCooldown" "3"
+		"AbilityManaCost" ""
+		"AbilityTextureName" "shield"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
 
 	}
 

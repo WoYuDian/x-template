@@ -1,5 +1,6 @@
 
 import { BaseModifier, registerModifier } from "../../../lib/dota_ts_adapter";
+import { Timers } from "../../../lib/timers";
 import { modifier_basic } from "../modifier_basic";
 import { modifier_sword_attributes } from "./sword_attributes";
 @registerModifier()
@@ -13,8 +14,11 @@ export class modifier_sword_fusion_buff extends modifier_basic {
         const damageFactor = buff? buff.damageFactor: 1
         const damageBonus = this.GetAbility().GetSpecialValueFor('basic_attack_bonus') * damageFactor
         this.damageBonus = damageBonus
-        this.SetHasCustomTransmitterData(true)
-        this.SendBuffRefreshToClients()
+
+        Timers.CreateTimer(0.1, (function() {
+            this.SetHasCustomTransmitterData(true)
+            this.SendBuffRefreshToClients()
+        }).bind(this))
 
         this.StartIntervalThink(FrameTime())
     }

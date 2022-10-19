@@ -1,0 +1,5 @@
+{
+    "zhuji": {"level": 8, "base_probability": 50},
+    "jindan": {"level": 15, "base_probability": 30},
+    "yuanying": {"level": 22, "base_probability": 20}
+}

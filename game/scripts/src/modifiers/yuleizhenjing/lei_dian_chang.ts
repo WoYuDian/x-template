@@ -28,4 +28,8 @@ export class modifier_lei_dian_chang extends BaseModifier {
     GetModifierAura(): string {
         return lei_dian_chang_debuff.name
     }
+
+    IsHidden(): boolean {
+        return true
+    }
 }

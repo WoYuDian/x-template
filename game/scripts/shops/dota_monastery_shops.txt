@@ -1,88 +1,49 @@
 "dota_shops"
 {
 	"consumables"
-	{
-		"item" 		"item_book_basic_magic"
-		"item"		"item_book_basic_fitness"
-		"item"		"item_book_necromancer_collection"
-		"item"		"item_book_swordmanship"		
-		"item"		"item_book_marksmanship"
-		"item"		"item_book_xuanbingjue"	
-		"item"		"item_book_fentianjue"	
-		"item"		"item_book_xilingji"	
-		"item"		"item_book_banshanjue"
-		"item"		"item_book_yuleizhenjing"
-		"item"		"item_book_jingangjue"
-		"item"		"item_book_suiyuejing"
-		"item"		"item_elixir_zhuji"
-		"item"		"item_elixir_jindan"
-		"item"		"item_elixir_yuanying"
-		"item"		"item_fabao_embryo"
-		"item"		"item_blueprint_sword"
-		"item"      "item_perfect_stone"
-	}
- 
-	"attributes"
-	{
- 
+	{	
+		"item"      "item_material_ronglingye"
+		"item"      "item_material_xilingye"
+
+		"item"      "item_piece_sword_mean_stacking"
+		"item"      "item_piece_zhong_ling_shu"
+		"item"      "item_piece_ice_piton"
+		"item"      "item_piece_huo_dan_shu"
+		"item"      "item_piece_di_ci"
+		"item"      "item_piece_yu_lei_shu"
+		"item"      "item_piece_summon_zombie"
+		"item"      "item_piece_luo_han_quan"
+		"item"      "item_piece_shi_jian_jia_su"
 	}
  
 	"weapons_armor"
 	{
- 
+ 		"item"		"item_blueprint_sword"
+		"item"      "item_blueprint_bow"
+		"item"      "item_blueprint_banner"
+		"item"      "item_blueprint_tower"
+		"item"      "item_blueprint_shield"
 	}
- 
-	"misc"
-	{
- 
-	}	
- 
-	// Level 1 - Green Recipes
+
 	"basics"
 	{
- 		
-	}
- 
-	// Level 2 - Blue Recipes
-	"support"
-	{
- 
-	}
- 
-	"magics"
-	{
- 
-	}
- 
-	// Level 3 - Purple Recipes
-	"defense"
-	{
- 
-	}
- 
-	"weapons"
-	{
- 
-	}
- 
-	// Level 4 - Orange / Orb / Artifacts
-	"artifacts"
-	{
- 
-	}
- 
-	"sideshop1"
-	{
- 
-	}
- 
-	"sideshop2"
-	{
- 
-	}
- 
-	"secretshop"
-	{
- 
+		"item"      "item_recipe_elixir_zhuji"
+		"item"      "item_recipe_elixir_jindan"
+		"item"      "item_recipe_elixir_yuanying"
+
+		"item"      "item_recipe_material_jinlingjing"
+		"item"      "item_recipe_material_mulingjing"
+		"item"      "item_recipe_material_shuilingjing"
+		"item"      "item_recipe_material_huolingjing"
+		"item"      "item_recipe_material_tulingjing"
+		"item"      "item_recipe_material_yanghunye"
+		"item"      "item_recipe_material_qixuezhijing"
+		"item"      "item_recipe_material_jinyuanzhijing"
+		"item"      "item_recipe_material_muyuanzhijing"
+		"item"      "item_recipe_material_shuiyuanzhijing"
+		"item"      "item_recipe_material_huoyuanzhijing"
+		"item"      "item_recipe_material_tuyuanzhijing"
+		"item"      "item_recipe_material_shenhunyuanjing"
+		"item"      "item_recipe_material_qixueyuanjing"
 	}
 }

@@ -1,1 +1,4 @@
 #base lua_items.txt
+"DOTAItems"
+{
+}

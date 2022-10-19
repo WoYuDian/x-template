@@ -9,7 +9,7 @@ export class modifier_shi_du_debuff extends BaseModifier {
         this.damageFactor = this.GetAbility().GetSpecialValueFor('damage_factor')
 
         if(!IsServer) return;        
-        this.StartIntervalThink(1)
+        this.StartIntervalThink(this.GetAbility().GetSpecialValueFor('damage_interval'))
     }
 
     OnRefresh(params: object): void {        

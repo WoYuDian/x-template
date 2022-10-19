@@ -1,0 +1,16 @@
+{
+	"available_heros": [
+		{"name": "npc_dota_hero_antimage", "abilities": ["antimage_mana_break"]},
+		{"name": "npc_dota_hero_juggernaut", "abilities": ["juggernaut_blade_dance"]},
+		{"name": "npc_dota_hero_phantom_assassin", "abilities": ["phantom_assassin_blur"]},
+		{"name": "npc_dota_hero_luna", "abilities": ["luna_moon_glaive"]},
+		{"name": "npc_dota_hero_lina", "abilities": ["lina_light_strike_array"]},
+		{"name": "npc_dota_hero_drow_ranger", "abilities": ["drow_ranger_marksmanship"]},
+		{"name": "npc_dota_hero_ursa", "abilities": ["ursa_fury_swipes"]},
+		{"name": "npc_dota_hero_templar_assassin", "abilities": ["templar_assassin_psi_blades"]},
+		{"name": "npc_dota_hero_obsidian_destroyer", "abilities": ["obsidian_destroyer_arcane_orb"]},
+		{"name": "npc_dota_hero_spectre", "abilities": ["spectre_dispersion"]},
+		{"name": "npc_dota_hero_sven", "abilities": ["sven_great_cleave"]},
+		{"name": "npc_dota_hero_terrorblade", "abilities": ["terrorblade_conjure_image"]}
+	]
+}

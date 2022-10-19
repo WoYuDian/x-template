@@ -1,6 +1,7 @@
 
 import { getForceOfRuleLevel } from "../../game_logic/realm_manager";
 import { BaseModifier, registerModifier } from "../../lib/dota_ts_adapter";
+import { Timers } from "../../lib/timers";
 
 @registerModifier()
 export class modifier_da_shou_yin_slow extends BaseModifier {
@@ -11,9 +12,12 @@ export class modifier_da_shou_yin_slow extends BaseModifier {
 
         this.moveSpeedReductionFactor = this.GetAbility().GetSpecialValueFor('move_speed_reduction_factor')
         this.forceOfRule = getForceOfRuleLevel('body', this.GetAbility().GetCaster()) + getForceOfRuleLevel('metal', this.GetAbility().GetCaster())
-        this.SetHasCustomTransmitterData(true)
+        // this.SetHasCustomTransmitterData(true)
 
-        this.StartIntervalThink(0.1)
+        Timers.CreateTimer(0.1, (function() {
+            this.SetHasCustomTransmitterData(true)
+            this.SendBuffRefreshToClients()
+        }).bind(this))
     }
 
     OnIntervalThink(): void {

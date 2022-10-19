@@ -1,9 +1,14 @@
 {
     "available_relics": [
-        {"relic_name": "test1", "texture_src": "chen_penitence"},
-        {"relic_name": "test2", "texture_src": "clinkz_searing_arrows"},
-        {"relic_name": "test3", "texture_src": "crystal_maiden_crystal_nova"},
-        {"relic_name": "test4", "texture_src": "dark_seer_surge"},
-        {"relic_name": "test5", "texture_src": "dazzle_poison_touch"}        
+        {"relic_name": "jing_ji_lin", "level": 1, "possibility": 100, "texture_src": "chen_penitence", "unit_composition": "jing_ji_lin"},
+        {"relic_name": "you_tan", "level": 1, "possibility": 100, "texture_src": "clinkz_searing_arrows", "unit_composition": "you_tan"},
+        {"relic_name": "ling_yan_gu", "level": 1, "possibility": 100, "texture_src": "crystal_maiden_crystal_nova", "unit_composition": "ling_yan_gu"},
+        {"relic_name": "di_huo_chi", "level": 1, "possibility": 100, "texture_src": "dark_seer_surge", "unit_composition": "di_huo_chi"},
+        {"relic_name": "fei_qi_kuang_mai", "level": 1, "possibility": 100, "texture_src": "dazzle_poison_touch", "unit_composition": "fei_qi_kuang_mai"},
+        {"relic_name": "shang_gu_zhan_chang", "level": 1, "possibility": 100, "texture_src": "dazzle_poison_touch", "unit_composition": "shang_gu_zhan_chang"},
+        {"relic_name": "hei_long_chao_xue", "level": 1, "possibility": 100, "texture_src": "dazzle_poison_touch", "unit_composition": "hei_long_chao_xue"},
+        {"relic_name": "yuan_ling_zhao_ze", "level": 1, "possibility": 100, "texture_src": "dazzle_poison_touch", "unit_composition": "yuan_ling_zhao_ze"},
+        {"relic_name": "tong_tian_feng", "level": 1, "possibility": 100, "texture_src": "dazzle_poison_touch", "unit_composition": "tong_tian_feng"},
+        {"relic_name": "hua_xue_zhao_ze", "level": 1, "possibility": 100, "texture_src": "dazzle_poison_touch", "unit_composition": "hua_xue_zhao_ze"}
     ]
 }

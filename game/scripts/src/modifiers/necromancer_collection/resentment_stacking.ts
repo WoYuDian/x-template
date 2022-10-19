@@ -26,4 +26,8 @@ export class modifier_resentment_stacking extends BaseModifier {
     GetModifierAura(): string {
         return modifier_resentment_stacking_buff.name
     }
+
+    IsHidden(): boolean {
+        return true
+    }
 }

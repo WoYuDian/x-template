@@ -24,13 +24,14 @@ export class AbilityPanel extends React.Component<props, state> {
     uiStyleConfiguration: any
     bookLinks: any[]
     availableAbilityPoints: number
+    showAbilityTip: boolean = false
     constructor(props: props) {
         super(props)
         this.togglePanel = this.togglePanel.bind(this)
         this.bookLevelIndexTable = {};
         this.bookLinks = [];
         this.uiStyleConfiguration = {
-            book: {width: 12, height: 100, levelGapHeight: 50, bookNumPerRow: 3},
+            book: {width: 24, height: 130, levelGapHeight: 50, bookNumPerRow: 3},
             ability: {width: 5, height: 140, levelGapHeight: 50}
         }
         this.state = {
@@ -38,6 +39,7 @@ export class AbilityPanel extends React.Component<props, state> {
         }
         this.processBookList();
         this.selectBook = this.selectBook.bind(this)    
+        this.displayAbilityTip = this.displayAbilityTip.bind(this)
     }    
 
     render() {        
@@ -64,7 +66,8 @@ export class AbilityPanel extends React.Component<props, state> {
         const abilityLines = []
         if(this.state.selectedBook) {
             const book = this.props.bookMap[this.state.selectedBook];
-            for(const abilityName of book.abilityKeys) {                
+            for(const abilityName of book.abilityKeys) { 
+                             
                 this.calcAbilityPosition(this.props.abilityMap[abilityName], book.abilityLevelIndexTable[this.props.abilityMap[abilityName].level])
                 abilityItems.push(<AbilityGraphItem state={getPlayerAbilityState(playerAbilityPoints ,playerAbilityMap, playerBookMap, abilityName)} id={abilityName} key={abilityName} styleConf={this.uiStyleConfiguration.ability} ability={this.props.abilityMap[abilityName]}></AbilityGraphItem>)
             }
@@ -77,7 +80,7 @@ export class AbilityPanel extends React.Component<props, state> {
                 }
             }
         }
-        
+
         //@ts-ignore
         if(this.props.showAbilityPanel) {
              return <Panel onactivate={this.togglePanel} style={{width: '100%', height: '100%', zIndex: 2}}>
@@ -94,7 +97,6 @@ export class AbilityPanel extends React.Component<props, state> {
                                 </Panel>  
                             </Panel>
                         </Panel>
-
                     </Panel>
                     <Panel style={{position: '30% 0 0', width: '70%', height: '100%'}}>
                         <Panel style={{position: '20px 95% 0', flowChildren: 'right'}}>
@@ -102,7 +104,14 @@ export class AbilityPanel extends React.Component<props, state> {
                             <Label style={{fontSize: '20px', color: '#ffffff'}} text={this.props.playerAbilityInfo?.ability_points[this.props.playerId.toString()] || 0}></Label>
                         </Panel>                        
                         <Panel style={{margin: '100px 20px 50px 20px', width: '100%', height: '100%'}}>
-                            <Label style={{width: '100%', height: '50px', lineHeight: '40px', fontSize: '30px', color: '#ffffff', textAlign: 'center'}} localizedText='#ability_graph'></Label>
+                            {this.showAbilityTip? 
+                                <Label style={{transition: 'all 0.2s ease-in-out 0.2s', backgroundColor: '#333333', textAlign: 'center', margin: '0 20%', width: '60%', zIndex: 3, position: '0 50px 0', fontSize: '30px', color: 'white', border: '1px solid #ffffff', padding: '10px 10px', borderRadius: '10px'}} localizedText='#ability_note'></Label>
+                                : null}
+                            <Panel style={{margin: '0 25%', width: '50%', height: '50px', flowChildren: 'right'}}>
+                                <Label style={{width: '48%', height: '50px', lineHeight: '30px', fontSize: '30px', padding: '10px 0', color: '#ffffff', textAlign: 'right'}} localizedText='#ability_graph'></Label>
+                                <Label onmouseover={e => {this.displayAbilityTip(true)}} onmouseout={e => {this.displayAbilityTip(false)}} 
+                                    style={{border: '1px solid #ffffff', color: 'white', borderRadius: '50%', height: '30px', width: 'height-percentage(100%)', fontSize: '20px', margin: '10px 0 10px 10px', padding: '5px 0', textAlign: 'center'}} text={'?'}></Label>
+                            </Panel>                            
                             <Panel style={{padding: '0 0 20px 0', position: '0 6% 0', width: '100%', height: '92%', //@ts-ignore
                                 overflow: 'squish scroll'}}>
                                 <Panel style={{width: '100%'}}>
@@ -110,7 +119,7 @@ export class AbilityPanel extends React.Component<props, state> {
                                     {abilityLines}
                                 </Panel>    
                             </Panel>
-                        </Panel>
+                        </Panel>                        
                     </Panel>
                 </Panel>
             </Panel>
@@ -119,13 +128,19 @@ export class AbilityPanel extends React.Component<props, state> {
         }
     }
 
+    displayAbilityTip(show: boolean) {
+        this.showAbilityTip = show
+    }
+
     calcLinePosition(link: any) {
         const from = $(`#${link.from}`);
         const to = $(`#${link.to}`);
         if(from && to) {
+            const xScale = (1 / from.actualuiscale_x)
+            const yScale = (1 / from.actualuiscale_y)
             return {
-                from: {x: (from.actualxoffset + from.contentwidth / 2) * 1.2, y: (from.actualyoffset + from.contentheight) * 1.2 + 8},
-                to: {x: (to.actualxoffset + to.contentwidth / 2) * 1.2, y: (to.actualyoffset) * 1.2 - 8},
+                from: {x: (from.actualxoffset + from.contentwidth / 2) * xScale, y: (from.actualyoffset + from.contentheight) * yScale + 8},
+                to: {x: (to.actualxoffset + to.contentwidth / 2) * xScale, y: (to.actualyoffset) * yScale - 8},
             }
         } else {
             return null
@@ -149,7 +164,7 @@ export class AbilityPanel extends React.Component<props, state> {
             book.abilityLinks = [];
             this.props.bookMap[key].index = index;
             index++;
-            for(const ability in book.ability_root) {
+            for(const ability in book.ability_root) {                
                 this.processBookAbilityGraph(book.ability_root[ability], 0, book)                
             }            
         }
@@ -191,8 +206,7 @@ export class AbilityPanel extends React.Component<props, state> {
             return;
         }
         ability.level = level;
-        book.abilityKeys.push(ability.ability_name)
-
+        book.abilityKeys.push(ability.ability_name)        
         if(!book.abilityLevelIndexTable[ability.level]) {
             book.abilityLevelIndexTable[ability.level] = 0
         }

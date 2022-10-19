@@ -26,11 +26,10 @@ export class PlayerPanel extends React.Component<props, any> {
                     curRank = rank;   
                 }                
             }
-            playerItems.push(<PlayerInfoItem key={key} playerInfo={this.props.playerMap[key]} rank={curRank}></PlayerInfoItem>)
+            playerItems.push(<PlayerInfoItem key={curRank + key} playerInfo={this.props.playerMap[key]} rank={curRank} score={this.props.stateInfo?.player_score[key]}></PlayerInfoItem>)
         }
         
         playerItems.sort(function(a, b) { return a.props.rank - b.props.rank})
-
         if($('#player_info_panel') && !this.props.userNameMap) {
             this.collectUserNames()
         }

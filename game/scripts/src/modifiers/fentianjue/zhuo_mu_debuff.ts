@@ -24,25 +24,43 @@ export class zhuo_mu_debuff extends BaseModifier {
     }
 
     DeclareFunctions(): ModifierFunction[] {
-        return [ModifierFunction.AVOID_DAMAGE, ModifierFunction.ON_TAKEDAMAGE]
+        return [ModifierFunction.AVOID_DAMAGE]
     }
 
     GetTexture(): string {
         return 'zhuo_mu'
     }
 
-    OnTakeDamage(event: ModifierInstanceEvent): void {
+    GetModifierAvoidDamage(event: ModifierAttackEvent): number {
         if(!IsServer()) return;
-        if(event.attacker != this.GetParent()) return;
+        if(event.attacker != this.GetParent()) return 0;
+
         const caster = this.GetAbility().GetCaster()
         const probability = getForceOfRuleLevel('fire', caster) * this.primaryStateFactor
 
         if(RollPercentage(probability)) {
-            const nFXIndex = ParticleManager.CreateParticle( "particles/units/heroes/hero_clinkz/clinkz_strafe_dodge.vpcf", ParticleAttachment.ABSORIGIN_FOLLOW, event.unit )
-            ParticleManager.SetParticleControlEnt( nFXIndex, 1, event.unit, ParticleAttachment.ABSORIGIN_FOLLOW, null, event.unit.GetAbsOrigin(), true )
-            ParticleManager.SetParticleControlEnt( nFXIndex, 3, event.unit, ParticleAttachment.ABSORIGIN_FOLLOW, null, event.unit.GetAbsOrigin(), true )
+            const nFXIndex = ParticleManager.CreateParticle( "particles/units/heroes/hero_clinkz/clinkz_strafe_dodge.vpcf", ParticleAttachment.ABSORIGIN_FOLLOW, event.target )
+            ParticleManager.SetParticleControlEnt( nFXIndex, 1, event.target, ParticleAttachment.ABSORIGIN_FOLLOW, null, event.target.GetAbsOrigin(), true )
+            ParticleManager.SetParticleControlEnt( nFXIndex, 3, event.target, ParticleAttachment.ABSORIGIN_FOLLOW, null, event.target.GetAbsOrigin(), true )
             ParticleManager.ReleaseParticleIndex( nFXIndex )
-            event.unit.Heal(event.damage, this.GetAbility())
-        } 
+            
+            return 1
+        } else {
+            return 0
+        }
     }
+
+    // OnTakeDamage(event: ModifierInstanceEvent): void {
+
+    //     const caster = this.GetAbility().GetCaster()
+    //     const probability = getForceOfRuleLevel('fire', caster) * this.primaryStateFactor
+
+    //     if(RollPercentage(probability)) {
+    //         const nFXIndex = ParticleManager.CreateParticle( "particles/units/heroes/hero_clinkz/clinkz_strafe_dodge.vpcf", ParticleAttachment.ABSORIGIN_FOLLOW, event.unit )
+    //         ParticleManager.SetParticleControlEnt( nFXIndex, 1, event.unit, ParticleAttachment.ABSORIGIN_FOLLOW, null, event.unit.GetAbsOrigin(), true )
+    //         ParticleManager.SetParticleControlEnt( nFXIndex, 3, event.unit, ParticleAttachment.ABSORIGIN_FOLLOW, null, event.unit.GetAbsOrigin(), true )
+    //         ParticleManager.ReleaseParticleIndex( nFXIndex )
+    //         event.unit.Heal(event.damage, this.GetAbility())
+    //     } 
+    // }
 }

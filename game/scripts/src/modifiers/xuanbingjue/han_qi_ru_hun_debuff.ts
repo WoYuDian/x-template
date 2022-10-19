@@ -13,4 +13,8 @@ export class han_qi_ru_hun_debuff extends BaseModifier {
     IsPurgable(): boolean {
         return false
     }
+
+    OnTooltip(): number {
+        return this.GetStackCount()           
+    }
 }

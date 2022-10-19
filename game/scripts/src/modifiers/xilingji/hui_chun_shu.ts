@@ -49,4 +49,8 @@ export class modifier_hui_chun_shu extends BaseModifier {
     IsPurgable(): boolean {
         return false
     }
+
+    IsHidden(): boolean {
+        return true;
+    }
 }

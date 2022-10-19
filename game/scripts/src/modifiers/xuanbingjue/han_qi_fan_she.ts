@@ -44,4 +44,8 @@ export class modifier_han_qi_fan_she extends BaseModifier {
     IsPurgable(): boolean {
         return false
     }
+
+    IsHidden(): boolean {
+        return true
+    }
 }

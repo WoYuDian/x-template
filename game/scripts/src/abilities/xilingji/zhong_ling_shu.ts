@@ -35,7 +35,7 @@ export class zhong_ling_shu extends BaseAbility
                 bReplaceExisting: false,
                 iUnitTargetTeam	: UnitTargetTeam.ENEMY,
                 iUnitTargetFlags: UnitTargetFlags.NONE,
-                iUnitTargetType	: UnitTargetType.HERO + UnitTargetType.CREEP + UnitTargetType.BASIC,
+                iUnitTargetType	: UnitTargetType.ALL,
                 bDeleteOnHit    : true,
                 fExpireTime     : GameRules.GetGameTime() + delay + 5,
                 //@ts-ignore

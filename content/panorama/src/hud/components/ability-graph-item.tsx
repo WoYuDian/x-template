@@ -17,13 +17,14 @@ export class AbilityGraphItem extends React.Component<props, any> {
     }
 
     render() {
-        if((this.props.state.level > 0) && (this.maxLevel == -1)) {
+        if((this.props.state.level > -1) && (this.maxLevel == -1)) {
             this.initAbilityState()
         }
 
         const operationBoxHeight = ((this.props.styleConf.height - 100) * 0.7 / this.props.styleConf.height) * 100 + '%';
         let upgradeButton = null; 
-        if(this.props.state.learnable) {
+
+        if(this.props.state.learnable && ((this.maxLevel > this.props.state.level) || (this.props.state.level == 0))) {
             upgradeButton = <Panel onactivate={e => {this.upgradeAbility(e, this.props.ability.ability_name)}} style={{flowChildren: 'right', width: '100%', height: operationBoxHeight, textAlign: 'center'}}>
                 <Label text={'+'} style={{borderRadius: '10px 10px 0 0', backgroundColor: '#e0c060', width: '100%',  fontSize: '20px', fontWeight: 'bold', color: '#ffffff', textAlign: 'center'}}></Label>                
             </Panel>
@@ -52,12 +53,12 @@ export class AbilityGraphItem extends React.Component<props, any> {
         return <Panel id={this.props.id} style={{ height: `width-percentage(${this.props.styleConf.height}%)`, width: `${this.props.styleConf.width}%`,
             position: `${this.props.ability.position.x}% ${this.props.ability.position.y}px 0`}}>
             {upgradeButton}
-            <DOTAAbilityImage style={{position: `0 ${operationBoxHeight} 0`, borderRadius: '10px', width: '100%', height: 'width-percentage(100%)'}} abilityname={this.props.ability.ability_name}></DOTAAbilityImage>
+            <DOTAAbilityImage showtooltip={true} style={{position: `0 ${operationBoxHeight} 0`, borderRadius: '10px', width: '100%', height: 'width-percentage(100%)'}} abilityname={this.props.ability.ability_name}></DOTAAbilityImage>
             {levelBarBox}
         </Panel>
     }
 
-    initAbilityState() {
+    initAbilityState() {        
         const heroIndex = Players.GetPlayerHeroEntityIndex(Game.GetLocalPlayerID());
         const ability = Entities.GetAbilityByName(heroIndex, this.props.ability.ability_name)
         this.maxLevel = Abilities.GetMaxLevel(ability)

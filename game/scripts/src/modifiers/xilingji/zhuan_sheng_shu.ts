@@ -3,6 +3,7 @@ import { BaseModifier, registerModifier } from "../../lib/dota_ts_adapter";
 import { modifier_fu_su_bound } from "./fu_su_bound";
 import { getForceOfRuleLevel } from "../../game_logic/realm_manager";
 import { Timers } from "../../lib/timers";
+import { respawnHero } from "../../game_logic/game_operation";
 @registerModifier()
 export class modifier_zhuan_sheng_shu extends BaseModifier {
     OnCreated(params: any): void {
@@ -49,7 +50,7 @@ export class modifier_zhuan_sheng_shu extends BaseModifier {
                     Timers.CreateTimer(ability.GetSpecialValueFor('delay'), (function() {                        
                         if(!tree || tree.IsNull()) return;
                         parent.SetRespawnPosition(tree.GetAbsOrigin())
-                        parent.RespawnHero(false, false)                    
+                        respawnHero(parent)
                         tree.Kill(ability, this.GetParent())
                         ability.StartCooldown(ability.GetSpecialValueFor('base_cold_down') - (getForceOfRuleLevel('wood', this.GetCaster()) * ability.GetSpecialValueFor('cold_down_reduction_factor')))
                     }).bind(this))                   
@@ -60,5 +61,9 @@ export class modifier_zhuan_sheng_shu extends BaseModifier {
 
     IsPurgable(): boolean {
         return false
+    }
+
+    IsHidden(): boolean {
+        return true
     }
 }

@@ -18,7 +18,7 @@ export class modifier_resentment_stacking_buff extends BaseModifier {
         const owner = this.GetCaster()
         
 
-        if(this.GetParent().GetUnitName() == 'npc_necromance_zombie') {
+        if((this.GetParent().GetUnitName() == 'npc_necromance_zombie') || (this.GetParent().GetUnitName() == 'shang_gu_zhang_chang_ghost')) {
             if(owner.IsBaseNPC()) {
                 const effectTarget = ParticleManager.CreateParticle('particles/econ/items/ogre_magi/ogre_magi_arcana/ogre_magi_arcana_secondstyle_fireblast_solarfeathers.vpcf', ParticleAttachment.ABSORIGIN_FOLLOW, owner)
                 ParticleManager.SetParticleControl( effectTarget, 1, owner.GetAbsOrigin())
@@ -29,7 +29,7 @@ export class modifier_resentment_stacking_buff extends BaseModifier {
                     modifier.IncrementStackCount()
                     modifier.SetDuration(8, true)    
                     //@ts-ignore
-                    modifier.OnRefresh()
+                    modifier.OnRefresh({})
                 } else {
                     owner.AddNewModifier(owner, this.GetAbility(), resentment_stacking_owner_buff.name, {duration: 8})
                 }
@@ -39,7 +39,7 @@ export class modifier_resentment_stacking_buff extends BaseModifier {
     }
 
     IsHidden(): boolean {
-        return this.GetParent().GetUnitName() != 'npc_necromance_zombie'
+        return true
     }
 
 }

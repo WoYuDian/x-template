@@ -50,4 +50,8 @@ export class modifier_ju_jian_shu extends BaseModifier {
     IsPurgable(): boolean {
         return false
     }    
+
+    IsHidden(): boolean {
+        return true
+    }
 }

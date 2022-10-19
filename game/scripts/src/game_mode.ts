@@ -5,6 +5,7 @@ import { loadAbilityGraph, getBookRoot } from './ability_graph/graph_helper'
 import {printObject, MapWearables, GenerateDefaultBlock, GenerateBundleBlock} from './util'
 import * as abilityHandlers from './game_logic/ability_manager'
 import {precacheAllResource} from './precache'
+import * as realmConf from './game_logic/configuration/realm_conf.json'
 declare global {
     interface CDOTAGamerules {
         Addon: GameMode;
@@ -50,22 +51,26 @@ export class GameMode {
         GameRules.SetStrategyTime(0)
         GameRules.SetShowcaseTime(0);
         GameRules.SetPreGameTime(0);        
-        GameRules.SetStartingGold(8000)
+        GameRules.SetStartingGold(200)
         GameRules.LockCustomGameSetupTeamAssignment(false)
-
         //@ts-ignore
-        GameRules.DropTable = LoadKeyValues('scripts/kv/item_drops.kv')
+        // GameRules.DropTable = LoadKeyValues('scripts/kv/item_drops.kv')
 
         const gamemode = GameRules.GetGameModeEntity();
         // gamemode.SetFogOfWarDisabled(true)
         // gamemode.SetUnseenFogOfWarEnabled(true)
+        
         gamemode.SetCameraDistanceOverride(1234)
         gamemode.SetUseCustomHeroLevels(true)
         gamemode.SetCustomHeroMaxLevel(100)
+        gamemode.SetBuybackEnabled(false)
+        gamemode.SetCustomBackpackSwapCooldown(0)
+        gamemode.SetUnseenFogOfWarEnabled(false)
+
         let xpConf = []
         let curXp = 0
         for(let i = 0; i < 100; i++) {            
-            if((i + 1) % 5 == 0) {
+            if((i == realmConf.zhuji.level) || (i == realmConf.jindan.level) || (i == realmConf.yuanying.level)) {
                 curXp = curXp + 500000
                 xpConf.push(curXp)
             } else {
@@ -74,7 +79,6 @@ export class GameMode {
             }            
         }
         gamemode.SetCustomXPRequiredToReachNextLevel(xpConf)
-
         ListenToGameEvent('player_connect_full', systemEventHandlers.playerFullConnect, this)
 
         ListenToGameEvent('dota_game_state_change', systemEventHandlers.gameStateChange, this)
@@ -83,23 +87,26 @@ export class GameMode {
         
         ListenToGameEvent('entity_killed', systemEventHandlers.onEntityKilled, this)
 
+        ListenToGameEvent('dota_item_purchased', systemEventHandlers.onMoneyChanged, this)
+        ListenToGameEvent('dota_hero_inventory_item_change', systemEventHandlers.onMoneyChanged, this)
+        
         CustomGameEventManager.RegisterListener('player_hero_selection', customEventHandlers.playerHeroSelection.bind(this))
         CustomGameEventManager.RegisterListener('player_plan_selection', customEventHandlers.playerPlanSelection.bind(this))
         CustomGameEventManager.RegisterListener('player_relic_selection', customEventHandlers.playerRelicSelection.bind(this))
         CustomGameEventManager.RegisterListener('player_upgrade_ability', abilityHandlers.playerUpgradeAbility.bind(this))
         CustomGameEventManager.RegisterListener('player_challenge_selection', customEventHandlers.playerChallengeSelection.bind(this))
         CustomGameEventManager.RegisterListener('player_break_realm', customEventHandlers.playerBreakRealm.bind(this))
+        CustomGameEventManager.RegisterListener('player_pick_award', customEventHandlers.playerPickAward.bind(this))
         loadAbilityGraph()     
 
-        // MapWearables()
-        // Convars.RegisterCommand('gwb',function(name, args) {
-        //     print(args,'========')
-        //     GenerateBundleBlock(args)
-        // }, 'Print bundle codes', ConVarFlags.DEMO)
+        MapWearables()
+        Convars.RegisterCommand('gwb',function(name, args) {
+            GenerateBundleBlock(args)
+        }, 'Print bundle codes', ConVarFlags.DEMO)
 
-        // Convars.RegisterCommand('ghdb',function(name, args) {
-        //     GenerateDefaultBlock(args)
-        // }, 'Print hero defalt bundle codes', ConVarFlags.DEMO)
+        Convars.RegisterCommand('ghdb',function(name, args) {
+            GenerateDefaultBlock(args)
+        }, 'Print hero defalt bundle codes', ConVarFlags.DEMO)
     }
 
     

@@ -26,4 +26,8 @@ export class modifier_gui_wang_fire extends BaseModifier {
     GetEffectName(): string {
         return 'particles/you_ming_ji_dian/gui_wang_fire_aura.vpcf'
     }
+
+    IsHidden(): boolean {
+        return true;
+    }
 }

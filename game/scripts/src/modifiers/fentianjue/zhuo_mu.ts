@@ -32,4 +32,8 @@ export class modifier_zhuo_mu extends BaseModifier {
     GetModifierAura(): string {
         return zhuo_mu_debuff.name
     }
+
+    IsHidden(): boolean {
+        return true
+    }
 }

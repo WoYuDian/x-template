@@ -26,4 +26,8 @@ export class modifier_shi_jian_dui_ji extends BaseModifier {
     GetModifierAura(): string {
         return modifier_shi_jian_dui_ji_debuff.name
     }
+
+    IsHidden(): boolean {
+        return true;
+    }
 }

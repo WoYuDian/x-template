@@ -49,7 +49,10 @@ module.exports = {
                         outputStyle: 'expanded',
                     },
                 },
-            },
+            },{
+                test: /\.(png|jpe?g|gif)$/i,
+                loader: 'file-loader'
+            }
         ],
     },
 

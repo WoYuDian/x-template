@@ -1,5 +1,6 @@
 
 import { BaseModifier, registerModifier } from "../../lib/dota_ts_adapter";
+import { calcDistanceOfTwoPoint } from "../../util";
 
 @registerModifier()
 export class modifier_fabao_common extends BaseModifier {
@@ -12,6 +13,18 @@ export class modifier_fabao_common extends BaseModifier {
         ParticleManager.SetParticleControlEnt( this.particleId, 0, this.GetParent(), ParticleAttachment.ROOTBONE_FOLLOW, null, this.GetParent().GetOrigin(), true )
         ParticleManager.SetParticleControlEnt( this.particleId, 1, this.GetParent(), ParticleAttachment.OVERHEAD_FOLLOW, null, this.GetParent().GetOrigin(), true )
         ParticleManager.SetParticleControlEnt( this.particleId, 3, this.GetParent(), ParticleAttachment.OVERHEAD_FOLLOW, null, this.GetParent().GetOrigin(), true )
+
+        this.StartIntervalThink(1)
+    }
+
+    OnIntervalThink(): void {
+        if(!IsServer()) return;
+
+        const distance = calcDistanceOfTwoPoint(this.owner.GetAbsOrigin(), this.GetParent().GetAbsOrigin())
+        if(distance > 2000) {
+            //@ts-ignore
+            this.GetParent().SetAbsOrigin(this.owner.GetAbsOrigin() + RandomVector(200))
+        }
     }
 
     OnRefresh(params: object): void {
@@ -34,7 +47,8 @@ export class modifier_fabao_common extends BaseModifier {
     CheckState(): Partial<Record<ModifierState, boolean>> {
         return {
             [ModifierState.MAGIC_IMMUNE]: true,
-            [ModifierState.ATTACK_IMMUNE]: true
+            [ModifierState.ATTACK_IMMUNE]: true,
+            [ModifierState.NO_UNIT_COLLISION]: true
         }
     }
 
@@ -49,5 +63,9 @@ export class modifier_fabao_common extends BaseModifier {
 
     RemoveOnDeath(): boolean {
         return false;
+    }
+
+    IsHidden(): boolean {
+        return true
     }
 }

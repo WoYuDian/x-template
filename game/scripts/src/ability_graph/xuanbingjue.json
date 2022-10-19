@@ -1,34 +1,35 @@
 {
     "book_name": "xuanbingjue",
-    "texture_src": "crystal_maiden_brilliance_aura",
+    "texture_src": "item_book_xuanbingjue",
+    "force_of_rules": ["water"],
     "abilities": {
         "ji_han_zhi_qi": {
             "parent_ability": null,
-            "force_of_rule_bonus": [{"rule_name": "water", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "water", "bonus": 5}]
         },
         "ice_piton": {
             "parent_ability": null,
-            "force_of_rule_bonus": [{"rule_name": "water", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "water", "bonus": 5}]
         },
         "han_qi_ru_ti": {
             "parent_ability": "ji_han_zhi_qi",
-            "force_of_rule_bonus": [{"rule_name": "water", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "water", "bonus": 5}]
         },
         "ice_gland": {
             "parent_ability": "ji_han_zhi_qi",
-            "force_of_rule_bonus": [{"rule_name": "water", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "water", "bonus": 5}]
         },
         "han_qi_ru_hun": {
             "parent_ability": "han_qi_ru_ti",
-            "force_of_rule_bonus": [{"rule_name": "water", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "water", "bonus": 5}]
         },
         "han_qi_fan_she": {
-            "parent_ability": "han_qi_ru_hun",
-            "force_of_rule_bonus": [{"rule_name": "water", "bonus": 1}]
+            "parent_ability": "han_qi_ru_ti",
+            "force_of_rule_bonus": [{"rule_name": "water", "bonus": 5}]
         },
         "xuan_han_ling_yu": {
-            "parent_ability": "han_qi_ru_hun",
-            "force_of_rule_bonus": [{"rule_name": "water", "bonus": 1}]
+            "parent_ability": "han_qi_fan_she",
+            "force_of_rule_bonus": [{"rule_name": "water", "bonus": 5}]
         }
     }
 }

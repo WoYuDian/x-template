@@ -38,4 +38,8 @@ export class modifier_fang_yu_zhuo_shao extends BaseModifier {
     IsPurgable(): boolean {
         return false
     }
+
+    IsHidden(): boolean {
+        return true;
+    }
 }

@@ -62,4 +62,8 @@ export class modifier_mana_recovery_debuff extends BaseModifier {
 
 
     }
+
+    IsHidden(): boolean {
+        return true
+    }
 }

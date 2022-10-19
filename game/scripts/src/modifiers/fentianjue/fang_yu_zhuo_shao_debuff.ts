@@ -5,10 +5,14 @@ import { BaseModifier, registerModifier } from "../../lib/dota_ts_adapter";
 export class fang_yu_zhuo_shao_debuff extends BaseModifier {
     reductionFactor: number = 0
     forceOfFire: number = 0
+    caster: CDOTA_BaseNPC
+    ability: CDOTABaseAbility
     OnCreated(params: any): void {
         if(!IsServer()) return;
         this.reductionFactor = this.GetAbility().GetSpecialValueFor('reduction_factor')
         this.forceOfFire = getForceOfRuleLevel('fire', this.GetAbility().GetCaster())
+        this.ability = this.GetAbility()
+        this.caster = this.ability.GetCaster()
         this.SetStackCount(1)
 
         this.SetHasCustomTransmitterData(true)

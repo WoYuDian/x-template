@@ -1,30 +1,31 @@
 {
     "book_name": "banshanjue",
-    "texture_src": "sandking_epicenter",
+    "texture_src": "item_book_banshanjue",
+    "force_of_rules": ["rock"],
     "abilities": {
         "yan_dun": {
             "parent_ability": null,
-            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 5}]
         },
         "di_ci": {
             "parent_ability": null,
-            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 5}]
         },
         "di_dong_shu": {
             "parent_ability": "yan_dun",
-            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 5}]
         },
         "shi_bao_shu": {
             "parent_ability": "di_ci",
-            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 5}]
         },
         "zhong_li_chang": {
             "parent_ability": "di_dong_shu",
-            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 5}]
         },
         "shan_yue_zhi_li": {
             "parent_ability": "di_dong_shu",
-            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "rock", "bonus": 5}]
         }
     }
 }

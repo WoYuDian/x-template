@@ -51,6 +51,6 @@ export class modifier_shan_yue_zhi_li extends modifier_generic_orb_effect {
     }
 
     IsHidden(): boolean {
-        return false
+        return true
     }
 }

@@ -87,9 +87,11 @@ export class modifier_jian_qi_zong_heng extends BaseModifier {
         this.radius = this.GetAbility().GetSpecialValueFor('radius')
     }
 
-
-
     IsPurgable(): boolean {
         return false
     }    
+
+    IsHidden(): boolean {
+        return true
+    }
 }

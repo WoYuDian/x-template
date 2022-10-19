@@ -1,7 +1,7 @@
 import { you_ming_ji_dian } from "../../abilities/necromancer_collection/you_ming_ji_dian";
-import { getPlayerHeroById } from "../../game_logic/game_operation";
 import { getForceOfRuleLevel } from "../../game_logic/realm_manager";
 import { BaseAbility, BaseModifier, registerModifier } from "../../lib/dota_ts_adapter";
+import { getPlayerHeroById } from "../../util";
 @registerModifier()
 export class modifier_gui_wang_fire_debuff extends BaseModifier {
     fireDamageFactor: number

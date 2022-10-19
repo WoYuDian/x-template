@@ -2,11 +2,11 @@
 import { BaseAbility, registerAbility } from "../../../lib/dota_ts_adapter"
 import { modifier_out_of_world } from "../../../modifiers/common/modifier_out_of_world";
 import { calcDistanceOfTwoPoint } from "../../../util";
-import { modifier_sword_attributes } from "./sword_attributes";
+import { fabao_ability } from "../fabao_ability";
 import { modifier_sword_fusion_buff } from "./sword_fusion_buff";
 
 @registerAbility()
-export class cast_sword_fusion extends BaseAbility
+export class cast_sword_fusion extends fabao_ability
 {    
     Spawn(): void {
         if(!IsServer()) return;
@@ -30,7 +30,7 @@ export class cast_sword_fusion extends BaseAbility
                 vSourceLoc: caster.GetAbsOrigin(),
                 Target: target,
                 Ability: this,
-                EffectName: 'particles/cast_sword_fusion/cast_sword_fusion.vpcf',
+                EffectName: 'particles/skywrath_mage_concussive_shot.vpcf',
                 bDodgeable: false,
                 bProvidesVision: true,
                 iMoveSpeed: speed,

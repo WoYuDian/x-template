@@ -35,4 +35,8 @@ export class modifier_zombie_augmentation extends BaseModifier {
     GetModifierAura(): string {
         return modifier_zombie_augmentation_buff.name
     }
+
+    IsHidden(): boolean {
+        return true
+    }
 }

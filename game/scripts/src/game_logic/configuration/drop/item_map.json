@@ -1,0 +1,99 @@
+{
+    "item_piece_fu_shen" : {"is_common": false, "units": [
+        {"unit": "yuan_ling_zhao_ze_boss", "chance": 8},
+        {"unit": "shang_gu_zhan_chang_ghost", "chance": 5}
+    ]},
+    "item_piece_she_hun_lian_yu" : {"is_common": false, "units": [
+        {"unit": "yuan_ling_zhao_ze_boss", "chance": 5},
+        {"unit": "shang_gu_zhan_chang_ghost", "chance": 3}
+    ]},
+    "item_piece_shi_du" : {"is_common": false, "units": [
+        {"unit": "yuan_ling_zhao_ze_boss", "chance": 16},
+        {"unit": "shang_gu_zhan_chang_ghost", "chance": 12}
+    ]},
+    "item_piece_summon_zombie" : {"is_common": false, "units": [
+        {"unit": "yuan_ling_zhao_ze_boss", "chance": 24},
+        {"unit": "shang_gu_zhan_chang_ghost", "chance": 16}
+    ]},
+    "item_piece_swallow_zombie" : {"is_common": false, "units": [
+        {"unit": "yuan_ling_zhao_ze_boss", "chance": 24},
+        {"unit": "shang_gu_zhan_chang_ghost", "chance": 16}
+    ]},
+    "item_piece_you_ming_ji_dian" : {"is_common": false, "units": [
+        {"unit": "yuan_ling_zhao_ze_boss", "chance": 8},
+        {"unit": "shang_gu_zhan_chang_ghost", "chance": 5}
+    ]},
+    "item_piece_zombie_blast" : {"is_common": false, "units": [
+        {"unit": "yuan_ling_zhao_ze_boss", "chance": 16},
+        {"unit": "shang_gu_zhan_chang_ghost", "chance": 12}
+    ]},
+
+    "item_piece_lei_dian_chang" : {"is_common": false, "units": [
+        {"unit": "tong_tian_feng_guard", "chance": 16},
+        {"unit": "di_huo_chi_guard", "chance": 12}
+    ]},
+    "item_piece_lei_dian_zhi_chu" : {"is_common": false, "units": [
+        {"unit": "tong_tian_feng_guard", "chance": 24},
+        {"unit": "di_huo_chi_guard", "chance": 16}
+    ]},
+    "item_piece_lei_dun_shu" : {"is_common": false, "units": [
+        {"unit": "tong_tian_feng_guard", "chance": 8},
+        {"unit": "di_huo_chi_guard", "chance": 5}
+    ]},
+    "item_piece_lei_dun" : {"is_common": false, "units": [
+        {"unit": "tong_tian_feng_guard", "chance": 16},
+        {"unit": "di_huo_chi_guard", "chance": 12}
+    ]},
+    "item_piece_lei_tin_zhen_ji" : {"is_common": false, "units": [
+        {"unit": "tong_tian_feng_guard", "chance": 5},
+        {"unit": "di_huo_chi_guard", "chance": 3}
+    ]},
+    "item_piece_wu_jin_lei_yu" : {"is_common": false, "units": [
+        {"unit": "tong_tian_feng_guard", "chance": 8},
+        {"unit": "di_huo_chi_guard", "chance": 5}
+    ]},
+    "item_piece_yu_lei_shu" : {"is_common": false, "units": [
+        {"unit": "tong_tian_feng_guard", "chance": 24},
+        {"unit": "di_huo_chi_guard", "chance": 16}
+    ]},
+
+    "item_piece_da_shou_yin" : {"is_common": false, "units": [
+        {"unit": "black_dragon", "chance": 5},
+        {"unit": "shang_gu_zhan_chang_ghost", "chance": 1}
+    ]},
+    "item_piece_hou_che_bu" : {"is_common": false, "units": [
+        {"unit": "black_dragon", "chance": 16},
+        {"unit": "shang_gu_zhan_chang_ghost", "chance": 8}
+    ]},
+    "item_piece_jin_gang_hou" : {"is_common": false, "units": [
+        {"unit": "black_dragon", "chance": 8},
+        {"unit": "shang_gu_zhan_chang_ghost", "chance": 4}
+    ]},
+    "item_piece_jin_gang_zhao" : {"is_common": false, "units": [
+        {"unit": "black_dragon", "chance": 24},
+        {"unit": "shang_gu_zhan_chang_ghost", "chance": 10}
+    ]},
+    "item_piece_luo_han_quan" : {"is_common": false, "units": [
+        {"unit": "black_dragon", "chance": 24},
+        {"unit": "shang_gu_zhan_chang_ghost", "chance": 10}
+    ]},
+    "item_piece_shan_shen_ji" : {"is_common": false, "units": [
+        {"unit": "black_dragon", "chance": 8},
+        {"unit": "shang_gu_zhan_chang_ghost", "chance": 4}
+    ]},
+    "item_piece_xu_mi_zhi" : {"is_common": false, "units": [
+        {"unit": "black_dragon", "chance": 16},
+        {"unit": "shang_gu_zhan_chang_ghost", "chance": 8}
+    ]},
+
+    "item_piece_shi_jian_dui_ji" : {"is_common": true, "common_chance": 4},
+    "item_piece_shi_jian_jia_su" : {"is_common": true, "common_chance": 6},
+    "item_piece_shi_jian_jian_shi" : {"is_common": true, "common_chance": 2},
+    "item_piece_shi_jian_jie_yong" : {"is_common": true, "common_chance": 2},
+    "item_piece_shi_jian_ling_yu" : {"is_common": true, "common_chance": 1},
+    "item_piece_shi_jian_yan_chi" : {"is_common": true, "common_chance": 6},
+    "item_piece_sui_yue_zhi_yan" : {"is_common": true, "common_chance": 4},
+
+    "item_lingshi": {"is_common": true, "common_chance": 100, "params": {"max": 30, "min": 20}},
+    "item_fabao_embryo": {"is_common": true, "common_chance": 20}
+}

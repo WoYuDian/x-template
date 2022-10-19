@@ -1,8 +1,7 @@
 import {cacheGet, cacheSet , cacheUpdate, CustomTableType} from '../cache'
 import {getPlayerAbilityState, getPlayerBookState} from '../ability_graph/graph_helper'
-import {printObject} from '../util'
+import {addAbilityToUnit, printObject} from '../util'
 import { forceOfRuleMap, addForceOfRule } from './realm_manager'
-
 const configuration = {
     playerInitialAbilityPoints: 3
 }
@@ -32,11 +31,15 @@ export function playerUpgradeAbility(event) {
     const abilityInfo: playerAbilityInfo = cacheGet('playerAbilityInfo');
     const abilityState = getPlayerAbilityState(abilityInfo.ability_points[playerIdStr], abilityInfo.ability_level_map[playerIdStr], abilityInfo.book_map[playerIdStr], event.abilityName);
 
+    if(!abilityState.learnable) {
+        print("Ability not learnable")
+        return;
+    }
     const hero = PlayerResource.GetSelectedHeroEntity(event.playerId);
 
     let ability = hero.FindAbilityByName(event.abilityName);
     if(!hero.HasAbility(event.abilityName)) {
-        hero.AddAbility(event.abilityName)        
+        addAbilityToUnit(hero, event.abilityName)   
         ability = hero.FindAbilityByName(event.abilityName);
     }
 
@@ -53,9 +56,13 @@ export function playerUpgradeAbility(event) {
         }
 
         if(!abilityInfo.ability_level_map[playerIdStr][event.abilityName]) {
-            abilityInfo.ability_level_map[playerIdStr][event.abilityName] = 0;
+            abilityInfo.ability_level_map[playerIdStr][event.abilityName] = {level: 0, learned: 0, max_level: -1};
         }
-        abilityInfo.ability_level_map[playerIdStr][event.abilityName] += 1;
+
+        if(abilityInfo.ability_level_map[playerIdStr][event.abilityName].max_level == -1) {
+            abilityInfo.ability_level_map[playerIdStr][event.abilityName].max_level = ability.GetMaxLevel();
+        }
+        abilityInfo.ability_level_map[playerIdStr][event.abilityName].level += 1;
         cacheUpdate('playerAbilityInfo')
 
         if(abilityState.ability.force_of_rule_bonus) {
@@ -81,6 +88,31 @@ export function learnBook(bookName: string, playerId: PlayerID) {
             return true;
         } else {
             return false;
+        }        
+    }    
+}
+
+export function learnAbility(abilityName: string, bookName: string, playerId: PlayerID) {
+    const playerIdStr = playerId.toString()
+    const abilityInfo: playerAbilityInfo = cacheGet('playerAbilityInfo');
+    const bookState = getPlayerBookState(abilityInfo.book_map[playerIdStr], bookName);
+    const abilityState = getPlayerAbilityState(abilityInfo.ability_points[playerIdStr], abilityInfo.ability_level_map[playerIdStr], abilityInfo.book_map[playerIdStr], abilityName);
+    
+    if(bookState.learned) {
+        return false;
+    } else {
+        if(abilityState.learned == 1) {
+            return false            
+        } else {
+            if(!abilityInfo.ability_level_map[playerIdStr]) {
+                abilityInfo.ability_level_map[playerIdStr] = {}
+            }
+            if(!abilityInfo.ability_level_map[playerIdStr][abilityName]) {
+                abilityInfo.ability_level_map[playerIdStr][abilityName] = {learned: 0, level: 0, max_level: -1}
+            }
+            abilityInfo.ability_level_map[playerIdStr][abilityName].learned = 1
+            cacheUpdate('playerAbilityInfo')
+            return true;
         }        
     }    
 }

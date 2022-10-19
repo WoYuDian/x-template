@@ -2,10 +2,11 @@
 import { BaseAbility, registerAbility } from "../../../lib/dota_ts_adapter"
 import { modifier_out_of_world } from "../../../modifiers/common/modifier_out_of_world";
 import { calcDistanceOfTwoPoint } from "../../../util";
+import { fabao_ability } from "../fabao_ability";
 import { modifier_sword_attributes } from "./sword_attributes";
 
 @registerAbility()
-export class cast_sword_shot extends BaseAbility
+export class cast_sword_shot extends fabao_ability
 {    
     Spawn(): void {
         if(!IsServer()) return;
@@ -33,6 +34,10 @@ export class cast_sword_shot extends BaseAbility
             }
 
             const speed = caster.GetBaseMoveSpeed() * 5
+
+            if(caster.HasModifier(modifier_out_of_world.name)) {
+                caster.RemoveModifierByName(modifier_out_of_world.name)
+            }
             caster.AddNewModifier(caster, this, modifier_out_of_world.name, {duration: distance / speed, dest_x: vPos.x, dest_y: vPos.y, dest_z: vPos.z})
             ProjectileManager.CreateLinearProjectile( {
                 Ability: this,
@@ -46,7 +51,7 @@ export class cast_sword_shot extends BaseAbility
                 bReplaceExisting: false,
                 iUnitTargetTeam	: UnitTargetTeam.ENEMY,
                 iUnitTargetFlags: UnitTargetFlags.NONE,
-                iUnitTargetType	: UnitTargetType.HERO + UnitTargetType.CREEP + UnitTargetType.BASIC,
+                iUnitTargetType	: UnitTargetType.ALL,
                 bDeleteOnHit    : true,
                 fExpireTime     : GameRules.GetGameTime() + 10.0,
                 //@ts-ignore

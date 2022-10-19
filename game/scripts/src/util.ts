@@ -113,3 +113,27 @@ export function rotateVector(direction: Vector, angle: number) {
         direction.x * Math.sin(angle) + direction.y * Math.cos(angle), 
         0)
 }
+
+export function getPlayerHeroById(playerId: PlayerID) {
+    const player = PlayerResource.GetPlayer(playerId)
+
+    if(player) {
+        return player.GetAssignedHero()
+    } else {
+        return null;
+    }
+}
+
+export function addAbilityToUnit(unit: CDOTA_BaseNPC, abilityName: string) {
+    const ability = unit.AddAbility(abilityName)
+    ability.SetLevel(ability.GetMaxLevel())
+    if(!ability.IsPassive()) {
+        for(let i = 31; i >= 0; i--) {
+            const slotAbility = unit.GetAbilityByIndex(i)
+            if(slotAbility && slotAbility.IsPassive()) {
+                unit.SwapAbilities(abilityName, slotAbility.GetAbilityName(), true, true)
+            }
+        }        
+    }
+
+}

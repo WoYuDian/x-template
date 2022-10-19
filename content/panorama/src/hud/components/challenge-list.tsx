@@ -18,7 +18,7 @@ export class ChallengeList extends React.Component<props, any> {
         if(challenges && (this.props.stateInfo?.state == 'rank_in_progress') && (this.props.stateInfo.challenge_index > -1)) {
             for(const key in challenges) {
                 let bgColor = (this.props.stateInfo.challenge_index + 1) == parseInt(key)? '#e0c060': '#333333'
-                challengeList.push(<Panel style={{ width: '100%', height: '60px', backgroundColor: bgColor, flowChildren: 'right'}}>
+                challengeList.push(<Panel key={key} style={{ width: '100%', height: '60px', backgroundColor: bgColor, flowChildren: 'right'}}>
                     <Label style={{width: '30%', margin: '20px 5%', height: '60px', textOverflow: 'ellipsis', whiteSpace: 'nowrap', fontSize: '20px', color: '#ffffff', textAlign: 'right'}} text={(this.props.userNameMap || {})[challenges[key].challenger]}></Label>
                     <Label style={{width: '20%', margin: '20px 0', height: '60px', textOverflow: 'ellipsis', whiteSpace: 'nowrap', fontSize: '20px', textAlign: 'center'}} text={' vs '}></Label>
                     <Label style={{width: '30%', margin: '20px 5%', height: '60px', textOverflow: 'ellipsis', whiteSpace: 'nowrap', fontSize: '20px', color: '#ffffff', textAlign: 'left'}} text={(this.props.userNameMap || {})[this.props.stateInfo.player_rank_info[challenges[key].rank as RankNumber]]}></Label>

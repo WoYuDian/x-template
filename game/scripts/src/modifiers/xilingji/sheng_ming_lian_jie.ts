@@ -73,4 +73,8 @@ export class modifier_sheng_ming_lian_jie extends BaseModifier {
     IsPurgable(): boolean {
         return false
     }
+
+    IsHidden(): boolean {
+        return true
+    }
 }

@@ -34,4 +34,12 @@ export class modifier_luo_han_quan extends BaseModifier {
     IsPurgable(): boolean {
         return false
     }
+
+    DeclareFunctions(): ModifierFunction[] {
+        return [ModifierFunction.TOOLTIP]
+    }
+
+    OnTooltip(): number {
+        return this.GetStackCount()           
+    }
 }

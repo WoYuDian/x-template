@@ -21,9 +21,7 @@ export class Line extends React.Component<props, any> {
         to.y = parseFloat(to.y.toFixed(2))
         const distance = Math.sqrt(Math.pow(from.x - to.x, 2) + Math.pow(from.y - to.y, 2))        
         let rotateDeg = ((Math.atan((to.y - from.y) / (to.x - from.x))) * 180 / Math.PI);
-        if(!rotateDeg) {
-            $.Msg(from.x,'========', from.y,'=========', to.x,'===========', to.y)
-        }
+
         if(rotateDeg < 0) {
             rotateDeg = 180 + rotateDeg
         } 

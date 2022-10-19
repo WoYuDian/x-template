@@ -99,4 +99,8 @@ export class modifier_sword_mean_stacking extends BaseModifier {
         return false
     }
 
+    OnTooltip(): number {
+        return this.GetStackCount()
+    }
+
 }

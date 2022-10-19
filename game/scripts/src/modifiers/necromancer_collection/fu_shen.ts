@@ -25,4 +25,8 @@ export class modifier_fu_shen extends BaseModifier {
             [ModifierState.NO_UNIT_COLLISION]: true
         }
     }
+
+    IsHidden(): boolean {
+        return true
+    }
 }

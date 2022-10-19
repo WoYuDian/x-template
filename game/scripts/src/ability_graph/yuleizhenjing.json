@@ -1,34 +1,35 @@
 {
     "book_name": "yuleizhenjing",
-    "texture_src": "zuus_thundergods_wrath",
+    "texture_src": "item_book_yuleizhenjing",
+    "force_of_rules": ["fire", "metal"],
     "abilities": {
         "lei_dian_zhi_chu": {
             "parent_ability": null,
-            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 1}, {"rule_name": "fire", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 3}, {"rule_name": "fire", "bonus": 3}]
         },
         "yu_lei_shu": {
             "parent_ability": null,
-            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 1}, {"rule_name": "fire", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 3}, {"rule_name": "fire", "bonus": 3}]
         },
         "lei_dian_chang": {
             "parent_ability": "lei_dian_zhi_chu",
-            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 1}, {"rule_name": "fire", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 3}, {"rule_name": "fire", "bonus": 3}]
         },
         "lei_dun": {
             "parent_ability": "lei_dian_zhi_chu",
-            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 1}, {"rule_name": "fire", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 3}, {"rule_name": "fire", "bonus": 3}]
         },
         "lei_dun_shu": {
             "parent_ability": "lei_dian_chang",
-            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 1}, {"rule_name": "fire", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 3}, {"rule_name": "fire", "bonus": 3}]
         },
         "wu_jin_lei_yu": {
             "parent_ability": "lei_dian_chang",
-            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 1}, {"rule_name": "fire", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 3}, {"rule_name": "fire", "bonus": 3}]
         },
         "lei_tin_zhen_ji": {
             "parent_ability": "lei_dun_shu",
-            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 1}, {"rule_name": "fire", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 3}, {"rule_name": "fire", "bonus": 3}]
         }
     }
 }

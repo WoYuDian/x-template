@@ -1,0 +1,51 @@
+{
+    "award_list": [
+        {"name": "item_book_swordmanship", "possibility": 10},
+        {"name": "item_book_fentianjue", "possibility": 10},                
+        {"name": "item_book_xilingji", "possibility": 10},
+        {"name": "item_book_xuanbingjue", "possibility": 10},        
+        {"name": "item_book_banshanjue", "possibility": 10},
+        {"name": "item_book_jingangjue", "possibility": 8},
+        {"name": "item_book_yuleizhenjing", "possibility": 8},
+        {"name": "item_book_necromancer_collection", "possibility": 8},
+        {"name": "item_book_suiyuejing", "possibility": 5},
+
+        {"name": "item_material_jinyuancao", "possibility": 100},
+        {"name": "item_material_muyuancao", "possibility": 100},
+        {"name": "item_material_shuiyuancao", "possibility": 100},
+        {"name": "item_material_huoyuancao", "possibility": 100},
+        {"name": "item_material_tuyuancao", "possibility": 100},
+        {"name": "item_material_yanghunhua", "possibility": 80},
+        {"name": "item_material_hongluoguo", "possibility": 80},
+
+        {"name": "item_material_jinlingjing", "possibility": 50},
+        {"name": "item_material_mulingjing", "possibility": 50},
+        {"name": "item_material_shuilingjing", "possibility": 50},
+        {"name": "item_material_huolingjing", "possibility": 50},
+        {"name": "item_material_tulingjing", "possibility": 50},
+        {"name": "item_material_yanghunye", "possibility": 40},
+        {"name": "item_material_qixuezhijing", "possibility": 40},
+
+        {"name": "item_material_jinyuanzhijing", "possibility": 20},
+        {"name": "item_material_muyuanzhijing", "possibility": 20},
+        {"name": "item_material_shuiyuanzhijing", "possibility": 20},
+        {"name": "item_material_huoyuanzhijing", "possibility": 20},
+        {"name": "item_material_tuyuanzhijing", "possibility": 20},
+        {"name": "item_material_shenhunyuanjing", "possibility": 16},
+        {"name": "item_material_qixueyuanjing", "possibility": 16},
+
+        {"name": "item_material_ronglingye", "possibility": 50},
+        {"name": "item_material_xilingye", "possibility": 16},
+
+        {"name": "item_fabao_embryo", "possibility": 10},
+        {"name": "item_thunder_stone", "possibility": 30},
+        {"name": "item_magnetic_stone", "possibility": 30},
+        {"name": "item_cold_iron", "possibility": 30},
+        {"name": "item_huaxueteng", "possibility": 30},
+        {"name": "item_jingangmu", "possibility": 30},
+        {"name": "item_shehunmu", "possibility": 30},
+        {"name": "item_longjin", "possibility": 30},
+        {"name": "item_shuangshengmu", "possibility": 30},
+        {"name": "item_perfect_stone", "possibility": 30}
+    ]
+}

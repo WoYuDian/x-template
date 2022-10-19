@@ -1,0 +1,101 @@
+{
+    "jing_ji_lin_boss": {
+        "level": 2, 
+        "drops": [
+            {"name": "item_material_muyuancao", "chance": 100},
+            {"name": "item_shuangshengmu", "chance": 10},
+            {"name": "item_piece_fu_su", "chance": 20},
+            {"name": "item_piece_hui_chun_shu", "chance": 30},
+            {"name": "item_piece_ji_sheng", "chance": 20},
+            {"name": "item_piece_sheng_ming_lian_jie", "chance": 12},
+            {"name": "item_piece_yun_ling_zhi_jing", "chance": 8},
+            {"name": "item_piece_zhong_ling_shu", "chance": 30},
+            {"name": "item_piece_zhuan_sheng_shu", "chance": 8}
+        ]
+    },
+    
+    "jing_ji_lin_creep": {"level": 1},
+    "you_tan_guard": {
+        "level": 2, 
+        "drops": [
+            {"name": "item_material_shuiyuancao", "chance": 100},
+            {"name": "item_cold_iron", "chance": 10},
+            {"name": "item_piece_han_qi_fan_she", "chance": 20},
+            {"name": "item_piece_han_qi_ru_hun", "chance": 30},
+            {"name": "item_piece_han_qi_ru_ti", "chance": 20},
+            {"name": "item_piece_ice_gland", "chance": 12},
+            {"name": "item_piece_ice_piton", "chance": 8},
+            {"name": "item_piece_ji_han_zhi_qi", "chance": 30},
+            {"name": "item_piece_xuan_han_ling_yu", "chance": 8}
+        ]
+    },
+    "ling_yan_gu_creep": {"level": 1},
+    "ling_yan_gu_boss": {
+        "level": 2, 
+        "drops": [
+            {"name": "item_material_tuyuancao", "chance": 100},
+            {"name": "item_magnetic_stone", "chance": 10},
+            {"name": "item_piece_di_ci", "chance": 30},
+            {"name": "item_piece_di_dong_shu", "chance": 20},
+            {"name": "item_piece_shan_yue_zhi_li", "chance": 10},
+            {"name": "item_piece_shi_bao_shu", "chance": 20},
+            {"name": "item_piece_yan_dun", "chance": 30},
+            {"name": "item_piece_zhong_li_chang", "chance": 10}
+        ]
+    },
+    "di_huo_chi_guard": {
+        "level": 2, 
+        "drops": [
+            {"name": "item_material_huoyuancao", "chance": 100},
+            {"name": "item_perfect_stone", "chance": 10},
+            {"name": "item_piece_fa_li_zhuo_shao", "chance": 20},
+            {"name": "item_piece_fang_yu_zhuo_shao", "chance": 10},
+            {"name": "item_piece_fen_tian_ling_yu", "chance": 8},
+            {"name": "item_piece_fen_tian_zhi_yan", "chance": 10},
+            {"name": "item_piece_huo_dan_shu", "chance": 30},
+            {"name": "item_piece_sheng_ming_zhuo_shao", "chance": 30},
+            {"name": "item_piece_zhuo_mu", "chance": 8}
+        ]
+    },
+    "fei_qi_kuang_mai_guard": {
+        "level": 2, 
+        "drops": [
+            {"name": "item_material_tuyuancao", "chance": 100},
+            {"name": "item_magnetic_stone", "chance": 10},
+            {"name": "item_piece_jian_qi_zong_heng", "chance": 5},
+            {"name": "item_piece_ju_jian_shu", "chance": 20},
+            {"name": "item_piece_sword_mean_stacking", "chance": 30},
+            {"name": "item_piece_sword_rain", "chance": 10},
+            {"name": "item_piece_sword_shield", "chance": 20},
+            {"name": "item_piece_sword_shot", "chance": 30},
+            {"name": "item_piece_sword_sudden", "chance": 10}
+        ]
+    },
+    "shang_gu_zhan_chang_ghost": {"level": 1},
+    "black_dragon": {
+        "level": 2, 
+        "drops": [
+            {"name": "item_longjin", "chance": 40},
+            {"name": "item_material_hongluoguo", "chance": 30}
+        ]
+    },
+    "yuan_ling_zhao_ze_boss": {
+        "level": 2, 
+        "drops": [
+            {"name": "item_shehunmu", "chance": 30},
+            {"name": "item_material_yanghunhua", "chance": 30}
+        ]
+    },
+    "tong_tian_feng_guard": {
+        "level": 2, 
+        "drops": [
+            {"name": "item_thunder_stone", "chance": 10}
+        ]
+    },
+    "hua_xue_zhao_ze_guard": {
+        "level": 2,
+        "drops": [
+            {"name": "item_huaxueteng", "chance": 30}
+        ]
+    }
+}

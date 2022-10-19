@@ -27,11 +27,11 @@ export class PlayerRankItem extends React.Component<props, any> {
         }
         
 
-        return <Panel style={{flowChildren: 'down', margin: '20px 0', width: 'fill-parent-flow(1.0)', height: 'width-percentage(350%)', backgroundColor: '#333333', border: '1px solid #ffffff'}}>
+        return <Panel style={{flowChildren: 'down', margin: '20px 0', width: 'fill-parent-flow(1.0)', minWidth: '12.5%', height: 'width-percentage(350%)', backgroundColor: '#333333', border: '1px solid #ffffff'}}>
             <Panel style={{color: '#e0c060', fontSize: '20px', width: '80%', margin: '10px 10%', flowChildren: 'right'}}>
                 <Label style={{width: '100%', textAlign: 'center', textOverflow: 'ellipsis', whiteSpace: 'nowrap'}} text={this.props.userName}></Label>
             </Panel>
-            <DOTAHeroImage heroname={this.props.heroName} style={{borderRadius: '10px', margin: '10px 10%', width: '80%', height: 'width-percentage(100%)'}}></DOTAHeroImage>
+            <DOTAHeroImage heroname={this.props.heroName} style={{borderRadius: '10px', margin: '10px 10%', width: '80%', height: 'width-percentage(72.7%)'}}></DOTAHeroImage>
             <Panel style={{color: '#e0c060', fontSize: '20px', width: '80%', margin: '10px 10%', flowChildren: 'right'}}>
                 <Label style={{width: '60%', textAlign: 'right', textOverflow: 'ellipsis', whiteSpace: 'nowrap'}} localizedText='#player_rank'></Label>
                 <Label style={{width: '40%', textAlign: 'left'}} text={this.props.rank}></Label>

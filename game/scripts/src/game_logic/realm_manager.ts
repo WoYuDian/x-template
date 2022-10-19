@@ -1,4 +1,3 @@
-import { getPlayerHeroById } from "./game_operation"
 import { modifier_elixir_zhuji } from "../modifiers/break_buff/modifier_elixir_zhuji";
 import { modifier_realm_zhuji } from "../modifiers/realm/modifier_realm_zhuji";
 import { modifier_elixir_jindan } from "../modifiers/break_buff/modifier_elixir_jindan";
@@ -15,6 +14,10 @@ import { modifier_force_of_body } from "../modifiers/realm/modifier_force_of_bod
 import { modifier_force_of_spirit } from "../modifiers/realm/modifier_force_of_spirit";
 import { Timers } from "../lib/timers";
 import { modifier_fabao_common } from "../modifiers/fabao/modifier_fabao_common";
+import { getPlayerHeroById } from "../util";
+import { addAbilityToUnit } from "../util";
+import * as realmConf from "./configuration/realm_conf.json"
+
 export const forceOfRuleMap = {
     water: modifier_force_of_water,
     fire: modifier_force_of_fire,
@@ -31,11 +34,11 @@ export function breakRealm(playerId: PlayerID) {
 
     const level = hero.GetLevel();
 
-    if(level == 4) {
+    if(level == realmConf.zhuji.level) {
         zhujiBreak(hero)
-    } else if (level == 9) {
+    } else if (level == realmConf.jindan.level) {
         jindanBreak(hero)
-    } else if (level == 14) {
+    } else if (level == realmConf.yuanying.level) {
         yuanyingBreak(hero)
     }
 
@@ -45,14 +48,14 @@ export function heroLevelUp(playerId: PlayerID) {
     const hero = getPlayerHeroById(playerId);
 
     if(hero) {
-        if((hero.GetLevel() + 1) == 5) {
-            hero.AddNewModifier(hero, null, modifier_elixir_zhuji.name, {percentage: 50})
+        if((hero.GetLevel() + 1) == 9) {
+            hero.AddNewModifier(hero, null, modifier_elixir_zhuji.name, {percentage: realmConf.zhuji.base_probability})
         }
-        if((hero.GetLevel() + 1) == 10) {
-            hero.AddNewModifier(hero, null, modifier_elixir_jindan.name, {percentage: 30})
+        if((hero.GetLevel() + 1) == 16) {
+            hero.AddNewModifier(hero, null, modifier_elixir_jindan.name, {percentage: realmConf.jindan.base_probability})
         }
-        if((hero.GetLevel() + 1) == 15) {
-            hero.AddNewModifier(hero, null, modifier_elixir_yuanying.name, {percentage: 20})
+        if((hero.GetLevel() + 1) == 23) {
+            hero.AddNewModifier(hero, null, modifier_elixir_yuanying.name, {percentage: realmConf.yuanying.base_probability})
         }
 
         if(hero.HasModifier(modifier_realm_yuanying.name)) {
@@ -100,7 +103,6 @@ function yuanyingBreak(hero: CDOTA_BaseNPC_Hero) {
         if(!hero.HasModifier(modifier_realm_yuanying.name)) {
             hero.AddNewModifier(hero, null, modifier_realm_yuanying.name, {})
             hero.RemoveModifierByName(modifier_elixir_yuanying.name)
-            // hero.AddAbility('mana_recovery')
 
             const nFXIndex = ParticleManager.CreateParticle( "particles/econ/events/fall_2021/hero_levelup_fall_2021.vpcf", ParticleAttachment.ABSORIGIN_FOLLOW, hero )
             ParticleManager.SetParticleControlEnt( nFXIndex, 1, hero, ParticleAttachment.ABSORIGIN_FOLLOW, null, hero.GetAbsOrigin(), true )
@@ -126,7 +128,7 @@ function jindanBreak(hero: CDOTA_BaseNPC_Hero) {
         if(!hero.HasModifier(modifier_realm_jindan.name)) {
             hero.AddNewModifier(hero, null, modifier_realm_jindan.name, {})
             hero.RemoveModifierByName(modifier_elixir_jindan.name)
-            hero.AddAbility('mana_recovery')
+            addAbilityToUnit(hero, 'mana_recovery')
 
             const nFXIndex = ParticleManager.CreateParticle( "particles/econ/events/fall_2021/hero_levelup_fall_2021.vpcf", ParticleAttachment.ABSORIGIN_FOLLOW, hero )
             ParticleManager.SetParticleControlEnt( nFXIndex, 1, hero, ParticleAttachment.ABSORIGIN_FOLLOW, null, hero.GetAbsOrigin(), true )
@@ -152,7 +154,7 @@ function zhujiBreak(hero: CDOTA_BaseNPC_Hero) {
         if(!hero.HasModifier(modifier_realm_zhuji.name)) {
             hero.AddNewModifier(hero, null, modifier_realm_zhuji.name, {})
             hero.RemoveModifierByName(modifier_elixir_zhuji.name)
-            hero.AddAbility('medusa_mana_shield')
+            addAbilityToUnit(hero, 'medusa_mana_shield')
 
             const nFXIndex = ParticleManager.CreateParticle( "particles/econ/events/fall_2021/hero_levelup_fall_2021.vpcf", ParticleAttachment.ABSORIGIN_FOLLOW, hero )
             ParticleManager.SetParticleControlEnt( nFXIndex, 1, hero, ParticleAttachment.ABSORIGIN_FOLLOW, null, hero.GetAbsOrigin(), true )
@@ -177,7 +179,7 @@ export function addForceOfRule(bonusInfo: {rule_name: string, bonus: number}, he
 }
 
 export function getForceOfRuleLevel(ruleName: string, unit: CDOTA_BaseNPC) {
-    if(!unit || !unit.FindAbilityByName) return;
+    if(!unit || !unit.FindAbilityByName || unit.IsNull()) return 0;
     const buff = unit.FindModifierByName(forceOfRuleMap[ruleName]?.name || '')
 
     if(buff) {
@@ -224,6 +226,15 @@ export function getFabaoSumOfForceOfRuleLevels(ruleNames: string[], unit: CDOTA_
     return totalLevel
 }
 
+export function getFabaoOwner(unit: CDOTA_BaseNPC) {
+    if(!unit || !unit.FindAbilityByName) return;
+
+    const fabaoBuff = unit.FindModifierByName(modifier_fabao_common.name) as modifier_fabao_common;
+    if(fabaoBuff) {
+        return fabaoBuff.owner
+    }
+}
+
 export function getRuleNamesOfUnit(unit: CDOTA_BaseNPC) {
     const ruleNames = []
     for(const key in forceOfRuleMap) {
@@ -234,4 +245,18 @@ export function getRuleNamesOfUnit(unit: CDOTA_BaseNPC) {
     }
 
     return ruleNames
+}
+
+export function getPlayerRealm(playerId: PlayerID): 'lianqi' | 'jindan' | 'zhuji' | 'yuanying' {
+    const hero = getPlayerHeroById(playerId);
+
+    if(hero.HasModifier(modifier_realm_yuanying.name)) {
+        return 'yuanying'
+    } else if(hero.HasModifier(modifier_realm_jindan.name)) {
+        return 'jindan'
+    } else if(hero.HasModifier(modifier_realm_zhuji.name)) {
+        return 'zhuji'
+    } else {
+        return 'lianqi'
+    }
 }

@@ -14,7 +14,7 @@ export class lei_dian_chang_debuff extends BaseModifier {
         this.stackPerInterval = this.GetAbility().GetSpecialValueFor('stack_per_interval');
         this.maxStack = this.GetAbility().GetSpecialValueFor('max_stack');
 
-        this.StartIntervalThink(1)
+        this.StartIntervalThink(this.GetAbility().GetSpecialValueFor('interval'))
     }
 
     OnIntervalThink(): void {

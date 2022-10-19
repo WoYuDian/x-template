@@ -1,6 +1,7 @@
 {
     "book_name": "suiyuejing",
-    "texture_src": "oracle_false_promise",
+    "texture_src": "item_book_suiyuejing",
+    "force_of_rules": ["metal", "wood", "water", "fire", "rock"],
     "abilities": {
         "shi_jian_yan_chi": {
             "parent_ability": null,

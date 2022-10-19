@@ -30,7 +30,7 @@ export class modifier_lei_dian_zhi_chu extends BaseModifier {
         if(!IsServer()) return;
 
         const parent = this.GetParent()
-        const increment = getForceOfRuleLevel('metal', parent) * this.stackSpeedFactor
+        const increment = Math.ceil(getForceOfRuleLevel('metal', parent) * this.stackSpeedFactor)
 
         let stack = this.GetStackCount() + increment
 
@@ -91,5 +91,9 @@ export class modifier_lei_dian_zhi_chu extends BaseModifier {
 
     IsPurgable(): boolean {
         return false
+    }
+
+    IsHidden(): boolean {
+        return true
     }
 }

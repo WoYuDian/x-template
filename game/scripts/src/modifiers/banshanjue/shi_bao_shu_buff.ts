@@ -85,4 +85,8 @@ export class modifier_shi_bao_shu_buff extends BaseModifier {
     IsPurgable(): boolean {
         return false
     }
+
+    IsHidden(): boolean {
+        return true
+    }
 }

@@ -1,7 +1,7 @@
 import { you_ming_ji_dian } from "../../abilities/necromancer_collection/you_ming_ji_dian";
-import { getPlayerHeroById } from "../../game_logic/game_operation";
 import { getForceOfRuleLevel } from "../../game_logic/realm_manager";
 import { BaseModifier, registerModifier } from "../../lib/dota_ts_adapter";
+import { getPlayerHeroById } from "../../util";
 import { modifier_gui_wang_fire } from "./gui_wang_fire";
 
 @registerModifier()
@@ -64,9 +64,5 @@ export class resentment_stacking_owner_buff extends BaseModifier {
 
     GetModifierAttackSpeedBonus_Constant(): number {
         return this.attackSpeedStackFactor * this.forceOfRule * this.GetStackCount()
-    }
-
-    IsHidden(): boolean {
-        return false
     }
 }

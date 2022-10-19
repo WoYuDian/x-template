@@ -109,4 +109,8 @@ export class modifier_wu_jin_lei_yu extends BaseModifier {
             })
         }
     }
+
+    IsHidden(): boolean {
+        return true
+    }
 }

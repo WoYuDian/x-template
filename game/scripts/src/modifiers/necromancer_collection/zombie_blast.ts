@@ -26,4 +26,8 @@ export class modifier_zombie_blast extends BaseModifier {
     GetModifierAura(): string {
         return modifier_zombie_blast_buff.name
     }
+
+    IsHidden(): boolean {
+        return true
+    }
 }

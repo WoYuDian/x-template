@@ -4,7 +4,7 @@
 		"BaseClass" "ability_lua"
 		"ScriptFile" "abilities/cast/material_abilities/ma_ignite/ma_ignite"
 		"AbilityValues" {
-			"duration_factor" "0.05"
+			"duration_factor" "0.3"
 			"damage_factor" "10"
 			"damage_interval" "0.5"
 
@@ -13,6 +13,154 @@
 		"AbilityCooldown" "0"
 		"AbilityManaCost" "0"
 		"AbilityTextureName" "ogre_magi_ignite"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "0"
+		"AbilityCastPoint" "0"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "1"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
+
+	}
+	"ma_thunder_pulse" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/cast/material_abilities/ma_thunder_pulse/ma_thunder_pulse"
+		"AbilityValues" {
+			"damage_interval" "1"
+			"damage_factor" "30"
+
+		}
+		"MaxLevel" "1"
+		"AbilityCooldown" "0"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "storm_spirit_electric_vortex"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "0"
+		"AbilityCastPoint" "0"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "1"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
+
+	}
+	"ma_magnetism" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/cast/material_abilities/ma_magnetism/ma_magnetism"
+		"AbilityValues" {
+			"speed_factor" "10"
+			"aura_radius" "500"
+
+		}
+		"MaxLevel" "1"
+		"AbilityCooldown" "0"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "enigma_black_hole"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "0"
+		"AbilityCastPoint" "0"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "1"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
+
+	}
+	"ma_freeze" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/cast/material_abilities/ma_freeze/ma_freeze"
+		"AbilityValues" {
+			"duration_factor" "0.3"
+			"move_speed_reduction_factor" "1"
+			"attack_speed_reduction_factor" "1"
+
+		}
+		"MaxLevel" "1"
+		"AbilityCooldown" "0"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "ancient_apparition_cold_feet"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "0"
+		"AbilityCastPoint" "0"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "1"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
+
+	}
+	"ma_poison" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/cast/material_abilities/ma_poison/ma_poison"
+		"AbilityValues" {
+			"duration_factor" "0.3"
+			"damage_factor" "10"
+			"damage_interval" "1"
+			"stack_factor" "0.2"
+			"base_max_stack" "5"
+
+		}
+		"MaxLevel" "1"
+		"AbilityCooldown" "0"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "venomancer_poison_sting"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "0"
+		"AbilityCastPoint" "0"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "1"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
+
+	}
+	"ma_shehun" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/cast/material_abilities/ma_shehun/ma_shehun"
+		"AbilityValues" {
+			"decay_interval" "3"
+			"aura_radius" "600"
+			"spell_amplify_per_stack" "5"
+
+		}
+		"MaxLevel" "1"
+		"AbilityCooldown" "0"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "death_prophet_spirit_siphon"
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam" ""
+		"AbilityUnitTargetType" ""
+		"AbilityUnitTargetFlags" ""
+		"AbilityCastAnimation" "0"
+		"AbilityCastPoint" "0"
+		"AbilityCastRangeBuffer" ""
+		"SpellImmunityType" "1"
+		"AbilityUnitDamageType" ""
+		"AbilitySound" "Hero_SkywrathMage.ArcaneBolt.Cast"
+
+	}
+	"ma_lifesteal" {
+		"BaseClass" "ability_lua"
+		"ScriptFile" "abilities/cast/material_abilities/ma_lifesteal/ma_lifesteal"
+		"AbilityValues" {
+			"lifesteal_percentage_factor" "1"
+
+		}
+		"MaxLevel" "1"
+		"AbilityCooldown" "0"
+		"AbilityManaCost" "0"
+		"AbilityTextureName" "enchantress_natures_attendants"
 		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityUnitTargetTeam" ""
 		"AbilityUnitTargetType" ""

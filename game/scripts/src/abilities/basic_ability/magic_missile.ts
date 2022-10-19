@@ -26,7 +26,7 @@ export class magic_missile extends BaseAbility
                 bReplaceExisting: false,
                 iUnitTargetTeam	: UnitTargetTeam.ENEMY,
                 iUnitTargetFlags: UnitTargetFlags.NONE,
-                iUnitTargetType	: UnitTargetType.HERO + UnitTargetType.CREEP + UnitTargetType.BASIC,
+                iUnitTargetType	: UnitTargetType.ALL,
                 bDeleteOnHit    : true,
                 fExpireTime     : GameRules.GetGameTime() + 10.0,
                 //@ts-ignore

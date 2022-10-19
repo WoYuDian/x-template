@@ -36,4 +36,8 @@ export class modifier_ji_han_zhi_qi extends BaseModifier {
     IsPurgable(): boolean {
         return false
     }
+
+    IsHidden(): boolean {
+        return false
+    }
 }

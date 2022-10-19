@@ -1,34 +1,35 @@
 {
     "book_name": "xilingji",
-    "texture_src": "treant_natures_grasp",
+    "texture_src": "item_book_xilingji",
+    "force_of_rules": ["wood"],
     "abilities": {
         "hui_chun_shu": {
             "parent_ability": null,
-            "force_of_rule_bonus": [{"rule_name": "wood", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "wood", "bonus": 5}]
         },
         "zhong_ling_shu": {
             "parent_ability": null,
-            "force_of_rule_bonus": [{"rule_name": "wood", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "wood", "bonus": 5}]
         },
         "ji_sheng": {
             "parent_ability": "hui_chun_shu",
-            "force_of_rule_bonus": [{"rule_name": "wood", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "wood", "bonus": 5}]
         },
         "fu_su": {
             "parent_ability": "hui_chun_shu",
-            "force_of_rule_bonus": [{"rule_name": "wood", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "wood", "bonus": 5}]
         },
         "sheng_ming_lian_jie": {
             "parent_ability": "ji_sheng",
-            "force_of_rule_bonus": [{"rule_name": "wood", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "wood", "bonus": 5}]
         },
         "zhuan_sheng_shu": {
             "parent_ability": "sheng_ming_lian_jie",
-            "force_of_rule_bonus": [{"rule_name": "wood", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "wood", "bonus": 5}]
         },
         "yun_ling_zhi_jing": {
             "parent_ability": "sheng_ming_lian_jie",
-            "force_of_rule_bonus": [{"rule_name": "wood", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "wood", "bonus": 5}]
         }
     }
 }

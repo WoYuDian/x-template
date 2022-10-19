@@ -35,4 +35,8 @@ export class modifier_lei_tin_zhen_ji extends BaseModifier {
         const duration = getForceOfRuleLevel('metal', parent) * this.durationFactor;
         event.unit.AddNewModifier(parent, ability, modifier_lei_tin_zhen_ji_debuff.name, {duration: duration})
     }
+
+    IsHidden(): boolean {
+        return true;
+    }
 }

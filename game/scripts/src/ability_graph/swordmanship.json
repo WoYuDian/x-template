@@ -1,34 +1,35 @@
 {
     "book_name": "swordmanship",
-    "texture_src": "juggernaut_omni_slash",
+    "texture_src": "item_book_swordmanship",
+    "force_of_rules": ["metal"],
     "abilities": {
         "sword_mean_stacking": {
             "parent_ability": null,
-            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 5}]
         },
         "sword_shot": {
             "parent_ability": null,
-            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 5}]
         },
         "sword_shield": {
             "parent_ability": "sword_mean_stacking",
-            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 5}]
         },
         "ju_jian_shu": {
             "parent_ability": "sword_mean_stacking",
-            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 5}]
         },
         "sword_sudden": {
             "parent_ability": "sword_shield",
-            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 5}]
         },
         "sword_rain": {
             "parent_ability": "sword_shield",
-            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 5}]
         },
         "jian_qi_zong_heng": {
             "parent_ability": "sword_sudden",
-            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 1}]
+            "force_of_rule_bonus": [{"rule_name": "metal", "bonus": 5}]
         }
     }
 }

@@ -28,4 +28,8 @@ export class modifier_shi_bao_shu extends BaseModifier {
     GetModifierAura(): string {
         return modifier_shi_bao_shu_buff.name
     }
+
+    IsHidden(): boolean {
+        return true;
+    }
 }

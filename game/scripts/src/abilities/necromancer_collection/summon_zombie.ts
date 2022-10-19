@@ -1,7 +1,7 @@
 import { BaseAbility, registerAbility } from "../../lib/dota_ts_adapter"
 import { createUnitCompositionInJungle} from '../../game_logic/game_operation'
 import { modifier_zombie_augmentation } from "../../modifiers/necromancer_collection/zombie_augmentation";
-import { getForceOfRuleLevel } from "../../game_logic/realm_manager";
+import { getForceOfRuleLevel, getSumOfForceOfRuleLevels } from "../../game_logic/realm_manager";
 @registerAbility()
 export class summon_zombie extends BaseAbility
 {    
@@ -18,7 +18,7 @@ export class summon_zombie extends BaseAbility
                 null, 
                 this.GetCaster(), 
                 this.GetCaster().GetTeam())
-
+            unit.AddNewModifier(caster, this, 'modifier_kill', {duration: this.GetSpecialValueFor('life_factor') * getSumOfForceOfRuleLevels(['rock', 'spirit'], caster) + this.GetSpecialValueFor('base_life')})
             unit.SetControllableByPlayer(this.GetCaster().GetPlayerOwnerID(), true)
         }
     }

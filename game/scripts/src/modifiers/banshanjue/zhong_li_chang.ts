@@ -28,4 +28,8 @@ export class modifier_zhong_li_chang extends BaseModifier {
     GetModifierAura(): string {
         return modifier_zhong_li_chang_debuff.name
     }
+
+    IsHidden(): boolean {
+        return true;
+    }
 }

@@ -67,4 +67,8 @@ export class modifier_move extends BaseModifier {
         //@ts-ignore
         this.GetParent().SetAbsOrigin(positionVerctor)
     }
+
+    IsHidden(): boolean {
+        return true;
+    }
 }

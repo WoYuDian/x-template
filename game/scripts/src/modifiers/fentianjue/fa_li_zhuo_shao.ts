@@ -22,6 +22,7 @@ export class modifier_fa_li_zhuo_shao extends BaseModifier {
         if(params.unit == this.GetParent()) return;
         if(params.unit.IsBuilding()) return;
         if(params.inflictor == this.GetAbility().GetCaster().FindAbilityByName('sheng_ming_zhuo_shao')) return
+        if(params.unit.GetTeamNumber() == params.attacker.GetTeamNumber()) return;
 
         if (params.damage_type == DamageTypes.MAGICAL) {
             const debuff = params.unit.FindModifierByName(fa_li_zhuo_shao_debuff.name)
@@ -36,5 +37,9 @@ export class modifier_fa_li_zhuo_shao extends BaseModifier {
 
     IsPurgable(): boolean {
         return false
+    }
+    
+    IsHidden(): boolean {
+        return true;
     }
 }

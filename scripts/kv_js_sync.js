@@ -33,6 +33,7 @@ function kv_js_sync() {
             return;
         }
 
+        console.log(file,'===============');
         let kv = keyvalues.decode(fs.readFileSync(file, 'utf-8'));
         let file_name = file.replace(/^.*[\\\/]/, '').replace(/\..*/, '');
         let json = JSON.stringify(kv);

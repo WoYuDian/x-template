@@ -1,3 +1,6 @@
+import { cacheGet, cacheUpdate } from "../cache";
+import { stateInfo } from "../common_type";
+import { checkGameFinish, openFowForTeam } from "../game_logic/game_operation";
 import { BaseAbility, registerAbility } from "../lib/dota_ts_adapter"
 @registerAbility()
 export class global_light_bolt extends BaseAbility
@@ -38,16 +41,32 @@ export class global_light_bolt extends BaseAbility
 
     OnProjectileHit(target: CDOTA_BaseNPC, location: Vector): boolean | void {
         if(target.GetTeam() != this.GetCaster().GetTeam()) {
+            const stateInfo: stateInfo = cacheGet('gameStateInfo')
+            const roundCount = stateInfo.round_count
+            const damage = roundCount * 100
+
             ApplyDamage({
                 victim: target,
                 attacker: this.GetCaster(),
-                damage: 30,
+                damage: damage,
                 damage_type: DamageTypes.PURE,
                 damage_flags: DamageFlag.NONE,
                 ability: this
             })
 
-            print(target.IsAlive())
+            if(!target.IsAlive()) {
+                const playerId = target.GetPlayerOwnerID()
+                if(!stateInfo.player_score[playerId.toString()]) {
+                    stateInfo.player_score[playerId.toString()] = {dead: 0, time: 0}
+                }
+
+                stateInfo.player_score[playerId.toString()].dead = 1
+                stateInfo.player_score[playerId.toString()].time = GameRules.GetGameTime()
+                openFowForTeam(target.GetTeamNumber())
+                cacheUpdate('gameStateInfo')
+
+                checkGameFinish()
+            }
             EmitSoundOn('Hero_Zuus.GodsWrath.Target', target)
         }
     }

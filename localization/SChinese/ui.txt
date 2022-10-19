@@ -1,6 +1,6 @@
 //------------------Game info
-"addon_game_name" "飞升"
-"addonname" "飞升"
+"addon_game_name" "刀塔修道场"
+"addonname" "刀塔修道场"
 //------------------Team name
 "DOTA_Custom1" "玩家1"
 "DOTA_Custom2" "玩家2"
